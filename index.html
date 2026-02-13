@@ -175,16 +175,20 @@
                     <span class="date">04/02/2026 – 14/02/2026</span>
                 </div>
                 <span class="badge" data-i18n="chem_badge">مبادرة Hash Plus</span>
-                <div class="project-gallery slider-container">
-                    <div class="slider" id="chemistrySlider">
-                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="Wonders of Chemistry 1" data-i18n-title="chem_title" onclick="openLightbox(0, 'chemistrySlider')">
-                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="Wonders of Chemistry 2" data-i18n-title="chem_title" onclick="openLightbox(1, 'chemistrySlider')">
-                        <img src="chem_3.png" alt="Wonders of Chemistry 3" title="Wonders of Chemistry 3" data-i18n-title="chem_title" onclick="openLightbox(2, 'chemistrySlider')">
-                        <img src="chem_4.png" alt="Wonders of Chemistry 4" title="Wonders of Chemistry 4" data-i18n-title="chem_title" onclick="openLightbox(3, 'chemistrySlider')">
-                        <img src="chem_5.png" alt="Wonders of Chemistry 5" title="Wonders of Chemistry 5" data-i18n-title="chem_title" onclick="openLightbox(4, 'chemistrySlider')">
+                <div class="project-gallery slider-container" id="chemistry-gallery">
+                    <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_3.png" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_4.png" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_5.png" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_6.png" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_7.png" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_8.png" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_9.png" alt="Wonders of Chemistry 9" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
                     </div>
-                    <button class="slider-btn prev" onclick="moveSlider(-1, 'chemistrySlider')">&#10094;</button>
-                    <button class="slider-btn next" onclick="moveSlider(1, 'chemistrySlider')">&#10095;</button>
+                    <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)">&#10095;</button>
                 </div>
                 <ul class="project-details">
                     <li data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
