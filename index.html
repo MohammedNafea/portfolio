@@ -174,7 +174,15 @@
                     <h3><i class="fas fa-vial"></i> <span data-i18n="chem_title">Wonders of Chemistry</span></h3>
                     <span class="date">04/02/2026 – 14/02/2026</span>
                 </div>
-                <span class="badge">مبادرة Hash Plus</span>
+                <span class="badge" data-i18n="chem_badge">مبادرة Hash Plus</span>
+                <div class="project-gallery slider-container">
+                    <div class="slider" id="chemistrySlider">
+                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="Wonders of Chemistry 1" data-i18n-title="chem_title" onclick="openLightbox(0, 'chemistrySlider')">
+                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="Wonders of Chemistry 2" data-i18n-title="chem_title" onclick="openLightbox(1, 'chemistrySlider')">
+                    </div>
+                    <button class="slider-btn prev" onclick="moveSlider(-1, 'chemistrySlider')">&#10094;</button>
+                    <button class="slider-btn next" onclick="moveSlider(1, 'chemistrySlider')">&#10095;</button>
+                </div>
                 <ul class="project-details">
                     <li data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
                 </ul>
