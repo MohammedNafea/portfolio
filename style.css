@@ -17,8 +17,11 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-white);
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .pdf-container {
@@ -65,12 +68,14 @@ body {
 }
 
 .neon-text {
-    font-size: 5rem;
+    font-size: clamp(2rem, 12vw, 5rem);
     color: var(--text-white);
     text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     position: relative;
     z-index: 2;
+    width: 100%;
+    padding: 0 10px;
 }
 
 .neon-text .highlight {
@@ -78,11 +83,12 @@ body {
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     color: var(--text-gray);
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    letter-spacing: clamp(1px, 0.5vw, 2px);
+    margin-bottom: 35px;
     z-index: 2;
+    padding: 0 15px;
 }
 
 .decorative-line {
@@ -395,24 +401,62 @@ body {
     padding-right: 10px;
 }
 
-.experience-list li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: var(--text-gray);
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    background: #111;
+    padding: clamp(15px, 3vw, 20px);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-white);
     display: flex;
     align-items: center;
     gap: 15px;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.experience-list i {
+.contact-item:hover {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.contact-item i {
     color: var(--neon-red);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.contact-item span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+.contact-item p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: bold;
+    word-break: break-all;
 }
 
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 350px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cert-card {
@@ -424,9 +468,10 @@ body {
 .cert-card h4 {
     color: var(--text-white);
     margin-bottom: 5px;
-    height: 3rem; /* Fixed height for title alignment */
+    min-height: 3rem;
     display: flex;
     align-items: center;
+    font-size: clamp(1rem, 4vw, 1.2rem);
 }
 
 .cert-date {
@@ -438,7 +483,7 @@ body {
 
 .cert-media-container {
     width: 100%;
-    height: 350px; /* Significantly increased to 350px for a larger, clearer view */
+    height: clamp(200px, 60vw, 350px);
     overflow: hidden;
     position: relative;
     border-radius: 8px;
@@ -451,7 +496,7 @@ body {
     height: 100%;
     object-fit: contain;
     object-position: center;
-    padding: 0; /* Removed padding to maximize visibility */
+    padding: 0;
     transition: 0.3s;
     background: #000;
 }
@@ -566,7 +611,7 @@ body {
     }
 }
 
-/* Mobile Browser Optimization Updates */
+/* Final Universal Compatibility Adjustments */
 @media (max-width: 600px) {
     .pdf-container {
         padding: 0;
@@ -574,56 +619,56 @@ body {
     }
 
     .page {
-        padding: 30px 15px;
+        padding: 25px 15px;
     }
 
-    .tech-icons {
-        font-size: 2rem;
-        gap: 20px;
+    .section-title {
+        font-size: 1.4rem;
+        padding-right: 10px;
     }
 
     .card {
         padding: 15px;
+        margin-bottom: 15px;
     }
 
     .slider-wrapper img {
-        flex: 0 0 85%;
-        min-width: 85%;
+        flex: 0 0 90%;
+        min-width: 90%;
     }
 
     .cert-media-container {
-        height: clamp(200px, 80vw, 280px);
+        height: clamp(180px, 70vw, 280px);
     }
 
-    .project-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+    .tech-icons {
+        margin-top: 30px;
+        gap: 20px;
+        font-size: 2rem;
     }
 
-    .project-header .date {
-        font-size: 0.8rem;
+    .closing-box {
+        padding: 30px 15px;
+        margin-top: 40px;
     }
+}
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+/* Touch Device Optimization */
+@media (hover: none) {
+    .contact-item:hover {
+        transform: none;
     }
-
-    .contact-item {
-        padding: 15px;
-        font-size: 0.9rem;
+    .slider-wrapper {
+        scroll-snap-type: x mandatory;
     }
-
-    .lightbox-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 25px;
-        border-width: 1px;
+    .slider-wrapper img {
+        scroll-snap-align: center;
     }
+}
 
-    .close-lightbox {
-        top: 15px;
-        right: 20px;
-        font-size: 35px;
+/* Specific Browser Fixes */
+@-moz-document url-prefix() {
+    .neon-text {
+        text-shadow: 0 0 5px var(--neon-red);
     }
 }
