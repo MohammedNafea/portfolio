@@ -36,7 +36,8 @@ const translations = {
         view_hd: "اضغط للتكبير",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "تنزيل APK"
     },
     en: {
         title: "Portfolio - Mohammed Nafea",
@@ -75,7 +76,8 @@ const translations = {
         view_hd: "Click to enlarge",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Download APK"
     },
     es: {
         title: "Portafolio - Mohammed Nafea",
@@ -114,7 +116,8 @@ const translations = {
         view_hd: "Haz clic para ampliar",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Descargar APK"
     },
     fr: {
         title: "Portfolio - Mohammed Nafea",
@@ -153,7 +156,8 @@ const translations = {
         view_hd: "Cliquer pour agrandir",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Télécharger APK"
     },
     de: {
         title: "Portfolio - Mohammed Nafea",
@@ -192,7 +196,8 @@ const translations = {
         view_hd: "Zum Vergrößern klicken",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APK herunterladen"
     },
     zh: {
         title: "个人作品集 - Mohammed Nafea",
@@ -231,7 +236,8 @@ const translations = {
         view_hd: "点击放大",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "下载 APK"
     },
     ja: {
         title: "ポートフォリオ - Mohammed Nafea",
@@ -270,7 +276,8 @@ const translations = {
         view_hd: "クリックして拡大",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APKをダウンロード"
     },
     ru: {
         title: "Портфолио - Mohammed Nafea",
@@ -309,7 +316,8 @@ const translations = {
         view_hd: "Нажмите для увеличения",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Скачать APK"
     },
     tr: {
         title: "Portfolyo - Mohammed Nafea",
@@ -348,7 +356,8 @@ const translations = {
         view_hd: "Büyütmek için tıklayın",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APK İndir"
     },
     pt: {
         title: "Portfólio - Mohammed Nafea",
@@ -387,7 +396,8 @@ const translations = {
         view_hd: "Clique para ampliar",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Baixar APK"
     },
     it: {
         title: "Portfolio - Mohammed Nafea",
@@ -426,7 +436,8 @@ const translations = {
         view_hd: "Clicca per ingrandire",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Scarica APK"
     },
     ko: {
         title: "포트폴리오 - Mohammed Nafea",
@@ -465,7 +476,8 @@ const translations = {
         view_hd: "클릭하여 확대",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APK 다운로드"
     },
     id: {
         title: "Portofolio - Mohammed Nafea",
@@ -504,7 +516,8 @@ const translations = {
         view_hd: "Klik untuk memperbesar",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "Unduh APK"
     },
     ur: {
         title: "پورٹ فولیو - محمد نافع",
@@ -543,7 +556,8 @@ const translations = {
         view_hd: "بڑا کرنے کے لیے کلک کریں",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APK ڈاؤن لوڈ کریں"
     },
     hi: {
         title: "पोर्टफोलियो - मोहम्मद नाफे",
@@ -582,6 +596,7 @@ const translations = {
         view_hd: "बड़ा करने के लिए क्लिक करें",
         github_label: "GitHub",
         twitter_label: "X (Twitter)",
-        telegram_label: "Telegram"
+        telegram_label: "Telegram",
+        download_apk: "APK डाउनलोड करें"
     }
 };
