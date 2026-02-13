@@ -7,15 +7,72 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--neon-red);
+            padding: 5px 10px;
+            border-radius: 50px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+        }
+        .lang-switcher select {
+            background: none;
+            color: white;
+            border: none;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+        .lang-switcher select option {
+            background: #0d0d0d;
+            color: white;
+        }
+        [dir="ltr"] .lang-switcher {
+            left: auto;
+            right: 20px;
+        }
+        @media (max-width: 600px) {
+            .lang-switcher {
+                top: 10px;
+                left: 10px;
+                padding: 3px 8px;
+            }
+            [dir="ltr"] .lang-switcher {
+                right: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="lang-switcher">
+        <i class="fas fa-globe" style="color: var(--neon-red);"></i>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
     <div class="pdf-container">
         <!-- Cover Page -->
         <section class="page cover">
             <div class="glow-bg"></div>
             <div class="content">
-                <h1 class="neon-text">محمد فتح الله <span class="highlight">نافع</span></h1>
-                <p class="subtitle">مطور تطبيقات جوال | مطور Flutter | مطور Java</p>
+                <h1 class="neon-text" data-i18n="name">محمد فتح الله <span class="highlight">نافع</span></h1>
+                <p class="subtitle" data-i18n="role">مطور تطبيقات جوال | مطور Flutter | مطور Java</p>
                 <div class="decorative-line"></div>
             </div>
             <div class="tech-icons">
@@ -28,34 +85,34 @@
 
         <!-- Summary & Education Page -->
         <section class="page">
-            <h2 class="section-title"><i class="fas fa-user-tie"></i> الملخص المهني</h2>
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> <span data-i18n="summary_title">الملخص المهني</span></h2>
             <div class="card about-card">
-                <p>مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية محددة بكفاءة تشغيلية عالية.</p>
+                <p data-i18n="summary_text">مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية محددة بكفاءة تشغيلية عالية.</p>
             </div>
 
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> المؤهل العلمي</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu_title">المؤهل العلمي</span></h2>
             <div class="card education-card">
-                <h3>بكالوريوس نظم معلومات إدارية</h3>
-                <p class="date">2020 – 2024</p>
-                <p>مشروع التخرج: <strong>Guide Me</strong> – تطبيق سياحي (تقدير ممتاز 🏆)</p>
+                <h3 data-i18n="edu_degree">بكالوريوس نظم معلومات إدارية</h3>
+                <p class="date" data-i18n="edu_date">2020 – 2024</p>
+                <p data-i18n="edu_project">مشروع التخرج: <strong>Guide Me</strong> – تطبيق سياحي (تقدير ممتاز 🏆)</p>
             </div>
 
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> الخبرة العملية</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> <span data-i18n="exp_title">الخبرة العملية</span></h2>
             <ul class="experience-list">
-                <li><i class="fas fa-check-circle"></i> تطوير تطبيقات متعددة المنصات باستخدام Flutter وDart.</li>
-                <li><i class="fas fa-check-circle"></i> بناء وصيانة تطبيقات أندرويد باستخدام Java وAndroid Studio.</li>
-                <li><i class="fas fa-check-circle"></i> تكامل خدمات Firebase (المصادقة – Firestore – الإشعارات).</li>
-                <li><i class="fas fa-check-circle"></i> إدارة الأكواد باستخدام Git وGitHub ضمن بيئة عمل تعاونية.</li>
+                <li data-i18n="exp_1"><i class="fas fa-check-circle"></i> تطوير تطبيقات متعددة المنصات باستخدام Flutter وDart.</li>
+                <li data-i18n="exp_2"><i class="fas fa-check-circle"></i> بناء وصيانة تطبيقات أندرويد باستخدام Java وAndroid Studio.</li>
+                <li data-i18n="exp_3"><i class="fas fa-check-circle"></i> تكامل خدمات Firebase (المصادقة – Firestore – الإشعارات).</li>
+                <li data-i18n="exp_4"><i class="fas fa-check-circle"></i> إدارة الأكواد باستخدام Git وGitHub ضمن بيئة عمل تعاونية.</li>
             </ul>
         </section>
 
         <!-- Projects Page -->
         <section class="page">
-            <h2 class="section-title"><i class="fas fa-rocket"></i> المشاريع الرئيسية</h2>
+            <h2 class="section-title"><i class="fas fa-rocket"></i> <span data-i18n="projects_title">المشاريع الرئيسية</span></h2>
             
             <div class="project-card">
                 <div class="project-header">
-                    <h3><i class="fas fa-map-marked-alt"></i> Guide Me – تطبيق سياحي</h3>
+                    <h3><i class="fas fa-map-marked-alt"></i> <span data-i18n="guide_me_title">Guide Me – تطبيق سياحي</span></h3>
                     <span class="date">2024</span>
                 </div>
                 <div class="project-gallery slider-container" id="guide-me-gallery">
@@ -74,89 +131,89 @@
                     <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)">&#10095;</button>
                 </div>
                 <ul class="project-details">
-                    <li>تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة المستخدم السياحية.</li>
+                    <li data-i18n="guide_me_desc">تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة المستخدم السياحية.</li>
                 </ul>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3><i class="fas fa-chart-line"></i> معسكر تحليل البيانات</h3>
+                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="data_bootcamp_title">معسكر تحليل البيانات</span></h3>
                     <span class="date">2026</span>
                 </div>
                 <div class="project-gallery slider-container" id="data-bootcamp-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير">
-                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير">
-                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير">
-                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير">
-                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير">
-                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)">&#10095;</button>
                 </div>
                 <ul class="project-details">
-                    <li>مشروع تحليل البيانات المتكامل الذي يتضمن معالجة البيانات وبناء التقارير التفاعلية.</li>
+                    <li data-i18n="data_bootcamp_desc">مشروع تحليل البيانات المتكامل الذي يتضمن معالجة البيانات وبناء التقارير التفاعلية.</li>
                 </ul>
                 <div class="project-links">
                     <a href="https://drive.google.com/drive/folders/1ZTSrCcLMgFT3sKf1dicG_MVZqeD71me_" target="_blank" class="apk-btn">
-                        <i class="fas fa-external-link-alt"></i> رابط مشروع باور اي
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="pbi_link">رابط مشروع باور اي</span>
                     </a>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3><i class="fas fa-vial"></i> Wonders of Chemistry</h3>
+                    <h3><i class="fas fa-vial"></i> <span data-i18n="chem_title">Wonders of Chemistry</span></h3>
                     <span class="date">04/02/2026 – 14/02/2026</span>
                 </div>
                 <span class="badge">مبادرة Hash Plus</span>
                 <ul class="project-details">
-                    <li>تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
+                    <li data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
                 </ul>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3><i class="fas fa-code-branch"></i> مشاريع مبادرة مليون مبرمج عربي</h3>
+                    <h3><i class="fas fa-code-branch"></i> <span data-i18n="mac_title">مشاريع مبادرة مليون مبرمج عربي</span></h3>
                     <span class="date">2017</span>
                 </div>
                 <div class="project-gallery slider-container" id="mac-work-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)">&#10095;</button>
                 </div>
                 <ul class="project-details">
-                    <li>تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.</li>
+                    <li data-i18n="mac_desc">تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.</li>
                 </ul>
             </div>
 
-            <h2 class="section-title"><i class="fas fa-certificate"></i> الشهادات</h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> <span data-i18n="certs_title">الشهادات</span></h2>
             <div class="cert-grid">
                 <div class="card cert-card">
-                    <h4>ورشة عمل Flutter</h4>
-                    <p class="cert-date">سبتمبر 2020</p>
+                    <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
+                    <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
                     <div class="cert-media-container">
-                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
                     </div>
                 </div>
                 <div class="card cert-card">
-                    <h4>معسكر تحليل البيانات</h4>
+                    <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
                     <p class="cert-date">2026</p>
                     <div class="cert-media-container">
-                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
                     </div>
                 </div>
                 <div class="card cert-card">
-                    <h4>مبادرة مليون مبرمج عربي</h4>
+                    <h4 data-i18n="mac_title">مبادرة مليون مبرمج عربي</h4>
                     <p class="cert-date">2017</p>
                     <div class="cert-media-container slider-container" id="cert-gallery">
                         <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)">&#10094;</button>
                         <div class="slider-wrapper">
-                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير">
-                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير">
+                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
                         </div>
                         <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)">&#10095;</button>
                     </div>
@@ -165,19 +222,19 @@
         </section>
         <!-- Contact Page -->
         <section class="page">
-            <h2 class="section-title"><i class="fas fa-envelope"></i> التواصل</h2>
+            <h2 class="section-title"><i class="fas fa-envelope"></i> <span data-i18n="contact_title">التواصل</span></h2>
             <div class="contact-grid">
                 <a href="mailto:mmmad68055@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <span>البريد الإلكتروني</span>
+                        <span data-i18n="email_label">البريد الإلكتروني</span>
                         <p>mmmad68055@gmail.com</p>
                     </div>
                 </a>
                 <a href="tel:+966547189625" class="contact-item">
                     <i class="fas fa-phone"></i>
                     <div>
-                        <span>رقم الهاتف</span>
+                        <span data-i18n="phone_label">رقم الهاتف</span>
                         <p>+966547189625</p>
                     </div>
                 </a>
@@ -205,8 +262,8 @@
             </div>
 
             <div class="closing-box">
-                <h3 class="neon-text-small">شكراً لاهتمامكم</h3>
-                <p>مستعد دائماً لتحويل الأفكار إلى تطبيقات مبتكرة.</p>
+                <h3 class="neon-text-small" data-i18n="thanks">شكراً لاهتمامكم</h3>
+                <p data-i18n="closing_text">مستعد دائماً لتحويل الأفكار إلى تطبيقات مبتكرة.</p>
             </div>
         </section>
 
@@ -219,23 +276,68 @@
         <div id="caption"></div>
     </div>
 
+    <script src="translations.js"></script>
     <script>
         let currentImages = [];
         let currentIndex = 0;
+        let currentLang = localStorage.getItem('selectedLang') || 'ar';
+
+        // Initialize Language
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('langSelect').value = currentLang;
+            applyLanguage(currentLang);
+        });
+
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('selectedLang', lang);
+            applyLanguage(lang);
+        }
+
+        function applyLanguage(lang) {
+            const dictionary = translations[lang];
+            
+            // Update Text Content
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dictionary[key]) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        const iconHtml = icon.outerHTML;
+                        el.innerHTML = iconHtml + ' ' + dictionary[key];
+                    } else {
+                        el.innerText = dictionary[key];
+                    }
+                }
+            });
+
+            // Update Titles/Alt
+            document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                const key = el.getAttribute('data-i18n-title');
+                if (dictionary[key]) el.title = dictionary[key];
+            });
+
+            // Update Direction
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+            document.title = dictionary.title;
+        }
 
         function moveSlider(galleryId, direction) {
             const wrapper = document.querySelector(`#${galleryId} .slider-wrapper`);
             const scrollAmount = wrapper.clientWidth;
+            
+            // Adjust direction for RTL
+            const dirMultiplier = (document.documentElement.dir === 'rtl') ? -1 : 1;
+            
             wrapper.scrollBy({
-                left: direction * scrollAmount,
+                left: direction * scrollAmount * dirMultiplier,
                 behavior: 'smooth'
             });
         }
 
         function openLightbox(imgElement) {
             const lightbox = document.getElementById("lightbox");
-            
-            // Look for the closest logical gallery container
             const wrapper = imgElement.closest('.slider-wrapper') || 
                             imgElement.closest('.cert-media-container') || 
                             imgElement.closest('.project-gallery');
@@ -244,7 +346,6 @@
                 currentImages = Array.from(wrapper.querySelectorAll('img'));
                 currentIndex = currentImages.indexOf(imgElement);
             } else {
-                // If not in a gallery, just show this single image
                 currentImages = [imgElement];
                 currentIndex = 0;
             }
@@ -256,6 +357,8 @@
         function updateLightbox() {
             const lightboxImg = document.getElementById("lightbox-img");
             const caption = document.getElementById("caption");
+            const dictionary = translations[currentLang];
+            
             lightboxImg.src = currentImages[currentIndex].src;
             caption.innerHTML = currentImages[currentIndex].alt;
         }
@@ -271,7 +374,6 @@
             updateLightbox();
         }
 
-        // Close lightbox on click outside
         window.onclick = function(event) {
             const lightbox = document.getElementById("lightbox");
             if (event.target == lightbox) {
