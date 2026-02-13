@@ -557,3 +557,83 @@ body {
         box-shadow: none;
     }
 }
+
+/* Mobile Browser Optimization */
+@media (max-width: 600px) {
+    .pdf-container {
+        padding: 0 0px;
+        width: 100%;
+    }
+
+    .page {
+        padding: 40px 20px;
+        min-height: auto; /* Remove A4 fixed height on mobile */
+    }
+
+    .neon-text {
+        font-size: 3rem;
+        word-break: break-word;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        margin-top: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr; /* Switch certificates to 1 column */
+    }
+
+    .cert-media-container {
+        height: 280px; /* Adjust height for mobile width */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-list li {
+        font-size: 1rem;
+        gap: 10px;
+    }
+
+    .slider-wrapper img {
+        flex: 0 0 calc(90% - 10px); /* Larger images in the slider on mobile */
+        min-width: calc(90% - 10px);
+    }
+
+    .close-lightbox {
+        top: 20px;
+        right: 25px;
+        font-size: 40px;
+    }
+
+    .lightbox-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        background: rgba(255, 0, 0, 0.2); /* Make buttons visible on touch */
+    }
+
+    .closing-box {
+        padding: 30px 20px;
+    }
+
+    .neon-text-small {
+        font-size: 1.6rem;
+    }
+}
