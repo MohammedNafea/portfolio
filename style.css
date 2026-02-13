@@ -401,6 +401,20 @@ body {
     padding-right: 10px;
 }
 
+.experience-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-list i {
+    color: var(--neon-red);
+    font-size: 1.2rem;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -557,29 +571,6 @@ body {
     font-weight: bold;
 }
 
-/* Contact Grid */
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.contact-item {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: var(--text-white);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid #222;
-}
-
-.contact-item i {
-    color: var(--neon-red);
-    font-size: 1.5rem;
-}
 
 /* Closing Box */
 .closing-box {
