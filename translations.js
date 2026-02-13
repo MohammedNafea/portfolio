@@ -31,7 +31,10 @@ const translations = {
         phone_label: "رقم الهاتف",
         thanks: "شكراً لاهتمامكم",
         closing_text: "مستعد دائماً لتحويل الأفكار إلى تطبيقات مبتكرة.",
-        view_hd: "اضغط للتكبير"
+        view_hd: "اضغط للتكبير",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     en: {
         title: "Portfolio - Mohammed Nafea",
@@ -65,7 +68,10 @@ const translations = {
         phone_label: "Phone Number",
         thanks: "Thank you for your interest",
         closing_text: "Always ready to turn ideas into innovative applications.",
-        view_hd: "Click to enlarge"
+        view_hd: "Click to enlarge",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     es: {
         title: "Portafolio - Mohammed Nafea",
@@ -99,7 +105,10 @@ const translations = {
         phone_label: "Número de teléfono",
         thanks: "Gracias por su interés",
         closing_text: "Siempre listo para convertir ideas en aplicaciones innovadoras.",
-        view_hd: "Haz clic para ampliar"
+        view_hd: "Haz clic para ampliar",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     fr: {
         title: "Portfolio - Mohammed Nafea",
@@ -133,7 +142,10 @@ const translations = {
         phone_label: "Téléphone",
         thanks: "Merci de votre intérêt",
         closing_text: "Toujours prêt à transformer des idées en applications innovantes.",
-        view_hd: "Cliquer pour agrandir"
+        view_hd: "Cliquer pour agrandir",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     de: {
         title: "Portfolio - Mohammed Nafea",
@@ -167,7 +179,10 @@ const translations = {
         phone_label: "Telefon",
         thanks: "Vielen Dank für Ihr Interesse",
         closing_text: "Bereit, Ideen in innovative Apps zu verwandeln.",
-        view_hd: "Zum Vergrößern klicken"
+        view_hd: "Zum Vergrößern klicken",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     zh: {
         title: "个人作品集 - Mohammed Nafea",
@@ -201,7 +216,10 @@ const translations = {
         phone_label: "电话号码",
         thanks: "感谢您的关注",
         closing_text: "随时准备将创意转化为创新的应用。",
-        view_hd: "点击放大"
+        view_hd: "点击放大",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     ja: {
         title: "ポートフォリオ - Mohammed Nafea",
@@ -235,7 +253,10 @@ const translations = {
         phone_label: "電話番号",
         thanks: "ご清聴ありがとうございました",
         closing_text: "アイデアを革新的なアプリに変換する準備は常にできています。",
-        view_hd: "クリックして拡大"
+        view_hd: "クリックして拡大",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     },
     ru: {
         title: "Портфолио - Mohammed Nafea",
@@ -269,6 +290,9 @@ const translations = {
         phone_label: "Номер телефона",
         thanks: "Спасибо за внимание",
         closing_text: "Всегда готов превращать идеи в инновационные приложения.",
-        view_hd: "Нажмите для увеличения"
+        view_hd: "Нажмите для увеличения",
+        github_label: "GitHub",
+        twitter_label: "X (Twitter)",
+        telegram_label: "Telegram"
     }
 };
