@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف أعمال - محمد نافع</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pdf-container">
+        <!-- Cover Page -->
+        <section class="page cover">
+            <div class="glow-bg"></div>
+            <div class="content">
+                <h1 class="neon-text">محمد فتح الله <span class="highlight">نافع</span></h1>
+                <p class="subtitle">مطور تطبيقات أندرويد | مطور Flutter | مطور Java</p>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="tech-icons">
+                <i class="fab fa-flutter"></i>
+                <i class="fab fa-android"></i>
+                <i class="fab fa-java"></i>
+                <i class="fas fa-database"></i>
+            </div>
+        </section>
+
+        <!-- Summary & Education Page -->
+        <section class="page">
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> الملخص المهني</h2>
+            <div class="card about-card">
+                <p>مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية محددة بكفاءة تشغيلية عالية.</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> المؤهل العلمي</h2>
+            <div class="card education-card">
+                <h3>بكالوريوس نظم معلومات إدارية</h3>
+                <p class="date">2020 – 2024</p>
+                <p>مشروع التخرج: <strong>Guide Me</strong> – تطبيق سياحي (تقدير ممتاز 🏆)</p>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> الخبرة العملية</h2>
+            <ul class="experience-list">
+                <li><i class="fas fa-check-circle"></i> تطوير تطبيقات متعددة المنصات باستخدام Flutter وDart.</li>
+                <li><i class="fas fa-check-circle"></i> بناء وصيانة تطبيقات أندرويد باستخدام Java وAndroid Studio.</li>
+                <li><i class="fas fa-check-circle"></i> تكامل خدمات Firebase (المصادقة – Firestore – الإشعارات).</li>
+                <li><i class="fas fa-check-circle"></i> إدارة الأكواد باستخدام Git وGitHub ضمن بيئة عمل تعاونية.</li>
+            </ul>
+        </section>
+
+        <!-- Projects Page -->
+        <section class="page">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> المشاريع الرئيسية</h2>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><i class="fas fa-map-marked-alt"></i> Guide Me – تطبيق سياحي</h3>
+                    <span class="date">2024</span>
+                </div>
+                <div class="project-gallery slider-container" id="guide-me-gallery">
+                    <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <img src="guide_me_1_splash.jpg" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_2_login.jpg" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_4.jpg" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_5.jpg" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_6.jpg" alt="Guide Me Screenshot 5" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_7.jpg" alt="Guide Me Screenshot 6" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_8.jpg" alt="Guide Me Screenshot 7 (Register)" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_9.jpg" alt="Guide Me Screenshot 8 (Settings)" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="guide_me_10_profile.jpg" alt="Guide Me Screenshot 9 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير">
+                    </div>
+                    <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)">&#10095;</button>
+                </div>
+                <ul class="project-details">
+                    <li>تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة المستخدم السياحية.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><i class="fas fa-chart-line"></i> معسكر تحليل البيانات</h3>
+                    <span class="date">2026</span>
+                </div>
+                <div class="project-gallery slider-container" id="data-bootcamp-gallery">
+                    <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير">
+                    </div>
+                    <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)">&#10095;</button>
+                </div>
+                <ul class="project-details">
+                    <li>مشروع تحليل البيانات المتكامل الذي يتضمن معالجة البيانات وبناء التقارير التفاعلية.</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://drive.google.com/drive/folders/1ZTSrCcLMgFT3sKf1dicG_MVZqeD71me_" target="_blank" class="apk-btn">
+                        <i class="fas fa-external-link-alt"></i> رابط مشروع باور اي
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><i class="fas fa-vial"></i> Wonders of Chemistry</h3>
+                    <span class="date">04/02/2026 – 14/02/2026</span>
+                </div>
+                <span class="badge">مبادرة Hash Plus</span>
+                <ul class="project-details">
+                    <li>تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><i class="fas fa-code-branch"></i> مشاريع مبادرة مليون مبرمج عربي</h3>
+                    <span class="date">2017</span>
+                </div>
+                <div class="project-gallery slider-container" id="mac-work-gallery">
+                    <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)">&#10094;</button>
+                    <div class="slider-wrapper">
+                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير">
+                    </div>
+                    <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)">&#10095;</button>
+                </div>
+                <ul class="project-details">
+                    <li>تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title"><i class="fas fa-certificate"></i> الشهادات</h2>
+            <div class="cert-grid">
+                <div class="card cert-card">
+                    <h4>ورشة عمل Flutter</h4>
+                    <p class="cert-date">سبتمبر 2020</p>
+                    <div class="cert-media-container">
+                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير">
+                    </div>
+                </div>
+                <div class="card cert-card">
+                    <h4>معسكر تحليل البيانات</h4>
+                    <p class="cert-date">2026</p>
+                    <div class="cert-media-container">
+                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير">
+                    </div>
+                </div>
+                <div class="card cert-card">
+                    <h4>مبادرة مليون مبرمج عربي</h4>
+                    <p class="cert-date">2017</p>
+                    <div class="cert-media-container slider-container" id="cert-gallery">
+                        <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)">&#10094;</button>
+                        <div class="slider-wrapper">
+                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير">
+                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير">
+                        </div>
+                        <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Page Logic -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function moveSlider(galleryId, direction) {
+            const wrapper = document.querySelector(`#${galleryId} .slider-wrapper`);
+            const scrollAmount = wrapper.clientWidth;
+            wrapper.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById("lightbox");
+            
+            // Look for the closest logical gallery container
+            const wrapper = imgElement.closest('.slider-wrapper') || 
+                            imgElement.closest('.cert-media-container') || 
+                            imgElement.closest('.project-gallery');
+            
+            if (wrapper) {
+                currentImages = Array.from(wrapper.querySelectorAll('img'));
+                currentIndex = currentImages.indexOf(imgElement);
+            } else {
+                // If not in a gallery, just show this single image
+                currentImages = [imgElement];
+                currentIndex = 0;
+            }
+
+            lightbox.style.display = "flex";
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            const lightboxImg = document.getElementById("lightbox-img");
+            const caption = document.getElementById("caption");
+            lightboxImg.src = currentImages[currentIndex].src;
+            caption.innerHTML = currentImages[currentIndex].alt;
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeLightboxImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= currentImages.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = currentImages.length - 1;
+            updateLightbox();
+        }
+
+        // Close lightbox on click outside
+        window.onclick = function(event) {
+            const lightbox = document.getElementById("lightbox");
+            if (event.target == lightbox) {
+                closeLightbox();
+            }
+        }
+    </script>
+</body>
+</html>
