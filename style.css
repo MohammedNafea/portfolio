@@ -225,6 +225,8 @@ body {
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slider-wrapper img {
