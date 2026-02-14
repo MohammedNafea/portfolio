@@ -29,12 +29,18 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
 }
 
-/* Hide Scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
+/* Hide Scrollbar Globally (Aggressive) */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
     display: none;
+}
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 body {
@@ -1054,6 +1060,7 @@ img {
 
     .page {
         padding: 25px 15px;
+        overflow: visible; /* Fix for missing content on mobile */
     }
 
     .section-title {
