@@ -1493,3 +1493,136 @@ body.light-mode .social-link {
 body.light-mode .main-footer {
     border-top-color: #eee;
 }
+
+/* Scroll To Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--neon-red);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background: #ff3333;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Adjust WhatsApp Button Position */
+.whatsapp-btn {
+    bottom: 90px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+    .whatsapp-btn {
+        bottom: 80px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide non-essential elements */
+    .lang-switcher,
+    .whatsapp-btn,
+    .scroll-top-btn,
+    .sound-btn,
+    .cursor, 
+    .cursor-follower,
+    #particles-js,
+    .glow-bg,
+    .project-gallery .slider-btn,
+    .contact-qr-btn,
+    .submit-btn,
+    footer,
+    #preloader {
+        display: none !important;
+    }
+
+    /* Reset Body */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        overflow: visible !important;
+    }
+
+    /* Typography adjustments */
+    h1, h2, h3, h4, p, li {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    .neon-text {
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+    
+    .highlight {
+        color: #d32f2f !important; /* Darker red for print */
+    }
+
+    /* Layout adjustments */
+    section.page {
+        page-break-inside: avoid;
+        border: none !important;
+        margin: 20px 0 !important;
+        padding: 0 !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Links */
+    a {
+        text-decoration: underline;
+        color: #000 !important;
+    }
+    
+    /* Reveal URLs for specific links */
+    .contact-item[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8rem;
+        color: #555;
+    }
+
+    /* Cards */
+    .card, .project-card {
+        border: 1px solid #ccc !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        color: #000 !important;
+        page-break-inside: avoid;
+    }
+    
+    .tech-icons, .project-links {
+        display: none !important;
+    }
+}
