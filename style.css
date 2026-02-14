@@ -24,6 +24,50 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body.light-mode {
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+    --primary-red: #D32F2F;
+    --neon-red: #B71C1C;
+    --text-white: #212121;
+    --text-gray: #555555;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .highlight {
+    color: #D32F2F;
+    text-shadow: none;
+}
+
+body.light-mode .neon-text {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+body.light-mode .about-card, body.light-mode .project-card, body.light-mode .cert-card, body.light-mode .cert-media-container {
+    border: 1px solid #e0e0e0;
+}
+
+body.light-mode .contact-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: var(--text-white);
+}
+
+body.light-mode .skill-item {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+body.light-mode .project-gallery img, body.light-mode .slider-wrapper img {
+    border: 1px solid #ddd;
+}
+
+body.light-mode .lang-switcher {
+    border: 1px solid var(--neon-red); /* Keep border visible */
+    background: rgba(33, 33, 33, 0.9); /* Keep switcher darl for contrast with buttons */
+}
+
+
 .pdf-container {
     max-width: 900px;
     width: 100%;
@@ -48,6 +92,57 @@ body {
 }
 
 /* Cover Page Styles */
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.icon-btn:hover {
+    color: var(--neon-red);
+    transform: scale(1.1);
+}
+
+/* QR Modal Styles */
+.qr-content {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    max-width: 320px;
+    width: 90%;
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-title {
+    color: var(--neon-red);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.qr-desc {
+    color: var(--text-gray);
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+#qrCodeContainer {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
 .cover {
     display: flex;
     flex-direction: column;

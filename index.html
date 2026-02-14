@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         .lang-switcher {
             position: fixed;
@@ -71,7 +72,29 @@
             <option value="id">Bahasa Indonesia</option>
             <option value="ur">اردو</option>
             <option value="hi">हिन्दी</option>
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ru">Русский</option>
+            <option value="tr">Türkçe</option>
+            <option value="pt">Português</option>
+            <option value="it">Italiano</option>
+            <option value="ko">한국어</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="ur">اردو</option>
+            <option value="hi">हिन्दी</option>
         </select>
+        <button id="themeToggle" class="icon-btn" onclick="toggleTheme()" title="Switch Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <button id="qrBtn" class="icon-btn" onclick="showQRCode()" title="Show QR Code">
+            <i class="fas fa-qrcode"></i>
+        </button>
     </div>
     <div class="pdf-container">
         <!-- Cover Page -->
@@ -167,13 +190,13 @@
                 <div class="project-gallery slider-container" id="guide-me-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="guide_me_1_splash.jpg" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_2_login.jpg" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_4.jpg" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_5.jpg" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_6_profile.jpg" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_7_home.jpg" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="guide_me_8_splash2.jpg" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="guide_me_1_splash.jpg" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash">
+                        <img src="guide_me_2_login.jpg" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login">
+                        <img src="guide_me_4.jpg" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details">
+                        <img src="guide_me_5.jpg" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details">
+                        <img src="guide_me_6_profile.jpg" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile">
+                        <img src="guide_me_7_home.jpg" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home">
+                        <img src="guide_me_8_splash2.jpg" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)">&#10095;</button>
                 </div>
@@ -195,12 +218,12 @@
                 <div class="project-gallery slider-container" id="data-bootcamp-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
+                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
+                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2">
+                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2">
+                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_3">
+                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)">&#10095;</button>
                 </div>
@@ -223,14 +246,14 @@
                 <div class="project-gallery slider-container" id="chemistry-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_4.png" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_6.png" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_8.png" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_9.jpg" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_10.jpg" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
-                        <img src="chem_11.jpg" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)">
+                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1">
+                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1">
+                        <img src="chem_4.png" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2">
+                        <img src="chem_6.png" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
+                        <img src="chem_8.png" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
+                        <img src="chem_9.jpg" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
+                        <img src="chem_10.jpg" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
+                        <img src="chem_11.jpg" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)">&#10095;</button>
                 </div>
@@ -252,7 +275,7 @@
                 <div class="project-gallery slider-container" id="mac-work-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_mac_project">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)">&#10095;</button>
                 </div>
@@ -289,14 +312,14 @@
                     <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
                     <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
                     <div class="cert-media-container">
-                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
                     </div>
                 </div>
                 <div class="card cert-card">
                     <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
                     <p class="cert-date">2026</p>
                     <div class="cert-media-container">
-                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
                     </div>
                 </div>
                 <div class="card cert-card">
@@ -305,8 +328,8 @@
                     <div class="cert-media-container slider-container" id="cert-gallery">
                         <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)">&#10094;</button>
                         <div class="slider-wrapper">
-                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
-                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd">
+                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
+                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
                         </div>
                         <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)">&#10095;</button>
                     </div>
@@ -324,16 +347,37 @@
         <div id="caption"></div>
     </div>
 
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
+        <div class="qr-content" onclick="event.stopPropagation()">
+            <span class="close-lightbox" onclick="closeQRModal()">&times;</span>
+            <h3 class="qr-title" data-i18n="qr_modal_title">QR Code</h3>
+            <div id="qrCodeContainer"></div>
+            <p class="qr-desc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
+        </div>
+    </div>
+
     <script src="translations.js"></script>
     <script>
         let currentImages = [];
         let currentIndex = 0;
         let currentLang = localStorage.getItem('selectedLang') || 'ar';
 
-        // Initialize Language
+        // Initialize Language and Theme
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('langSelect').value = currentLang;
+            // Language
+            const langSelect = document.getElementById('langSelect');
+            if (langSelect) {
+                langSelect.value = currentLang;
+            }
             applyLanguage(currentLang);
+
+            // Theme
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+            }
+            updateThemeIcon(savedTheme === 'light');
         });
 
         function changeLanguage(lang) {
@@ -343,6 +387,7 @@
         }
 
         function applyLanguage(lang) {
+            if (!translations[lang]) return;
             const dictionary = translations[lang];
             
             // Update Text Content
@@ -351,8 +396,7 @@
                 if (dictionary[key]) {
                     const icon = el.querySelector('i');
                     if (icon) {
-                        const iconHtml = icon.outerHTML;
-                        el.innerHTML = iconHtml + ' ' + dictionary[key];
+                        el.innerHTML = icon.outerHTML + ' ' + dictionary[key];
                     } else if (key === 'name') {
                         el.innerHTML = dictionary[key];
                     } else {
@@ -361,11 +405,32 @@
                 }
             });
 
-            // Update Titles/Alt
+            // Update Image Alt Text
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const key = el.getAttribute('data-i18n-alt');
+                if (dictionary[key]) {
+                    el.alt = dictionary[key];
+                    // Update caption if this image is currently open in lightbox
+                    const lightboxImg = document.getElementById("lightbox-img");
+                    if (lightboxImg && lightboxImg.src === el.src) {
+                        document.getElementById("caption").innerText = dictionary[key];
+                    }
+                }
+            });
+
+            // Update Titles
             document.querySelectorAll('[data-i18n-title]').forEach(el => {
                 const key = el.getAttribute('data-i18n-title');
                 if (dictionary[key]) el.title = dictionary[key];
             });
+
+            // Update Button Titles
+            const isLight = document.body.classList.contains('light-mode');
+            const themeBtn = document.getElementById('themeToggle');
+            if (themeBtn) themeBtn.title = dictionary[isLight ? 'theme_toggle_dark' : 'theme_toggle_light'];
+            
+            const qrBtn = document.getElementById('qrBtn');
+            if (qrBtn) qrBtn.title = dictionary['qr_btn_title'];
 
             // Update Direction
             const rtlLanguages = ['ar', 'ur'];
@@ -374,11 +439,51 @@
             document.title = dictionary.title;
         }
 
+        // Theme Functions
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateThemeIcon(isLight);
+            
+            // Update tooltip immediately
+            const dictionary = translations[currentLang];
+            if (dictionary) {
+                document.getElementById('themeToggle').title = dictionary[isLight ? 'theme_toggle_dark' : 'theme_toggle_light'];
+            }
+        }
+
+        function updateThemeIcon(isLight) {
+            const icon = document.getElementById('themeToggle').querySelector('i');
+            if (icon) icon.className = isLight ? 'fas fa-moon' : 'fas fa-sun';
+        }
+
+        // QR Code Functions
+        function showQRCode() {
+            const modal = document.getElementById('qrModal');
+            const qrContainer = document.getElementById('qrCodeContainer');
+            qrContainer.innerHTML = '';
+            
+            new QRCode(qrContainer, {
+                text: window.location.href,
+                width: 200,
+                height: 200,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            
+            modal.style.display = "flex";
+        }
+
+        function closeQRModal(event) {
+            if (event && event.target.closest('.qr-content')) return;
+            document.getElementById("qrModal").style.display = "none";
+        }
+
         function moveSlider(galleryId, direction) {
             const wrapper = document.querySelector(`#${galleryId} .slider-wrapper`);
             const scrollAmount = wrapper.clientWidth;
-            
-            // Adjust direction for RTL
             const dirMultiplier = (document.documentElement.dir === 'rtl') ? -1 : 1;
             
             wrapper.scrollBy({
@@ -408,10 +513,11 @@
         function updateLightbox() {
             const lightboxImg = document.getElementById("lightbox-img");
             const caption = document.getElementById("caption");
-            const dictionary = translations[currentLang];
             
-            lightboxImg.src = currentImages[currentIndex].src;
-            caption.innerHTML = currentImages[currentIndex].alt;
+            if (currentImages.length > 0) {
+                lightboxImg.src = currentImages[currentIndex].src;
+                caption.innerText = currentImages[currentIndex].alt;
+            }
         }
 
         function closeLightbox() {
@@ -419,6 +525,7 @@
         }
 
         function changeLightboxImage(direction) {
+            if (currentImages.length === 0) return;
             currentIndex += direction;
             if (currentIndex >= currentImages.length) currentIndex = 0;
             if (currentIndex < 0) currentIndex = currentImages.length - 1;
