@@ -489,8 +489,8 @@
             const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
 
-            // Show crown for contact QR
-            document.getElementById('qrCrownImg').style.display = 'block';
+            // Hide separate crown — it will be embedded in the QR
+            document.getElementById('qrCrownImg').style.display = 'none';
 
             // Set title/desc for contact QR
             document.getElementById('qrModalTitle').innerText = dictionary['contact_qr_title'] || 'Contact QR';
@@ -510,14 +510,58 @@
                 'END:VCARD'
             ].join('\n');
             
+            // Use H (highest) error correction to allow logo overlay
             new QRCode(qrContainer, {
                 text: vcard,
-                width: 220,
-                height: 220,
+                width: 260,
+                height: 260,
                 colorDark : "#000000",
                 colorLight : "#ffffff",
-                correctLevel : QRCode.CorrectLevel.M
+                correctLevel : QRCode.CorrectLevel.H
             });
+            
+            // Embed the crown into the center of the QR code
+            setTimeout(function() {
+                const canvas = qrContainer.querySelector('canvas');
+                if (canvas) {
+                    const ctx = canvas.getContext('2d');
+                    const crownImg = new Image();
+                    crownImg.crossOrigin = 'anonymous';
+                    crownImg.onload = function() {
+                        const logoSize = canvas.width * 0.22;
+                        const x = (canvas.width - logoSize) / 2;
+                        const y = (canvas.height - logoSize) / 2;
+                        const radius = logoSize / 2;
+                        const cx = x + radius;
+                        const cy = y + radius;
+                        
+                        // White circle background
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, radius + 4, 0, Math.PI * 2);
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fill();
+                        
+                        // Red glow ring
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, radius + 2, 0, Math.PI * 2);
+                        ctx.strokeStyle = '#FF0000';
+                        ctx.lineWidth = 3;
+                        ctx.shadowColor = 'rgba(255, 0, 0, 0.6)';
+                        ctx.shadowBlur = 10;
+                        ctx.stroke();
+                        ctx.shadowBlur = 0;
+                        
+                        // Clip circle and draw crown
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+                        ctx.clip();
+                        ctx.drawImage(crownImg, x, y, logoSize, logoSize);
+                        ctx.restore();
+                    };
+                    crownImg.src = 'fire_crown.jpg';
+                }
+            }, 100);
             
             modal.style.display = "flex";
         }
