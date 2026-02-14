@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nafea-portfolio-v3';
+const CACHE_NAME = 'nafea-portfolio-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -20,7 +20,9 @@ const ASSETS = [
   'https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'
 ];
 
+// Install: cache assets and skip waiting to activate immediately
 self.addEventListener('install', (e) => {
+  self.skipWaiting();
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS);
@@ -28,10 +30,26 @@ self.addEventListener('install', (e) => {
   );
 });
 
+// Activate: delete all old caches
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+      );
+    }).then(() => self.clients.claim())
+  );
+});
+
+// Fetch: network-first strategy (try network, fallback to cache)
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
+    fetch(e.request)
+      .then((response) => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
+        return response;
+      })
+      .catch(() => caches.match(e.request))
   );
 });
