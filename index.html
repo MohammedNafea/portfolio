@@ -434,6 +434,50 @@
             </div>
         </section>
         <!-- Contact Page -->
+        <section class="page contact-section" id="contact" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> <span data-i18n="contact_title">تواصل معي</span></h2>
+            <p class="contact-subtitle" data-i18n="contact_desc">لديك مشروع أو فكرة؟ لا تتردد في مراسلتي، أنا بانتظارك!</p>
+            
+            <div class="contact-container">
+                <form class="contact-form" action="mailto:king.darkmn@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" name="name" required placeholder="الاسم" data-i18n-placeholder="name_placeholder">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" required placeholder="البريد الإلكتروني" data-i18n-placeholder="email_placeholder">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" required placeholder="الرسالة" data-i18n-placeholder="msg_placeholder"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span data-i18n="send_btn">إرسال</span> <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <div class="contact-info">
+                    <a href="https://github.com/MohammedNafea" target="_blank" class="social-link github" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mohammednafea" target="_blank" class="social-link linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/KingDarkmn" target="_blank" class="social-link twitter" title="X (Twitter)">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://t.me/king_darkmn" target="_blank" class="social-link telegram" title="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="mailto:king.darkmn@gmail.com" class="social-link email" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <p data-i18n="footer_text">© 2026 محمد نافع. جميع الحقوق محفوظة.</p>
+            <div class="heart-container">Made with <i class="fas fa-heart heart-beat"></i></div>
+        </footer>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
@@ -658,7 +702,22 @@
             document.documentElement.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
             document.documentElement.lang = lang;
             document.title = dictionary.title;
+
+            // Update Placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dictionary[key]) el.placeholder = dictionary[key];
+            });
         }
+
+        // Dynamic Title
+        let docTitle = document.title;
+        window.addEventListener("blur", () => {
+            document.title = "Come back! 😭 | " + docTitle;
+        });
+        window.addEventListener("focus", () => {
+            document.title = docTitle;
+        });
 
         // Theme Functions
         function toggleTheme() {
