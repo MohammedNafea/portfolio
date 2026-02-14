@@ -144,6 +144,11 @@
                         </div>
                     </a>
                 </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button class="apk-btn" onclick="showContactQR()" style="background: var(--primary-red); color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-family: 'Cairo', sans-serif; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
+                        <i class="fas fa-address-card"></i> <span data-i18n="save_contact_qr">حفظ بيانات التواصل (QR)</span>
+                    </button>
+                </div>
             </section>
 
             <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu_title">المؤهل العلمي</span></h2>
@@ -335,9 +340,9 @@
     <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
         <div class="qr-content" onclick="event.stopPropagation()">
             <span class="close-lightbox" onclick="closeQRModal()">&times;</span>
-            <h3 class="qr-title" data-i18n="qr_modal_title">QR Code</h3>
+            <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
             <div id="qrCodeContainer"></div>
-            <p class="qr-desc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
+            <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
         </div>
     </div>
 
@@ -446,7 +451,12 @@
         function showQRCode() {
             const modal = document.getElementById('qrModal');
             const qrContainer = document.getElementById('qrCodeContainer');
+            const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
+            
+            // Set title/desc for site QR
+            document.getElementById('qrModalTitle').innerText = dictionary['qr_modal_title'] || 'QR Code';
+            document.getElementById('qrModalDesc').innerText = dictionary['qr_modal_desc'] || 'Scan to open on mobile';
             
             new QRCode(qrContainer, {
                 text: window.location.href,
@@ -455,6 +465,42 @@
                 colorDark : "#000000",
                 colorLight : "#ffffff",
                 correctLevel : QRCode.CorrectLevel.H
+            });
+            
+            modal.style.display = "flex";
+        }
+
+        function showContactQR() {
+            const modal = document.getElementById('qrModal');
+            const qrContainer = document.getElementById('qrCodeContainer');
+            const dictionary = translations[currentLang];
+            qrContainer.innerHTML = '';
+
+            // Set title/desc for contact QR
+            document.getElementById('qrModalTitle').innerText = dictionary['contact_qr_title'] || 'Contact QR';
+            document.getElementById('qrModalDesc').innerText = dictionary['contact_qr_desc'] || 'Scan to save contact';
+
+            // vCard 3.0 format
+            const vcard = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'N:Nafea;Mohammed;Fathallah;;',
+                'FN:Mohammed Fathallah Nafea',
+                'EMAIL:king.darkmn@gmail.com',
+                'URL:https://github.com/MohammedNafea',
+                'X-SOCIALPROFILE;type=twitter:https://x.com/KingDarkmn',
+                'X-SOCIALPROFILE;type=telegram:https://t.me/king_darkmn',
+                'NOTE:WhatsApp: https://wa.me/message/YGXHPUENICNAN1\\nGitHub: github.com/MohammedNafea\\nX: x.com/KingDarkmn\\nTelegram: @king_darkmn',
+                'END:VCARD'
+            ].join('\n');
+            
+            new QRCode(qrContainer, {
+                text: vcard,
+                width: 220,
+                height: 220,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.M
             });
             
             modal.style.display = "flex";
