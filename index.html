@@ -463,6 +463,7 @@
             const qrContainer = document.getElementById('qrCodeContainer');
             const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
+            currentQRType = 'site';
             
             // Hide crown for site QR
             document.getElementById('qrCrownImg').style.display = 'none';
@@ -483,11 +484,16 @@
             modal.style.display = "flex";
         }
 
+        // Track which QR type is currently shown
+        let currentQRType = 'site';
+        let currentVCard = '';
+
         function showContactQR() {
             const modal = document.getElementById('qrModal');
             const qrContainer = document.getElementById('qrCodeContainer');
             const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
+            currentQRType = 'contact';
 
             // Hide the separate crown image element
             document.getElementById('qrCrownImg').style.display = 'none';
@@ -496,30 +502,22 @@
             document.getElementById('qrModalTitle').innerText = dictionary['contact_qr_title'] || 'Contact Card';
             document.getElementById('qrModalDesc').innerText = dictionary['contact_qr_desc'] || 'Scan to save contact';
 
-            // vCard 3.0 — Complete business card format (RFC 6350 compliant)
-            // Compatible with: iOS, Android, Samsung, Huawei, Outlook, CamCard, HubSpot, etc.
-            const vcard = [
-                'BEGIN:VCARD',
-                'VERSION:3.0',
-                'PRODID:-//Mohammed Nafea//Portfolio//EN',
-                'N:Nafea;Mohammed;Fathallah;;',
-                'FN:Mohammed Fathallah Nafea',
-                'ORG:Software Developer',
-                'TITLE:Mobile & Web Developer',
-                'EMAIL;TYPE=INTERNET,WORK:king.darkmn@gmail.com',
-                'URL;TYPE=WORK:https://mohammednafea.github.io/portfolio/',
-                'URL;TYPE=GitHub:https://github.com/MohammedNafea',
-                'URL;TYPE=Twitter:https://x.com/KingDarkmn',
-                'URL;TYPE=Telegram:https://t.me/king_darkmn',
-                'URL;TYPE=WhatsApp:https://wa.me/message/YGXHPUENICNAN1',
-                'NOTE:Mobile & Web Developer\\nGitHub: github.com/MohammedNafea\\nX: x.com/KingDarkmn\\nTelegram: @king_darkmn\\nWhatsApp: wa.me/message/YGXHPUENICNAN1',
-                'REV:' + new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
-                'END:VCARD'
-            ].join('\r\n');
+            // vCard 3.0 — ONLY standard fields for maximum compatibility
+            // Works with: iOS, Android, Honor, Samsung, Huawei, Outlook, CamCard, etc.
+            currentVCard = 'BEGIN:VCARD\r\n' +
+                'VERSION:3.0\r\n' +
+                'N:Nafea;Mohammed;Fathallah;;\r\n' +
+                'FN:Mohammed Fathallah Nafea\r\n' +
+                'ORG:Software Developer\r\n' +
+                'TITLE:Mobile & Web Developer\r\n' +
+                'EMAIL:king.darkmn@gmail.com\r\n' +
+                'URL:https://mohammednafea.github.io/portfolio/\r\n' +
+                'NOTE:GitHub: https://github.com/MohammedNafea\\nX (Twitter): https://x.com/KingDarkmn\\nTelegram: https://t.me/king_darkmn\\nWhatsApp: https://wa.me/message/YGXHPUENICNAN1\r\n' +
+                'END:VCARD';
             
             // Use H (highest) error correction to allow logo overlay
             new QRCode(qrContainer, {
-                text: vcard,
+                text: currentVCard,
                 width: 260,
                 height: 260,
                 colorDark : "#000000",
@@ -529,49 +527,55 @@
             
             // Embed the crown into the center of the QR code
             setTimeout(function() {
-                // QRCode.js creates both <canvas> and <img>; hide <img> so canvas shows
-                const qrImg = qrContainer.querySelector('img');
-                if (qrImg) qrImg.style.display = 'none';
-
-                const canvas = qrContainer.querySelector('canvas');
-                if (canvas) {
-                    canvas.style.display = 'block';
-                    const ctx = canvas.getContext('2d');
-                    const crownImg = new Image();
-                    crownImg.onload = function() {
-                        const logoSize = Math.floor(canvas.width * 0.20);
-                        const x = Math.floor((canvas.width - logoSize) / 2);
-                        const y = Math.floor((canvas.height - logoSize) / 2);
-                        const radius = logoSize / 2;
-                        const cx = x + radius;
-                        const cy = y + radius;
-                        
-                        // White circle background (clear space)
-                        ctx.beginPath();
-                        ctx.arc(cx, cy, radius + 5, 0, Math.PI * 2);
-                        ctx.fillStyle = '#ffffff';
-                        ctx.fill();
-                        
-                        // Red glow ring
-                        ctx.beginPath();
-                        ctx.arc(cx, cy, radius + 3, 0, Math.PI * 2);
-                        ctx.strokeStyle = '#FF0000';
-                        ctx.lineWidth = 3;
-                        ctx.stroke();
-                        
-                        // Clip circle and draw crown
-                        ctx.save();
-                        ctx.beginPath();
-                        ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-                        ctx.clip();
-                        ctx.drawImage(crownImg, x, y, logoSize, logoSize);
-                        ctx.restore();
-                    };
-                    crownImg.src = 'fire_crown.jpg';
-                }
-            }, 200);
+                embedCrownOnCanvas(qrContainer);
+            }, 300);
             
             modal.style.display = "flex";
+        }
+
+        function embedCrownOnCanvas(container, callback) {
+            // QRCode.js creates both <canvas> and <img>; hide <img> so canvas shows
+            const qrImg = container.querySelector('img');
+            if (qrImg) qrImg.style.display = 'none';
+
+            const canvas = container.querySelector('canvas');
+            if (canvas) {
+                canvas.style.display = 'block';
+                const ctx = canvas.getContext('2d');
+                const crownImg = new Image();
+                crownImg.onload = function() {
+                    const logoSize = Math.floor(canvas.width * 0.18);
+                    const x = Math.floor((canvas.width - logoSize) / 2);
+                    const y = Math.floor((canvas.height - logoSize) / 2);
+                    const radius = logoSize / 2;
+                    const cx = x + radius;
+                    const cy = y + radius;
+                    
+                    // White circle background (clear space)
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius + 6, 0, Math.PI * 2);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fill();
+                    
+                    // Red ring
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius + 3, 0, Math.PI * 2);
+                    ctx.strokeStyle = '#CC0000';
+                    ctx.lineWidth = 3;
+                    ctx.stroke();
+                    
+                    // Clip circle and draw crown
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+                    ctx.clip();
+                    ctx.drawImage(crownImg, x, y, logoSize, logoSize);
+                    ctx.restore();
+
+                    if (callback) callback(canvas);
+                };
+                crownImg.src = 'fire_crown.jpg';
+            }
         }
 
         function closeQRModal(event) {
@@ -580,29 +584,63 @@
         }
 
         function downloadQR() {
-            const container = document.getElementById('qrCodeContainer');
-            const canvas = container.querySelector('canvas');
-            const img = container.querySelector('img');
-            
-            let dataURL;
-            if (canvas) {
-                dataURL = canvas.toDataURL('image/png');
-            } else if (img) {
-                // Fallback: draw image to canvas
-                const tempCanvas = document.createElement('canvas');
-                tempCanvas.width = img.naturalWidth || img.width;
-                tempCanvas.height = img.naturalHeight || img.height;
-                const ctx = tempCanvas.getContext('2d');
-                ctx.drawImage(img, 0, 0);
-                dataURL = tempCanvas.toDataURL('image/png');
+            if (currentQRType === 'contact') {
+                // Generate a HIGH RESOLUTION QR (1024x1024) for download
+                const offscreen = document.createElement('div');
+                offscreen.style.position = 'absolute';
+                offscreen.style.left = '-9999px';
+                document.body.appendChild(offscreen);
+
+                new QRCode(offscreen, {
+                    text: currentVCard,
+                    width: 1024,
+                    height: 1024,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+
+                setTimeout(function() {
+                    embedCrownOnCanvas(offscreen, function(canvas) {
+                        const dataURL = canvas.toDataURL('image/png');
+                        const link = document.createElement('a');
+                        link.download = 'Mohammed_Nafea_Contact_QR.png';
+                        link.href = dataURL;
+                        link.click();
+                        document.body.removeChild(offscreen);
+                    });
+                }, 500);
             } else {
-                return;
+                // Site QR — also generate high resolution
+                const offscreen = document.createElement('div');
+                offscreen.style.position = 'absolute';
+                offscreen.style.left = '-9999px';
+                document.body.appendChild(offscreen);
+
+                new QRCode(offscreen, {
+                    text: window.location.href,
+                    width: 1024,
+                    height: 1024,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+
+                setTimeout(function() {
+                    const qrImg = offscreen.querySelector('img');
+                    if (qrImg) qrImg.style.display = 'none';
+                    const canvas = offscreen.querySelector('canvas');
+                    if (canvas) {
+                        canvas.style.display = 'block';
+                        const dataURL = canvas.toDataURL('image/png');
+                        const link = document.createElement('a');
+                        link.download = 'Portfolio_QR.png';
+                        link.href = dataURL;
+                        link.click();
+                    }
+                    document.body.removeChild(offscreen);
+                }, 500);
             }
-            
-            const link = document.createElement('a');
-            link.download = 'qr-code.png';
-            link.href = dataURL;
-            link.click();
         }
 
         function moveSlider(galleryId, direction) {
