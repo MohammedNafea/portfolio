@@ -346,6 +346,7 @@
     <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
         <div class="qr-content" onclick="event.stopPropagation()">
             <span class="close-lightbox" onclick="closeQRModal()">&times;</span>
+            <img id="qrCrownImg" src="fire_crown.jpg" alt="Crown" class="qr-crown-img" style="display: none;">
             <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
             <div id="qrCodeContainer"></div>
             <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
@@ -463,6 +464,9 @@
             const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
             
+            // Hide crown for site QR
+            document.getElementById('qrCrownImg').style.display = 'none';
+            
             // Set title/desc for site QR
             document.getElementById('qrModalTitle').innerText = dictionary['qr_modal_title'] || 'QR Code';
             document.getElementById('qrModalDesc').innerText = dictionary['qr_modal_desc'] || 'Scan to open on mobile';
@@ -484,6 +488,9 @@
             const qrContainer = document.getElementById('qrCodeContainer');
             const dictionary = translations[currentLang];
             qrContainer.innerHTML = '';
+
+            // Show crown for contact QR
+            document.getElementById('qrCrownImg').style.display = 'block';
 
             // Set title/desc for contact QR
             document.getElementById('qrModalTitle').innerText = dictionary['contact_qr_title'] || 'Contact QR';
