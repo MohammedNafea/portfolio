@@ -24,6 +24,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <link rel="manifest" href="manifest.json">
     <style>
         /* Preloader */
         #preloader {
@@ -142,6 +144,9 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-content">
@@ -274,7 +279,7 @@
         <section class="page">
             <h2 class="section-title"><i class="fas fa-rocket"></i> <span data-i18n="projects_title">المشاريع الرئيسية</span></h2>
             
-            <div class="project-card" data-aos="fade-up">
+            <div class="project-card" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                 <div class="project-header">
                     <h3><i class="fas fa-map-marked-alt"></i> <span data-i18n="guide_me_title">Guide Me – تطبيق سياحي</span></h3>
                     <span class="date">2024</span>
@@ -302,7 +307,7 @@
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                 <div class="project-header">
                     <h3><i class="fas fa-chart-line"></i> <span data-i18n="data_bootcamp_title">معسكر تحليل البيانات</span></h3>
                     <span class="date">2026</span>
@@ -329,7 +334,7 @@
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                 <div class="project-header">
                     <h3><i class="fas fa-vial"></i> <span data-i18n="chem_title">Wonders of Chemistry</span></h3>
                     <span class="date">04/02/2026 – 14/02/2026</span>
@@ -359,7 +364,7 @@
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                 <div class="project-header">
                     <h3><i class="fas fa-code-branch"></i> <span data-i18n="mac_title">مشاريع مبادرة مليون مبرمج عربي</span></h3>
                     <span class="date">2017</span>
@@ -400,21 +405,21 @@
 
             <h2 class="section-title" data-aos="fade-right"><i class="fas fa-certificate"></i> <span data-i18n="certs_title">الشهادات</span></h2>
             <div class="cert-grid">
-                <div class="card cert-card">
+                <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
                     <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
                     <div class="cert-media-container">
                         <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
                     </div>
                 </div>
-                <div class="card cert-card">
+                <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
                     <p class="cert-date">2026</p>
                     <div class="cert-media-container">
                         <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
                     </div>
                 </div>
-                <div class="card cert-card">
+                <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="mac_title">مبادرة مليون مبرمج عربي</h4>
                     <p class="cert-date">2017</p>
                     <div class="cert-media-container slider-container" id="cert-gallery">
@@ -459,6 +464,27 @@
     <script src="translations.js"></script>
     <script src="cv-generator.js"></script>
     <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        });
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+
         // Init AOS
         AOS.init({
             duration: 1000,
