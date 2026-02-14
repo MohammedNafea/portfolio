@@ -1,8 +1,9 @@
-const CACHE_NAME = 'nafea-portfolio-v4';
+const CACHE_NAME = 'nafea-portfolio-v5';
 const ASSETS = [
   './',
   './index.html',
   './404.html',
+  './offline.html',
   './style.css',
   './translations.js',
   './cv-generator.js',
@@ -41,15 +42,29 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetch: network-first strategy (try network, fallback to cache)
+// Fetch: network-first, fallback to cache, then offline page for navigation
 self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    fetch(e.request)
-      .then((response) => {
-        const clone = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
-        return response;
-      })
-      .catch(() => caches.match(e.request))
-  );
+  if (e.request.mode === 'navigate') {
+    // For page navigation: network → cache → offline.html
+    e.respondWith(
+      fetch(e.request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
+          return response;
+        })
+        .catch(() => caches.match(e.request).then((r) => r || caches.match('./offline.html')))
+    );
+  } else {
+    // For other resources: network → cache
+    e.respondWith(
+      fetch(e.request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone));
+          return response;
+        })
+        .catch(() => caches.match(e.request))
+    );
+  }
 });

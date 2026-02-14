@@ -26,7 +26,7 @@
     </script>
     <title>ملف أعمال - محمد نافع</title>
     <link rel="icon" href="fire_crown.webp" type="image/webp">
-    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="fire_crown.webp">
     
     <!-- Open Graph / SEO -->
     <meta property="og:title" content="ملف أعمال - محمد نافع | Mobile App Developer">
@@ -203,6 +203,15 @@
 
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
+
+    <!-- Noscript Fallback -->
+    <noscript>
+        <div style="background:#111;color:#fff;text-align:center;padding:40px 20px;font-family:'Cairo',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+            <h1 style="color:#FF0000;font-size:2rem;">⚠️ JavaScript Required</h1>
+            <p style="margin-top:15px;font-size:1.1rem;color:#ccc;">هذا الموقع يحتاج تفعيل JavaScript للعمل بشكل صحيح.</p>
+            <p style="margin-top:5px;font-size:1.1rem;color:#ccc;">This website requires JavaScript to function properly.</p>
+        </div>
+    </noscript>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -493,22 +502,22 @@
                 </form>
                 
                 <div class="contact-info">
-                    <a href="https://github.com/MohammedNafea" target="_blank" class="social-link github" title="GitHub">
+                    <a href="https://github.com/MohammedNafea" target="_blank" rel="noopener noreferrer" class="social-link github" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/mohammednafea" target="_blank" class="social-link linkedin" title="LinkedIn">
+                    <a href="https://linkedin.com/in/mohammednafea" target="_blank" rel="noopener noreferrer" class="social-link linkedin" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://x.com/KingDarkmn" target="_blank" class="social-link twitter" title="X (Twitter)">
+                    <a href="https://x.com/KingDarkmn" target="_blank" rel="noopener noreferrer" class="social-link twitter" title="X (Twitter)">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://t.me/king_darkmn" target="_blank" class="social-link telegram" title="Telegram">
+                    <a href="https://t.me/king_darkmn" target="_blank" rel="noopener noreferrer" class="social-link telegram" title="Telegram">
                         <i class="fab fa-telegram"></i>
                     </a>
                     <a href="mailto:king.darkmn@gmail.com" class="social-link email" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                    <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" rel="noopener noreferrer" class="social-link whatsapp" title="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -847,6 +856,12 @@
             
             const qrBtn = document.getElementById('qrBtn');
             if (qrBtn) qrBtn.title = dictionary['qr_btn_title'];
+
+            const soundBtn = document.getElementById('soundToggle');
+            if (soundBtn) soundBtn.title = dictionary['sound_toggle_title'] || 'Mute/Unmute Sounds';
+
+            const scrollBtn = document.getElementById('scrollTop');
+            if (scrollBtn) scrollBtn.title = dictionary['scroll_top_title'] || 'Go to Top';
 
             // Update Direction
             const rtlLanguages = ['ar', 'ur'];

@@ -1473,6 +1473,55 @@ body.light-mode #preloader {
     border-color: #25D366;
 }
 
+.social-link.linkedin:hover {
+    background: #0A66C2;
+    box-shadow: 0 0 15px #0A66C2;
+    border-color: #0A66C2;
+}
+
+.social-link.telegram:hover {
+    background: #0088CC;
+    box-shadow: 0 0 15px #0088CC;
+    border-color: #0088CC;
+}
+
+.social-link.github:hover {
+    background: #6e5494;
+    box-shadow: 0 0 15px #6e5494;
+    border-color: #6e5494;
+}
+
+.social-link.twitter:hover {
+    background: #1DA1F2;
+    box-shadow: 0 0 15px #1DA1F2;
+    border-color: #1DA1F2;
+}
+
+.social-link.email:hover {
+    background: var(--neon-red);
+    box-shadow: 0 0 15px var(--neon-red);
+    border-color: var(--neon-red);
+}
+
+/* Skeleton Loading for Images */
+.slider-wrapper img {
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+body.light-mode .slider-wrapper img {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+}
+
+@keyframes skeleton-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
 /* Footer */
 .main-footer {
     text-align: center;
