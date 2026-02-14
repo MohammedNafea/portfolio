@@ -63,7 +63,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <link rel="manifest" href="manifest.json">
@@ -329,9 +329,9 @@
                     <button class="contact-qr-btn" onclick="showContactQR()">
                         <i class="fas fa-address-card"></i> <span data-i18n="save_contact_qr">حفظ بيانات التواصل (QR)</span>
                     </button>
-                    <button class="contact-qr-btn" onclick="generateAndDownloadCV()">
+                    <a href="Mohamed_Nafea_CV_ATS.pdf" download class="contact-qr-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">
                         <i class="fas fa-file-pdf"></i> <span data-i18n="download_cv">تحميل السيرة الذاتية (PDF)</span>
-                    </button>
+                    </a>
                 </div>
             </section>
 
