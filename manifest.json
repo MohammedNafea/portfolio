@@ -8,14 +8,14 @@
   "description": "Mohammed Nafea - Mobile App Developer Portfolio",
   "icons": [
     {
-      "src": "fire_crown.jpg",
+      "src": "fire_crown.webp",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/webp"
     },
     {
-      "src": "fire_crown.jpg",
+      "src": "fire_crown.webp",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/webp"
     }
   ]
 }
