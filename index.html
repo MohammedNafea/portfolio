@@ -150,9 +150,12 @@
                         </div>
                     </a>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
+                <div style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                     <button class="contact-qr-btn" onclick="showContactQR()">
                         <i class="fas fa-address-card"></i> <span data-i18n="save_contact_qr">حفظ بيانات التواصل (QR)</span>
+                    </button>
+                    <button class="contact-qr-btn" onclick="generateAndDownloadCV()">
+                        <i class="fas fa-file-pdf"></i> <span data-i18n="download_cv">تحميل السيرة الذاتية (PDF)</span>
                     </button>
                 </div>
             </section>
@@ -356,7 +359,9 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="translations.js"></script>
+    <script src="cv-generator.js"></script>
     <script>
         let currentImages = [];
         let currentIndex = 0;
