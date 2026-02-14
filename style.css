@@ -52,6 +52,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
@@ -174,6 +175,7 @@ body.light-mode .page {
 
 .page {
     min-height: 100vh; /* Better for web view */
+    min-height: -webkit-fill-available; /* iOS Safari fix */
     padding: clamp(20px, 5vw, 60px);
     background-color: var(--bg-color);
     position: relative;
@@ -1768,6 +1770,40 @@ p, .project-details, .contact-subtitle {
     transform: translate(0);
 }
 
+/* iOS Safari: Prevent hover states from sticking on touch */
+@media (hover: none) and (pointer: coarse) {
+    .social-link:hover {
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        border-color: var(--neon-red);
+    }
+    .social-link:active {
+        background: var(--neon-red);
+        color: white;
+        transform: scale(0.95);
+    }
+    .social-link.whatsapp:active {
+        background: #25D366;
+        border-color: #25D366;
+    }
+    .social-link.linkedin:active {
+        background: #0A66C2;
+        border-color: #0A66C2;
+    }
+    .social-link.telegram:active {
+        background: #0088CC;
+        border-color: #0088CC;
+    }
+    .social-link.github:active {
+        background: #6e5494;
+        border-color: #6e5494;
+    }
+    .social-link.twitter:active {
+        background: #1DA1F2;
+        border-color: #1DA1F2;
+    }
+}
 /* Flexbox Gap Polyfill (Safari 12-14) */
 @supports not (gap: 1em) {
     .tech-icons > *, .contact-info > *, .skills-grid > * {
