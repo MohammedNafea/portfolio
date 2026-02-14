@@ -223,6 +223,9 @@
         <button id="themeToggle" class="icon-btn" onclick="toggleTheme()" title="Switch Theme" aria-label="Switch Theme">
             <i class="fas fa-sun"></i>
         </button>
+        <button id="soundToggle" class="icon-btn" onclick="toggleSound()" title="Mute/Unmute Sounds" aria-label="Mute/Unmute Sounds">
+            <i class="fas fa-volume-up"></i>
+        </button>
         <button id="qrBtn" class="icon-btn" onclick="showQRCode()" title="Show QR Code" aria-label="Show QR Code">
             <i class="fas fa-qrcode"></i>
         </button>
@@ -284,6 +287,13 @@
                             <p>KingDarkmn</p>
                         </div>
                     </a>
+                    <a href="https://linkedin.com/in/mohammednafea" target="_blank" class="contact-item" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <span data-i18n="linkedin_label">LinkedIn</span>
+                            <p>mohammednafea</p>
+                        </div>
+                    </a>
                     <a href="https://t.me/king_darkmn" target="_blank" class="contact-item" aria-label="Telegram">
                         <i class="fab fa-telegram"></i>
                         <div>
@@ -330,13 +340,13 @@
                 <div class="project-gallery slider-container" id="guide-me-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="guide_me_1_splash.webp" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy">
-                        <img src="guide_me_2_login.webp" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login" loading="lazy">
-                        <img src="guide_me_4.webp" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy">
-                        <img src="guide_me_5.webp" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy">
-                        <img src="guide_me_6_profile.webp" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile" loading="lazy">
-                        <img src="guide_me_7_home.webp" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home" loading="lazy">
-                        <img src="guide_me_8_splash2.webp" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy">
+                        <img src="guide_me_1_splash.webp" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy" width="360" height="640">
+                        <img src="guide_me_2_login.webp" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login" loading="lazy" width="360" height="640">
+                        <img src="guide_me_4.webp" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy" width="360" height="640">
+                        <img src="guide_me_5.webp" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy" width="360" height="640">
+                        <img src="guide_me_6_profile.webp" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile" loading="lazy" width="360" height="640">
+                        <img src="guide_me_7_home.webp" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home" loading="lazy" width="360" height="640">
+                        <img src="guide_me_8_splash2.webp" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy" width="360" height="640">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
@@ -356,12 +366,12 @@
                 <div class="project-gallery slider-container" id="data-bootcamp-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="data_bootcamp_1.webp" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
-                        <img src="data_bootcamp_2.webp" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
-                        <img src="data_bootcamp_3.webp" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy">
-                        <img src="data_bootcamp_4.webp" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy">
-                        <img src="data_bootcamp_5.webp" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_3" loading="lazy">
-                        <img src="data_bootcamp_6.webp" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
+                        <img src="data_bootcamp_1.webp" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450">
+                        <img src="data_bootcamp_2.webp" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450">
+                        <img src="data_bootcamp_3.webp" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy" width="800" height="450">
+                        <img src="data_bootcamp_4.webp" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy" width="800" height="450">
+                        <img src="data_bootcamp_5.webp" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_3" loading="lazy" width="800" height="450">
+                        <img src="data_bootcamp_6.webp" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
@@ -382,14 +392,14 @@
                 <div class="project-gallery slider-container" id="chemistry-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="chem_1.webp" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy">
-                        <img src="chem_2.webp" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy">
-                        <img src="chem_4.webp" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2" loading="lazy">
-                        <img src="chem_6.webp" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
-                        <img src="chem_8.webp" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
-                        <img src="chem_9.webp" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
-                        <img src="chem_10.webp" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
-                        <img src="chem_11.webp" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
+                        <img src="chem_1.webp" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy" width="360" height="640">
+                        <img src="chem_2.webp" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy" width="360" height="640">
+                        <img src="chem_4.webp" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2" loading="lazy" width="360" height="640">
+                        <img src="chem_6.webp" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy" width="360" height="640">
+                        <img src="chem_8.webp" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy" width="360" height="640">
+                        <img src="chem_9.webp" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy" width="360" height="640">
+                        <img src="chem_10.webp" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy" width="360" height="640">
+                        <img src="chem_11.webp" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy" width="360" height="640">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
@@ -409,7 +419,7 @@
                 <div class="project-gallery slider-container" id="mac-work-gallery">
                     <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="mac_project_work.webp" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_mac_project" loading="lazy">
+                        <img src="mac_project_work.webp" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_mac_project" loading="lazy" width="800" height="450">
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
@@ -423,14 +433,14 @@
                     <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
                     <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
                     <div class="cert-media-container">
-                        <img src="flutter_cert.webp" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
+                        <img src="flutter_cert.webp" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
                     </div>
                 </div>
                 <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
                     <p class="cert-date">2026</p>
                     <div class="cert-media-container">
-                        <img src="data_cert.webp" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
+                        <img src="data_cert.webp" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
                     </div>
                 </div>
                 <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
@@ -439,8 +449,8 @@
                     <div class="cert-media-container slider-container" id="cert-gallery">
                         <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                         <div class="slider-wrapper">
-                            <img src="mac_cert_1.webp" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
-                            <img src="mac_cert_2.webp" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
+                            <img src="mac_cert_1.webp" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
+                            <img src="mac_cert_2.webp" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
                         </div>
                         <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                     </div>
@@ -484,6 +494,9 @@
                     <a href="mailto:king.darkmn@gmail.com" class="social-link email" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
+                    <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="social-link whatsapp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -494,13 +507,9 @@
         </footer>
 
         <!-- Floating Buttons -->
-        <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
 
-        <button id="soundToggle" class="sound-btn" onclick="toggleSound()" title="Mute/Unmute Sounds" aria-label="Mute/Unmute Sounds">
-            <i class="fas fa-volume-up"></i>
-        </button>
+
+
 
         <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top" aria-label="Scroll to Top">
             <i class="fas fa-arrow-up"></i>
@@ -521,7 +530,7 @@
     <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
         <div class="qr-content" onclick="event.stopPropagation()">
             <span class="close-lightbox" onclick="closeQRModal()" aria-label="Close Modal">&times;</span>
-            <img id="qrCrownImg" src="fire_crown.webp" alt="Crown" class="qr-crown-img" style="display: none;">
+            <img id="qrCrownImg" src="fire_crown.webp" alt="Crown" class="qr-crown-img" style="display: none;" width="192" height="192">
             <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
             <div id="qrCodeContainer"></div>
             <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>

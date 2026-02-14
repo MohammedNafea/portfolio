@@ -1547,12 +1547,6 @@ body.light-mode .main-footer {
 
 
 
-/* Adjust WhatsApp Button Position */
-.whatsapp-btn {
-    bottom: 90px;
-    transition: 0.3s;
-}
-
 @media (max-width: 768px) {
     .scroll-top-btn {
         bottom: 20px;
@@ -1561,16 +1555,12 @@ body.light-mode .main-footer {
         height: 45px;
         font-size: 1.2rem;
     }
-    .whatsapp-btn {
-        bottom: 80px;
-    }
 }
 
 /* Print Styles */
 @media print {
     /* Hide non-essential elements */
     .lang-switcher,
-    .whatsapp-btn,
     .scroll-top-btn,
     .sound-btn,
     .cursor, 
@@ -1733,4 +1723,25 @@ p, .project-details, .contact-subtitle {
 /* Smooth Scrolling for iOS */
 html {
     -webkit-overflow-scrolling: touch;
+}
+
+/* Sound Button in Header */
+.lang-switcher #soundToggle {
+    position: static;
+    transform: none;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: none;
+    color: var(--neon-red);
+    font-size: 1.2rem;
+    display: inline-flex;
+    margin: 0 5px;
+}
+
+.lang-switcher #soundToggle:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: scale(1.1);
 }

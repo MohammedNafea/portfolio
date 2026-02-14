@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nafea-portfolio-v2';
+const CACHE_NAME = 'nafea-portfolio-v3';
 const ASSETS = [
   './',
   './index.html',
@@ -7,7 +7,9 @@ const ASSETS = [
   './translations.js',
   './cv-generator.js',
   './manifest.json',
-  './fire_crown.jpg',
+  './fire_crown.webp',
+  './sitemap.xml',
+  './robots.txt',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap',
   'https://unpkg.com/aos@2.3.1/dist/aos.css',
