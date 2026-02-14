@@ -1229,6 +1229,104 @@ img {
     font-size: 1.2em;
 }
 
+/* ============ ADVANCED UI FEATURES ============ */
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    font-size: 4rem;
+    color: var(--neon-red);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+body.light-mode #preloader {
+    background: #ffffff;
+}
+
+/* Custom Cursor */
+.cursor, .cursor-follower {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.cursor {
+    width: 8px;
+    height: 8px;
+    background: var(--neon-red);
+}
+
+.cursor-follower {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--neon-red);
+    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+}
+
+.cursor-follower.active {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 0, 0, 0.1);
+    border-color: transparent;
+}
+
+@media (min-width: 992px) {
+    .cursor, .cursor-follower {
+        display: block;
+    }
+    
+    /* Hide default cursor on interactive elements when custom cursor is active */
+    a, button, .card, input, select, textarea, .project-card, .cert-card {
+        cursor: none;
+    }
+    
+    body {
+        cursor: none;
+    }
+}
+
+/* Particles Container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Ensure content is above particles */
+.cover .content, .cover .tech-icons, .cover .glow-bg {
+    z-index: 2;
+    position: relative;
+}
+
 
 /* Print Optimization */
 @media print {
