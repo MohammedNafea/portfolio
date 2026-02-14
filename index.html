@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         .lang-switcher {
@@ -88,14 +89,14 @@
     </div>
     <div class="pdf-container">
         <!-- Cover Page -->
-        <section class="page cover">
+        <section class="page cover" data-aos="fade-in">
             <div class="glow-bg"></div>
             <div class="content">
                 <h1 class="neon-text" data-i18n="name">محمد فتح الله <span class="highlight">نافع</span></h1>
                 <p class="subtitle" data-i18n="role">مطور تطبيقات جوال | مطور Flutter | مطور Java</p>
                 <div class="decorative-line"></div>
             </div>
-            <div class="tech-icons">
+            <div class="tech-icons" data-aos="fade-up" data-aos-delay="200">
                 <i class="fab fa-flutter"></i>
                 <i class="fab fa-android"></i>
                 <i class="fab fa-java"></i>
@@ -104,7 +105,7 @@
         </section>
 
         <!-- Summary & Education Page -->
-        <section class="page">
+        <section class="page" data-aos="fade-up">
             <h2 class="section-title"><i class="fas fa-user-tie"></i> <span data-i18n="summary_title">الملخص المهني</span></h2>
             <div class="card about-card">
                 <p data-i18n="summary_text">مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية محددة بكفاءة تشغيلية عالية.</p>
@@ -180,7 +181,7 @@
         <section class="page">
             <h2 class="section-title"><i class="fas fa-rocket"></i> <span data-i18n="projects_title">المشاريع الرئيسية</span></h2>
             
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up">
                 <div class="project-header">
                     <h3><i class="fas fa-map-marked-alt"></i> <span data-i18n="guide_me_title">Guide Me – تطبيق سياحي</span></h3>
                     <span class="date">2024</span>
@@ -208,7 +209,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-header">
                     <h3><i class="fas fa-chart-line"></i> <span data-i18n="data_bootcamp_title">معسكر تحليل البيانات</span></h3>
                     <span class="date">2026</span>
@@ -235,7 +236,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-header">
                     <h3><i class="fas fa-vial"></i> <span data-i18n="chem_title">Wonders of Chemistry</span></h3>
                     <span class="date">04/02/2026 – 14/02/2026</span>
@@ -265,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-header">
                     <h3><i class="fas fa-code-branch"></i> <span data-i18n="mac_title">مشاريع مبادرة مليون مبرمج عربي</span></h3>
                     <span class="date">2017</span>
@@ -283,7 +284,7 @@
             </div>
 
             <!-- Skills Section -->
-            <h2 class="section-title"><i class="fas fa-laptop-code"></i> <span data-i18n="tech_skills_title">المهارات التقنية</span></h2>
+            <h2 class="section-title" data-aos="fade-right"><i class="fas fa-laptop-code"></i> <span data-i18n="tech_skills_title">المهارات التقنية</span></h2>
             <div class="skills-grid">
                 <div class="skill-item"><i class="fab fa-flutter"></i> Flutter</div>
                 <div class="skill-item"><i class="fas fa-bullseye"></i> Dart</div>
@@ -295,7 +296,7 @@
                 <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
             </div>
 
-            <h2 class="section-title"><i class="fas fa-user-check"></i> <span data-i18n="soft_skills_title">المهارات الأساسية</span></h2>
+            <h2 class="section-title" data-aos="fade-right"><i class="fas fa-user-check"></i> <span data-i18n="soft_skills_title">المهارات الأساسية</span></h2>
             <div class="skills-grid">
                 <div class="skill-item" data-i18n="skill_problem_solving">حل المشكلات</div>
                 <div class="skill-item" data-i18n="skill_analytical">التفكير التحليلي</div>
@@ -304,7 +305,7 @@
                 <div class="skill-item" data-i18n="skill_communication">التواصل</div>
             </div>
 
-            <h2 class="section-title"><i class="fas fa-certificate"></i> <span data-i18n="certs_title">الشهادات</span></h2>
+            <h2 class="section-title" data-aos="fade-right"><i class="fas fa-certificate"></i> <span data-i18n="certs_title">الشهادات</span></h2>
             <div class="cert-grid">
                 <div class="card cert-card">
                     <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
@@ -360,9 +361,44 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="translations.js"></script>
     <script src="cv-generator.js"></script>
     <script>
+        // Init AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Typed.js instance
+        let typed;
+
+        function initTyped(strings) {
+            if (typed) typed.destroy();
+            
+            // If strings not provided or empty, fallback
+            if (!strings || strings.length === 0) return;
+
+            // The subtitle element
+            const subtitle = document.querySelector('.subtitle');
+            if (subtitle) {
+                // Clear existing text content to let Typed.js take over
+                subtitle.innerHTML = ''; 
+                typed = new Typed('.subtitle', {
+                    strings: strings,
+                    typeSpeed: 50,
+                    backSpeed: 30,
+                    backDelay: 2000,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '|',
+                });
+            }
+        }
+
         let currentImages = [];
         let currentIndex = 0;
         let currentLang = localStorage.getItem('selectedLang') || 'ar';
@@ -403,6 +439,10 @@
                         el.innerHTML = icon.outerHTML + ' ' + dictionary[key];
                     } else if (key === 'name') {
                         el.innerHTML = dictionary[key];
+                    } else if (key === 'role') {
+                        // Handle Typed.js for role
+                        const roles = dictionary[key].split('|').map(s => s.trim());
+                        initTyped(roles);
                     } else {
                         el.innerText = dictionary[key];
                     }

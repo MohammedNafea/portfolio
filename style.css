@@ -53,19 +53,40 @@ body.light-mode .neon-text {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
-body.light-mode .about-card, body.light-mode .project-card, body.light-mode .cert-card, body.light-mode .cert-media-container {
-    border: 1px solid #e0e0e0;
+/* Glassmorphism Classes */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.light-mode .contact-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
-    color: var(--text-white);
+body.light-mode .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
-body.light-mode .skill-item {
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+/* Update existing card styles to use glass effect */
+.project-card, .cert-card, .contact-item, .skill-item, .about-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body.light-mode .project-card, 
+body.light-mode .cert-card, 
+body.light-mode .contact-item, 
+body.light-mode .skill-item, 
+body.light-mode .about-card {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 body.light-mode .project-gallery img, body.light-mode .slider-wrapper img {
@@ -1139,9 +1160,17 @@ img {
         margin-bottom: 7px;
     }
     .slider-wrapper > * {
-        margin-right: 10px;
+        margin: 0 10px;
     }
 }
+
+/* Typed.js Cursor */
+.typed-cursor {
+    color: var(--neon-red);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 
 /* Print Optimization */
 @media print {
