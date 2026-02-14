@@ -351,6 +351,67 @@
             </ul>
         </section>
 
+        <!-- Skills Page -->
+        <section class="page" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-code"></i> <span data-i18n="tech_skills_title">المهارات التقنية</span></h2>
+            <div class="skills-grid">
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fab fa-flutter" style="color: #02569B; font-size: 2rem;"></i>
+                    <h4>Flutter</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fab fa-dart-lang" style="color: #0175C2; font-size: 2rem;"></i>
+                    <h4>Dart</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fab fa-java" style="color: #ED8B00; font-size: 2rem;"></i>
+                    <h4>Java</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fab fa-android" style="color: #3DDC84; font-size: 2rem;"></i>
+                    <h4>Android Studio</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-fire" style="color: #FFCA28; font-size: 2rem;"></i>
+                    <h4>Firebase</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fab fa-git-alt" style="color: #F05032; font-size: 2rem;"></i>
+                    <h4>Git & GitHub</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 40px;"><i class="fas fa-users"></i> <span data-i18n="soft_skills_title">المهارات الأساسية</span></h2>
+            <div class="skills-grid">
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-lightbulb" style="color: #FFD700; font-size: 2rem;"></i>
+                    <h4 data-i18n="skill_problem_solving">حل المشكلات</h4>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-brain" style="color: #FF6B6B; font-size: 2rem;"></i>
+                    <h4 data-i18n="skill_analytical">التفكير التحليلي</h4>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-people-carry" style="color: #4FC3F7; font-size: 2rem;"></i>
+                    <h4 data-i18n="skill_teamwork">العمل الجماعي</h4>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-clock" style="color: #81C784; font-size: 2rem;"></i>
+                    <h4 data-i18n="skill_time_mgmt">إدارة الوقت</h4>
+                </div>
+                <div class="skill-item glass-card" data-tilt data-tilt-max="5" data-tilt-speed="400">
+                    <i class="fas fa-comments" style="color: #CE93D8; font-size: 2rem;"></i>
+                    <h4 data-i18n="skill_communication">التواصل</h4>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Page -->
         <section class="page">
             <h2 class="section-title"><i class="fas fa-rocket"></i> <span data-i18n="projects_title">المشاريع الرئيسية</span></h2>
@@ -766,6 +827,12 @@
             // The subtitle element
             const subtitle = document.querySelector('.subtitle');
             if (subtitle) {
+                // Safety check: ensure Typed.js library is loaded
+                if (typeof Typed === 'undefined') {
+                    // Fallback: show first string as static text
+                    subtitle.textContent = strings[0];
+                    return;
+                }
                 // Clear existing text content to let Typed.js take over
                 subtitle.innerHTML = ''; 
                 typed = new Typed('.subtitle', {
