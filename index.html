@@ -7,6 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#000000">
     <title>ملف أعمال - محمد نافع</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -438,8 +439,7 @@
                     if (icon) {
                         el.innerHTML = icon.outerHTML + ' ' + dictionary[key];
                     } else if (key === 'name') {
-                        // Handle Typed.js for name
-                        initTypedName(dictionary[key]);
+                        el.innerHTML = dictionary[key];
                     } else if (key === 'role') {
                         // Handle Typed.js for role
                         const roles = dictionary[key].split('|').map(s => s.trim());
@@ -449,32 +449,6 @@
                     }
                 }
             });
-
-            // Update Image Alt Text
-
-
-        // Typed.js instance for Name
-        let typedName;
-
-        function initTypedName(nameString) {
-            if (typedName) typedName.destroy();
-            
-            const nameEl = document.querySelector('[data-i18n="name"]');
-            if (nameEl) {
-                nameEl.innerHTML = ''; 
-                typedName = new Typed('[data-i18n="name"]', {
-                    strings: [nameString],
-                    typeSpeed: 80,
-                    backSpeed: 50,
-                    showCursor: false, // No cursor for the main title looks cleaner usually, or enabled but hidden after
-                    contentType: 'html', // Important for the <span> class="highlight"
-                    onComplete: (self) => {
-                        // Optional: Add cursor removal or keep breathing effect
-                        // self.cursor.remove(); 
-                    }
-                });
-            }
-        }
 
             // Update Image Alt Text
             document.querySelectorAll('[data-i18n-alt]').forEach(el => {

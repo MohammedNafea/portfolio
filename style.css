@@ -14,6 +14,15 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
 }
 
 html {
@@ -686,6 +695,55 @@ img {
     .qr-content {
         max-width: 280px;
         padding: 25px;
+    }
+    .qr-content {
+        max-width: 280px;
+        padding: 25px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .neon-text {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .page {
+        padding: 20px 15px;
+    }
+
+    .tech-icons {
+        gap: 15px;
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .card, .project-card, .about-card {
+        padding: 20px 15px;
+    }
+
+    .project-gallery, .cert-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider-wrapper img {
+        flex: 0 0 calc(100% - 10px);
+        min-width: calc(100% - 10px);
+    }
+
+    .contact-item {
+        padding: 12px;
+        font-size: 0.9rem;
     }
 }
 
