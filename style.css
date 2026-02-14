@@ -1467,6 +1467,12 @@ body.light-mode #preloader {
     border-color: var(--neon-red);
 }
 
+.social-link.whatsapp:hover {
+    background: #25D366;
+    box-shadow: 0 0 15px #25D366;
+    border-color: #25D366;
+}
+
 /* Footer */
 .main-footer {
     text-align: center;
