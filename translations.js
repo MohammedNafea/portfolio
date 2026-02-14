@@ -1,7 +1,7 @@
 const translations = {
     ar: {
         title: "ملف أعمال - محمد نافع",
-        name: "محمد فتح الله نافع",
+        name: "محمد فتح الله <span class=\"highlight\">نافع</span>",
         role: "مطور تطبيقات جوال | مطور Flutter | مطور Java",
         summary_title: "الملخص المهني",
         summary_text: "مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية محددة بكفاءة تشغيلية عالية.",
@@ -42,7 +42,7 @@ const translations = {
     },
     en: {
         title: "Portfolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Mobile App Developer | Flutter Developer | Java Developer",
         summary_title: "Professional Summary",
         summary_text: "Android developer with experience in Flutter, Dart, and Java. Experienced in developing scalable mobile applications, Firebase integration, and version control using Git. Capable of delivering projects within deadlines with high operational efficiency.",
@@ -83,7 +83,7 @@ const translations = {
     },
     es: {
         title: "Portafolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Desarrollador de Apps Móviles | Desarrollador Flutter | Desarrollador Java",
         summary_title: "Resumen Profesional",
         summary_text: "Desarrollador Android con experiencia en Flutter, Dart y Java. Experiencia en desarrollo de aplicaciones móviles escalables, integración de Firebase y control de versiones con Git.",
@@ -124,7 +124,7 @@ const translations = {
     },
     fr: {
         title: "Portfolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Développeur Mobile | Développeur Flutter | Développeur Java",
         summary_title: "Résumé Professionnel",
         summary_text: "Développeur Android expérimenté en Flutter, Dart et Java. Spécialisé dans les applications mobiles évolutives et l'intégration Firebase.",
@@ -165,7 +165,7 @@ const translations = {
     },
     de: {
         title: "Portfolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Mobile App Entwickler | Flutter Entwickler | Java Entwickler",
         summary_title: "Berufliche Zusammenfassung",
         summary_text: "Android-Entwickler mit Erfahrung in Flutter, Dart und Java. Erfahren in skalierbaren mobilen Anwendungen und Firebase-Integration.",
@@ -206,7 +206,7 @@ const translations = {
     },
     zh: {
         title: "个人作品集 - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "移动应用开发 | Flutter 开发 | Java 开发",
         summary_title: "职业总结",
         summary_text: "拥有 Flutter、Dart 和 Java 经验的 Android 开发人员。擅长开发可扩展的移动应用、Firebase 集成和 Git 版本控制。",
@@ -247,7 +247,7 @@ const translations = {
     },
     ja: {
         title: "ポートフォリオ - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "モバイルアプリ開発 | Flutter 開発 | Java 開発",
         summary_title: "プロフェッショナルサマリー",
         summary_text: "Flutter、Dart、Javaの実績を持つAndroid開発者。拡張性の高いモバイルアプリ、Firebase連携、Gitによるバージョン管理の経験があります。",
@@ -288,7 +288,7 @@ const translations = {
     },
     ru: {
         title: "Портфолио - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Разработчик мобильных приложений | Flutter | Java",
         summary_title: "Профессиональное резюме",
         summary_text: "Android-разработчик с опытом работы в Flutter, Dart и Java. Опыт разработки масштабируемых мобильных приложений и интеграции Firebase.",
@@ -329,7 +329,7 @@ const translations = {
     },
     tr: {
         title: "Portfolyo - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Mobil Uygulama Geliştirici | Flutter Geliştirici | Java Geliştirici",
         summary_title: "Profesyonel Özet",
         summary_text: "Flutter, Dart ve Java konularında deneyimli Android geliştirici. Ölçeklenebilir mobil uygulamalar, Firebase entegrasyonu ve Git ile versiyon kontrolü konularında deneyimlidir.",
@@ -370,7 +370,7 @@ const translations = {
     },
     pt: {
         title: "Portfólio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Desenvolvedor de Apps Móveis | Flutter | Java",
         summary_title: "Resumo Profissional",
         summary_text: "Desenvolvedor Android com experiência em Flutter, Dart e Java. Experiente no desenvolvimento de aplicações móveis escaláveis e integração com Firebase.",
@@ -411,7 +411,7 @@ const translations = {
     },
     it: {
         title: "Portfolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Sviluppatore App Mobile | Flutter | Java",
         summary_title: "Riepilogo Professionale",
         summary_text: "Sviluppatore Android con esperienza in Flutter, Dart e Java. Esperto nello sviluppo di applicazioni mobili scalabili e integrazione Firebase.",
@@ -452,7 +452,7 @@ const translations = {
     },
     ko: {
         title: "포트폴리오 - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "모바일 앱 개발자 | Flutter 개발자 | Java 개발자",
         summary_title: "전문가 요약",
         summary_text: "Flutter, Dart 및 Java 경험이 있는 Android 개발자입니다. 확장 가능한 모바일 애플리케이션 개발, Firebase 통합 및 Git을 활용한 버전 관리에 능숙합니다.",
@@ -493,7 +493,7 @@ const translations = {
     },
     id: {
         title: "Portofolio - Mohammed Nafea",
-        name: "Mohammed Fathallah Nafea",
+        name: "Mohammed Fathallah <span class=\"highlight\">Nafea</span>",
         role: "Pengembang Aplikasi Mobile | Flutter | Java",
         summary_title: "Ringkasan Profesional",
         summary_text: "Pengembang Android dengan pengalaman di Flutter, Dart, dan Java. Berpengalaman dalam mengembangkan aplikasi mobile yang dapat disksalakan dan integrasi Firebase.",
@@ -534,7 +534,7 @@ const translations = {
     },
     ur: {
         title: "پورٹ فولیو - محمد نافع",
-        name: "محمد فتح اللہ نافع",
+        name: "محمد فتح اللہ <span class=\"highlight\">نافع</span>",
         role: "موبائل ایپ ڈویلپر | فلٹر ڈویلپر | جاوا ڈویلپر",
         summary_title: "پیشہ ورانہ خلاصہ",
         summary_text: "فلٹر، ڈارٹ اور جاوا میں تجربہ رکھنے والے اینڈرائیڈ ڈویلپر۔ توسیع پذیر موبائل ایپلی کیشنز، فائر بیس انٹیگریشن، اور گٹ کے استعمال میں مہارت۔",
@@ -575,7 +575,7 @@ const translations = {
     },
     hi: {
         title: "पोर्टफोलियो - मोहम्मद नाफे",
-        name: "मोहम्मद फथल्लाह नाफे",
+        name: "मोहम्मद फथल्लाह <span class=\"highlight\">नाफे</span>",
         role: "मोबाइल ऐप डेवलपर | फ्लटर डेवलपर | जावा डेवलپر",
         summary_title: "पेशेवर सारांश",
         summary_text: "फ्लटर, डार्ट और जावा में अनुभव के साथ एंड्रॉइड डेवलपर। स्केलेबल मोबाइल एप्लिकेशन विकसित करने, फायरबेस एकीकरण और गिट का उपयोग करने में अनुभवी।",

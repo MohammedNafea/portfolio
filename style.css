@@ -67,6 +67,10 @@ body {
     z-index: 1;
 }
 
+.highlight {
+    color: #FF0000;
+}
+
 .neon-text {
     font-size: clamp(2rem, 12vw, 5rem);
     color: var(--text-white);

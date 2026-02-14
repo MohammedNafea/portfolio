@@ -331,6 +331,8 @@
                     if (icon) {
                         const iconHtml = icon.outerHTML;
                         el.innerHTML = iconHtml + ' ' + dictionary[key];
+                    } else if (key === 'name') {
+                        el.innerHTML = dictionary[key];
                     } else {
                         el.innerText = dictionary[key];
                     }
