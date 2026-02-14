@@ -23,8 +23,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.",
         chem_link: "زيارة المشروع",,
-        chem_link: "زيارة المشروع"
-        chem_link: "زيارة المشروع",
         mac_title: "مشاريع مبادرة مليون مبرمج عربي",
         mac_desc: "تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.",
         certs_title: "الشهادات",
@@ -66,8 +64,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Developing an interactive educational program to simplify chemistry concepts.",
         chem_link: "Visit Project",,
-        chem_link: "Visit Project"
-        chem_link: "Visit Project",
         mac_title: "One Million Arab Coders Projects",
         mac_desc: "Developing several basic Android apps as part of the Android Developer path.",
         certs_title: "Certifications",
@@ -109,8 +105,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Programa educativo interactivo para simplificar conceptos de química.",
         chem_link: "Visitar Proyecto",,
-        chem_link: "Visitar Proyecto"
-        chem_link: "Visitar Proyecto",
         mac_title: "Proyectos One Million Arab Coders",
         mac_desc: "Desarrollo de aplicaciones Android básicas en la ruta de desarrollador Android.",
         certs_title: "Certificaciones",
@@ -152,8 +146,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Programme éducatif interactif pour simplifier les concepts de chimie.",
         chem_link: "Visiter le Projet",,
-        chem_link: "Visiter le Projet"
-        chem_link: "Visiter le Projet",
         mac_title: "Projets One Million Arab Coders",
         mac_desc: "Développement d'applications Android de base.",
         certs_title: "Certifications",
@@ -195,8 +187,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Interaktives Lernprogramm zur Vereinfachung der Chemie.",
         chem_link: "Projekt Besuchen",,
-        chem_link: "Projekt Besuchen"
-        chem_link: "Projekt Besuchen",
         mac_title: "One Million Arab Coders Projekte",
         mac_desc: "Entwicklung grundlegender Android-Apps.",
         certs_title: "Zertifizierungen",
@@ -238,8 +228,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "开发互动教育程序以简化化学概念。",
         chem_link: "访问项目",,
-        chem_link: "访问项目"
-        chem_link: "访问项目",
         mac_title: "百万阿拉伯程序员项目",
         mac_desc: "作为 Android 开发人员路径的一部分开发了多个基础应用。",
         certs_title: "专业证书",
@@ -281,8 +269,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "化学の概念を簡素化するための対話型教育プログラムの開発。",
         chem_link: "プロジェクトを見る",,
-        chem_link: "プロジェクトを見る"
-        chem_link: "プロジェクトを見る",
         mac_title: "One Million Arab Coders プロジェクト",
         mac_desc: "Android開発者パスの一部として、複数の基本アプリを開発。",
         certs_title: "資格・認定",
@@ -324,8 +310,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Разработка интерактивной программы для упрощения химии.",
         chem_link: "Посетить Проект",,
-        chem_link: "Посетить Проект"
-        chem_link: "Посетить Проект",
         mac_title: "Проекты One Million Arab Coders",
         mac_desc: "Разработка базовых Android-приложений.",
         certs_title: "Сертификаты",
@@ -367,8 +351,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Kimya kavramlarını basitleştirmek için etkileşimli bir eğitim programı geliştirme.",
         chem_link: "Projeyi Ziyaret Et",,
-        chem_link: "Projeyi Ziyaret Et"
-        chem_link: "Projeyi Ziyaret Et",
         mac_title: "One Million Arab Coders Projeleri",
         mac_desc: "Android Geliştirici yolunun bir parçası olarak temel Android uygulamaları geliştirme.",
         certs_title: "Sertifikalar",
@@ -410,8 +392,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Programa educacional interativo para simplificar conceitos de química.",
         chem_link: "Visitar Projeto",,
-        chem_link: "Visitar Projeto"
-        chem_link: "Visitar Projeto",
         mac_title: "Projetos One Million Arab Coders",
         mac_desc: "Desenvolvimento de aplicativos Android básicos.",
         certs_title: "Certificações",
@@ -453,8 +433,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Programma educativo interattivo per semplificare i concetti di chimica.",
         chem_link: "Visita Progetto",,
-        chem_link: "Visita Progetto"
-        chem_link: "Visita Progetto",
         mac_title: "Progetti One Million Arab Coders",
         mac_desc: "Sviluppo di applicazioni Android di base.",
         certs_title: "Certificazioni",
@@ -496,8 +474,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "화학 개념을 단순화하기 위한 대화형 교육 프로그램 개발.",
         chem_link: "프로젝트 방문",,
-        chem_link: "프로젝트 방문"
-        chem_link: "프로젝트 방문",
         mac_title: "Million Arab Coders 프로젝트",
         mac_desc: "Android 개발자 경로의 일환으로 기본 Android 앱 개발.",
         certs_title: "자격 및 인증",
@@ -539,8 +515,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "Mengembangkan program pendidikan interaktif untuk menyederhanakan konsep kimia.",
         chem_link: "Kunjungi Proyek",,
-        chem_link: "Kunjungi Proyek"
-        chem_link: "Kunjungi Proyek",
         mac_title: "Proyek One Million Arab Coders",
         mac_desc: "Pengembangan beberapa aplikasi Android dasar.",
         certs_title: "Sertifikasi",
@@ -582,8 +556,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "کیمسٹری کے تصورات کو آسان بنانے کے لیے انٹرایکٹو تعلیمی پروگرام کی تیاری۔",
         chem_link: "پروجیکٹ دیکھیں",,
-        chem_link: "پروجیکٹ دیکھیں"
-        chem_link: "پروجیکٹ دیکھیں",
         mac_title: "ون ملین عرب کوڈرز پروجیکٹس",
         mac_desc: "اینڈرائیڈ ڈویلپر پاتھ کے حصے کے طور پر بنیادی اینڈرائیڈ ایپس کی تیاری۔",
         certs_title: "سرٹیفکیٹس",
@@ -625,8 +597,6 @@ const translations = {
         chem_title: "Wonders of Chemistry",
         chem_desc: "रसायन विज्ञान की अवधारणाओं को सरल बनाने के लिए इंटरैक्टिव शैक्षिक कार्यक्रम विकसित करना।",
         chem_link: "प्रोजेक्ट देखें",,
-        chem_link: "प्रोजेक्ट देखें"
-        chem_link: "प्रोजेक्ट देखें",
         mac_title: "वन मिलियन अरब कोडर्स प्रोजेक्ट्स",
         mac_desc: "एंड्रॉइड डेवलपर पथ के हिस्से के रूप में बुनियादी एंड्रॉइड ऐप विकसित करना।",
         certs_title: "प्रमाण पत्र",
