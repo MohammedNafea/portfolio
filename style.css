@@ -1626,3 +1626,94 @@ body.light-mode .main-footer {
         display: none !important;
     }
 }
+
+/* ============ CROSS-BROWSER & RESPONSIVE OPTIMIZATION ============ */
+
+/* Tablet Optimization (iPad & Tablets) */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .project-card, .cert-card {
+        padding: 20px;
+    }
+    
+    .tech-icons {
+        gap: 20px;
+        font-size: 2.2rem;
+    }
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Large Screens (2K/4K Optimization) */
+@media (min-width: 1400px) {
+    .container, .pdf-container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    
+    body {
+        font-size: 1.1rem;
+    }
+    
+    .project-card {
+        padding: 40px;
+    }
+}
+
+/* Fluid Typography (Clamp) */
+h1, .neon-text {
+    font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+}
+
+h2, .section-title {
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+}
+
+p, .project-details, .contact-subtitle {
+    font-size: clamp(0.9rem, 2vw + 1rem, 1.1rem);
+}
+
+/* Touch Target Optimization (Mobile Friendly) */
+@media (hover: none) and (pointer: coarse) {
+    a, button, .icon-btn, .social-link, .slider-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .project-links a {
+        padding: 12px 20px;
+    }
+}
+
+/* Vendor Prefixes for Cross-Browser Support */
+.glass-card, .project-card, .cert-card {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.glitch-effect, .banner-text {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+}
+
+/* Flexbox Gap Polyfill (Safari 12-14) */
+@supports not (gap: 1em) {
+    .tech-icons > *, .contact-info > *, .skills-grid > * {
+        margin: 0 10px;
+    }
+}
+
+/* Smooth Scrolling for iOS */
+html {
+    -webkit-overflow-scrolling: touch;
+}
