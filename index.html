@@ -145,7 +145,7 @@
                     </a>
                 </div>
                 <div style="text-align: center; margin-top: 20px;">
-                    <button class="apk-btn" onclick="showContactQR()" style="background: var(--primary-red); color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-family: 'Cairo', sans-serif; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
+                    <button class="contact-qr-btn" onclick="showContactQR()">
                         <i class="fas fa-address-card"></i> <span data-i18n="save_contact_qr">حفظ بيانات التواصل (QR)</span>
                     </button>
                 </div>
@@ -343,6 +343,9 @@
             <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
             <div id="qrCodeContainer"></div>
             <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
+            <button class="qr-download-btn" onclick="downloadQR()">
+                <i class="fas fa-download"></i> <span data-i18n="download_qr">تحميل QR</span>
+            </button>
         </div>
     </div>
 
@@ -509,6 +512,32 @@
         function closeQRModal(event) {
             if (event && event.target.closest('.qr-content')) return;
             document.getElementById("qrModal").style.display = "none";
+        }
+
+        function downloadQR() {
+            const container = document.getElementById('qrCodeContainer');
+            const canvas = container.querySelector('canvas');
+            const img = container.querySelector('img');
+            
+            let dataURL;
+            if (canvas) {
+                dataURL = canvas.toDataURL('image/png');
+            } else if (img) {
+                // Fallback: draw image to canvas
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = img.naturalWidth || img.width;
+                tempCanvas.height = img.naturalHeight || img.height;
+                const ctx = tempCanvas.getContext('2d');
+                ctx.drawImage(img, 0, 0);
+                dataURL = tempCanvas.toDataURL('image/png');
+            } else {
+                return;
+            }
+            
+            const link = document.createElement('a');
+            link.download = 'qr-code.png';
+            link.href = dataURL;
+            link.click();
         }
 
         function moveSlider(galleryId, direction) {

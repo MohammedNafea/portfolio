@@ -143,6 +143,64 @@ body.light-mode .lang-switcher {
     margin: 10px 0;
 }
 
+/* Contact QR Button */
+.contact-qr-btn {
+    background: var(--primary-red);
+    color: #ffffff;
+    border: 2px solid var(--neon-red);
+    padding: 12px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.contact-qr-btn:hover {
+    background: var(--neon-red);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+body.light-mode .contact-qr-btn {
+    background: var(--primary-red);
+    color: #ffffff;
+    border-color: var(--primary-red);
+    box-shadow: 0 3px 10px rgba(211, 47, 47, 0.3);
+}
+
+body.light-mode .contact-qr-btn:hover {
+    background: #B71C1C;
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.5);
+}
+
+/* QR Download Button */
+.qr-download-btn {
+    background: var(--primary-red);
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.qr-download-btn:hover {
+    background: var(--neon-red);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
 .cover {
     display: flex;
     flex-direction: column;
