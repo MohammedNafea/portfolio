@@ -1,10 +1,11 @@
-const CACHE_NAME = 'nafea-portfolio-v5';
+const CACHE_NAME = 'nafea-portfolio-v6';
 const ASSETS = [
   './',
   './index.html',
   './404.html',
   './offline.html',
   './style.css',
+  './typed.js',
   './translations.js',
   './cv-generator.js',
   './manifest.json',
@@ -16,7 +17,6 @@ const ASSETS = [
   'https://unpkg.com/aos@2.3.1/dist/aos.css',
   'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js',
   'https://unpkg.com/aos@2.3.1/dist/aos.js',
-  'https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js',
   'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js'
 ];
