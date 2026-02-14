@@ -100,6 +100,52 @@
             60% { clip: rect(20px, 9999px, 70px, 0); }
             80% { clip: rect(90px, 9999px, 30px, 0); }
             100% { clip: rect(40px, 9999px, 80px, 0); }
+            80% { clip: rect(90px, 9999px, 30px, 0); }
+            100% { clip: rect(40px, 9999px, 80px, 0); }
+        }
+
+        /* Snake Game Styles */
+        #game-container {
+            margin-top: 40px;
+            position: relative;
+            display: inline-block;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            border: 2px solid var(--neon-red);
+            border-radius: 10px;
+            background: #000;
+            z-index: 10;
+        }
+        canvas {
+            display: block;
+            background-color: #050505;
+            border-radius: 8px;
+            max-width: 100%;
+        }
+        #score-board {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: var(--neon-red);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 0 0 5px red;
+            pointer-events: none;
+        }
+        .start-msg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.2rem;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 25px;
+            border-radius: 8px;
+            pointer-events: none;
+            white-space: nowrap;
+            border: 1px solid var(--neon-red);
         }
     </style>
 </head>
@@ -110,6 +156,13 @@
         <h1 class="neon-text" data-text="404">404</h1>
         <p class="message" data-i18n="page_not_found">Oops! The page you're looking for has vanished.</p>
         <a href="index.html" class="home-btn"><i class="fas fa-home"></i> <span data-i18n="back_home">Back to Home</span></a>
+        
+        <br>
+        <div id="game-container">
+            <canvas id="gameCanvas" width="320" height="320"></canvas>
+            <div id="score-board"><span data-i18n="score">Score</span>: <span id="score">0</span></div>
+            <div id="start-msg" class="start-msg"><span data-i18n="start_game">Press Arrow Keys to Start</span> <br> <small style="font-size: 0.8rem; color: #aaa;">(Desktop Only)</small></div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -159,6 +212,113 @@
             },
             "retina_detect": true
         });
+        /* --- Snake Game Logic --- */
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('score');
+        const startMsg = document.getElementById('start-msg');
+        
+        const box = 20;
+        let snake = [];
+        snake[0] = { x: 9 * box, y: 10 * box };
+        
+        let food = {
+            x: Math.floor(Math.random() * (canvas.width / box)) * box,
+            y: Math.floor(Math.random() * (canvas.height / box)) * box
+        };
+        
+        let score = 0;
+        let d;
+        let game;
+        let gameStarted = false;
+
+        document.addEventListener('keydown', direction);
+
+        function direction(event) {
+            if (!gameStarted && (event.keyCode >= 37 && event.keyCode <= 40)) {
+                gameStarted = true;
+                startMsg.style.display = 'none';
+                game = setInterval(draw, 100);
+            }
+
+            if (event.keyCode == 37 && d != "RIGHT") d = "LEFT";
+            else if (event.keyCode == 38 && d != "DOWN") d = "UP";
+            else if (event.keyCode == 39 && d != "LEFT") d = "RIGHT";
+            else if (event.keyCode == 40 && d != "UP") d = "DOWN";
+            
+            // Prevent scrolling with arrows
+            if([32, 37, 38, 39, 40].indexOf(event.keyCode) > -1) {
+                event.preventDefault();
+            }
+        }
+
+        function collision(head, array) {
+            for (let i = 0; i < array.length; i++) {
+                if (head.x == array[i].x && head.y == array[i].y) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function draw() {
+            ctx.fillStyle = "#050505";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < snake.length; i++) {
+                ctx.fillStyle = (i == 0) ? "#ff0000" : "#8B0000"; // Head neon red, body dark red
+                ctx.shadowBlur = (i == 0) ? 10 : 0;
+                ctx.shadowColor = "#ff0000";
+                ctx.fillRect(snake[i].x, snake[i].y, box, box);
+
+                ctx.strokeStyle = "#000";
+                ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+                ctx.shadowBlur = 0; // Reset shadow
+            }
+
+            ctx.fillStyle = "#fff";
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = "#fff";
+            ctx.fillRect(food.x, food.y, box, box);
+            ctx.shadowBlur = 0;
+
+            let snakeX = snake[0].x;
+            let snakeY = snake[0].y;
+
+            if (d == "LEFT") snakeX -= box;
+            if (d == "UP") snakeY -= box;
+            if (d == "RIGHT") snakeX += box;
+            if (d == "DOWN") snakeY += box;
+
+            if (snakeX == food.x && snakeY == food.y) {
+                score++;
+                scoreEl.innerText = score;
+                food = {
+                    x: Math.floor(Math.random() * (canvas.width / box)) * box,
+                    y: Math.floor(Math.random() * (canvas.height / box)) * box
+                }
+            } else {
+                snake.pop();
+            }
+
+            let newHead = { x: snakeX, y: snakeY };
+
+            if (snakeX < 0 || snakeX >= canvas.width || snakeY < 0 || snakeY >= canvas.height || collision(newHead, snake)) {
+                clearInterval(game);
+                gameStarted = false;
+                startMsg.style.display = 'block';
+                startMsg.innerHTML = `<span style="color:red">Game Over!</span> Score: ${score}<br><span style="font-size:0.8rem">Press Arrows to Restart</span>`;
+                
+                // Reset Game
+                snake = [];
+                snake[0] = { x: 9 * box, y: 10 * box };
+                score = 0;
+                scoreEl.innerText = score;
+                d = undefined;
+            }
+
+            snake.unshift(newHead);
+        }
     </script>
 </body>
 </html>
