@@ -185,7 +185,7 @@
 </head>
 <body>
     <!-- Scroll Progress Bar -->
-    <div id="scroll-progress"></div>
+
 
     <!-- Preloader -->
     <div id="preloader">
@@ -499,9 +499,7 @@
             <i class="fas fa-volume-up"></i>
         </button>
 
-        <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top" aria-label="Scroll to Top">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
@@ -533,24 +531,7 @@
     <script src="cv-generator.js?v=0.1"></script>
     <script>
         // Scroll Progress Bar & Scroll To Top Logic
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
 
-            // Scroll To Top Button Visibility
-            const scrollBtn = document.getElementById("scrollTop");
-            if (winScroll > 500) {
-                scrollBtn.classList.add("visible");
-            } else {
-                scrollBtn.classList.remove("visible");
-            }
-        });
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
