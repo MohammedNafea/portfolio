@@ -68,7 +68,8 @@ body {
 }
 
 .highlight {
-    color: #E74C3C;
+    color: #D35F5F;
+    text-shadow: 0 0 10px rgba(211, 95, 95, 0.3), 0 0 20px rgba(211, 95, 95, 0.15);
 }
 
 .neon-text {
