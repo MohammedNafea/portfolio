@@ -1,10 +1,8 @@
 function generateAndDownloadCV() {
-    // 1. Get current language data
-    const lang = currentLang || 'en'; // default to en if undefined
-    const t = translations[lang];
-    const isRTL = lang === 'ar' || lang === 'ur' || lang === 'fa';
-    const dir = isRTL ? 'rtl' : 'ltr';
-    const align = isRTL ? 'right' : 'left';
+    // 1. Always use English for CV
+    const t = translations['en'];
+    const dir = 'ltr';
+    const align = 'left';
 
     // 2. Create the CV Container (hidden)
     const cvContainer = document.createElement('div');
