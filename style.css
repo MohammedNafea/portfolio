@@ -55,6 +55,233 @@ body {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
+/* ============ LANG-SWITCHER TOOLBAR ============ */
+
+/* Base: Fixed top-right toolbar */
+.lang-switcher {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    flex-wrap: nowrap;
+}
+
+/* RTL support */
+[dir="rtl"] .lang-switcher {
+    right: auto;
+    left: 15px;
+}
+
+/* Globe icon */
+.lang-switcher > .fa-globe {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* Language select */
+.lang-switcher select {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    min-width: 90px;
+    transition: all 0.3s ease;
+}
+
+.lang-switcher select:focus {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+.lang-switcher select option {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 8px;
+}
+
+/* Icon buttons */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--neon-red);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 0, 0, 0.15);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.icon-btn:active {
+    transform: scale(0.95);
+}
+
+/* Light mode overrides */
+body.light-mode .lang-switcher {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .lang-switcher select {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .lang-switcher select option {
+    background: #fff;
+    color: #333;
+}
+
+body.light-mode .icon-btn {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--neon-red);
+}
+
+body.light-mode .icon-btn:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* ---- Tablet (max 768px) ---- */
+@media (max-width: 768px) {
+    .lang-switcher {
+        top: 10px;
+        right: 10px;
+        gap: 6px;
+        padding: 6px 10px;
+    }
+
+    [dir="rtl"] .lang-switcher {
+        right: auto;
+        left: 10px;
+    }
+
+    .lang-switcher select {
+        min-width: 75px;
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .icon-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ---- Mobile (max 576px) ---- */
+@media (max-width: 576px) {
+    .lang-switcher {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 20px 20px 0 0;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 12px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+        background: rgba(0, 0, 0, 0.85);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    [dir="rtl"] .lang-switcher {
+        left: 0;
+        right: 0;
+    }
+
+    .lang-switcher > .fa-globe {
+        display: none;
+    }
+
+    .lang-switcher select {
+        flex: 1;
+        min-width: 0;
+        max-width: 120px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .icon-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 1rem;
+    }
+
+    body.light-mode .lang-switcher {
+        background: rgba(255, 255, 255, 0.92);
+        border-top-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Add bottom padding to body so content isn't hidden behind the toolbar */
+    body {
+        padding-bottom: 70px;
+    }
+}
+
+/* ---- Very small screens (max 380px) ---- */
+@media (max-width: 380px) {
+    .lang-switcher {
+        gap: 6px;
+        padding: 8px 8px;
+    }
+
+    .lang-switcher select {
+        max-width: 90px;
+        font-size: 0.75rem;
+        padding: 3px 6px;
+    }
+
+    .icon-btn {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+
 body.light-mode {
     --bg-color: #f7f9fc;
     --card-bg: #ffffff;
