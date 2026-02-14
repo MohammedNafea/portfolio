@@ -8,6 +8,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#000000">
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https://mohammednafea.github.io https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com;">
+    <!-- Font Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" as="style">
+
     <!-- Google Tag Manager (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DM18PLXSY"></script>
     <script>
@@ -51,7 +58,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -330,7 +337,12 @@
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <!-- ... -->
+                <p class="project-details" data-i18n="guide_me_desc">تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة المستخدم السياحية.</p>
+                <div class="project-links">
+                    <a href="https://github.com/MohammedNafea/portfolio/releases/download/1.0.0/app-guideme.apk" download class="apk-btn">
+                        <i class="fas fa-download"></i> <span data-i18n="download_apk">تنزيل APK</span>
+                    </a>
+                </div>
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -350,7 +362,12 @@
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <!-- ... -->
+                <p class="project-details" data-i18n="data_bootcamp_desc">مشروع تحليل البيانات المتكامل الذي يتضمن معالجة البيانات وبناء التقارير التفاعلية.</p>
+                <div class="project-links">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiYjMwZmFlMDQtZWY5My00YjkzLTk4YzktZWY5MDYyYmQyNzg3IiwidCI6IjI4YjFmN2IyLWNlYzgtNGRjOS1hYmZlLTRmYjgyNjRjMDU1NSIsImMiOjl9" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="pbi_link">رابط مشروع باور اي</span>
+                    </a>
+                </div>
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -373,7 +390,12 @@
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <!-- ... -->
+                <p class="project-details" data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</p>
+                <div class="project-links">
+                    <a href="https://mohammednafea.github.io/ChemistryWonders/" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="chem_link">زيارة المشروع</span>
+                    </a>
+                </div>
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -388,7 +410,7 @@
                     </div>
                     <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <!-- ... -->
+                <p class="project-details" data-i18n="mac_desc">تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.</p>
             </div>
             <!-- ... -->
 
@@ -507,8 +529,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="translations.js"></script>
-    <script src="cv-generator.js"></script>
+    <script src="translations.js?v=0.1"></script>
+    <script src="cv-generator.js?v=0.1"></script>
     <script>
         // Scroll Progress Bar & Scroll To Top Logic
         window.addEventListener('scroll', () => {

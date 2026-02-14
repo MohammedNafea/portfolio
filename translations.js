@@ -70,7 +70,9 @@ const translations = {
         img_chem_2: "الجدول الدوري",
         img_chem_3: "التفاعلات الكيميائية",
         img_val_certificate: "شهادة التقدير",
-        img_mac_project: "تطبيقات متنوعة"
+        img_mac_project: "تطبيقات متنوعة",
+        page_not_found: "عفواً! الصفحة التي تبحث عنها اختفت كالسحر.",
+        back_home: "العودة للرئيسية"
     },
     en: {
         title: "Portfolio - Mohammed Nafea",
@@ -143,7 +145,9 @@ const translations = {
         img_chem_2: "Periodic Table",
         img_chem_3: "Chemical Reactions",
         img_val_certificate: "Certificate of Appreciation",
-        img_mac_project: "Various Apps"
+        img_mac_project: "Various Apps",
+        page_not_found: "Oops! The page you're looking for has vanished.",
+        back_home: "Back to Home"
     },
     es: {
         title: "Portafolio - Mohammed Nafea",
@@ -216,7 +220,9 @@ const translations = {
         img_chem_2: "Tabla Periódica",
         img_chem_3: "Reacciones Químicas",
         img_val_certificate: "Certificado de Reconocimiento",
-        img_mac_project: "Varias Aplicaciones"
+        img_mac_project: "Varias Aplicaciones",
+        page_not_found: "¡Vaya! La página que buscas ha desaparecido.",
+        back_home: "Volver al Inicio"
     },
     fr: {
         title: "Portfolio - Mohammed Nafea",
@@ -289,7 +295,9 @@ const translations = {
         img_chem_2: "Tableau Périodique",
         img_chem_3: "Réactions Chimiques",
         img_val_certificate: "Certificat de Reconnaissance",
-        img_mac_project: "Diverses Applications"
+        img_mac_project: "Diverses Applications",
+        page_not_found: "Oups ! La page que vous cherchez a disparu.",
+        back_home: "Retour à l'accueil"
     },
     de: {
         title: "Portfolio - Mohammed Nafea",
@@ -362,7 +370,9 @@ const translations = {
         img_chem_2: "Periodensystem",
         img_chem_3: "Chemische Reaktionen",
         img_val_certificate: "Anerkennungsurkunde",
-        img_mac_project: "Verschiedene Apps"
+        img_mac_project: "Verschiedene Apps",
+        page_not_found: "Hoppla! Die gesuchte Seite ist verschwunden.",
+        back_home: "Zurück zur Startseite"
     },
     zh: {
         title: "个人作品集 - Mohammed Nafea",
@@ -435,7 +445,9 @@ const translations = {
         img_chem_2: "周期表",
         img_chem_3: "化学反应",
         img_val_certificate: "荣誉证书",
-        img_mac_project: "各种应用"
+        img_mac_project: "各种应用",
+        page_not_found: "哎呀！您寻找的页面消失了。",
+        back_home: "返回首页"
     },
     ja: {
         title: "ポートフォリオ - Mohammed Nafea",
@@ -508,7 +520,9 @@ const translations = {
         img_chem_2: "周期表",
         img_chem_3: "化学反応",
         img_val_certificate: "感謝状",
-        img_mac_project: "さまざまなアプリ"
+        img_mac_project: "さまざまなアプリ",
+        page_not_found: "おっと！お探しのページは消えてしまいました。",
+        back_home: "ホームに戻る"
     },
     ru: {
         title: "Портфолио - Mohammed Nafea",
@@ -581,7 +595,9 @@ const translations = {
         img_chem_2: "Периодическая таблица",
         img_chem_3: "Химические реакции",
         img_val_certificate: "Сертификат признательности",
-        img_mac_project: "Различные приложения"
+        img_mac_project: "Различные приложения",
+        page_not_found: "Упс! Страница, которую вы ищете, исчезла.",
+        back_home: "Вернуться на главную"
     },
     tr: {
         title: "Portfolyo - Mohammed Nafea",
@@ -654,7 +670,9 @@ const translations = {
         img_chem_2: "Periyodik Tablo",
         img_chem_3: "Kimyasal Reaksiyonlar",
         img_val_certificate: "Teşekkür Belgesi",
-        img_mac_project: "Çeşitli Uygulamalar"
+        img_mac_project: "Çeşitli Uygulamalar",
+        page_not_found: "Hay aksi! Aradığınız sayfa kayboldu.",
+        back_home: "Ana Sayfaya Dön"
     },
     pt: {
         title: "Portfólio - Mohammed Nafea",
@@ -727,7 +745,9 @@ const translations = {
         img_chem_2: "Tabela Periódica",
         img_chem_3: "Reações Químicas",
         img_val_certificate: "Certificado de Reconhecimento",
-        img_mac_project: "Vários Aplicativos"
+        img_mac_project: "Vários Aplicativos",
+        page_not_found: "Ops! A página que você procura desapareceu.",
+        back_home: "Voltar para o Início"
     },
     it: {
         title: "Portfolio - Mohammed Nafea",
@@ -799,8 +819,10 @@ const translations = {
         img_chem_1: "Output Principale Chimica",
         img_chem_2: "Tavola Periodica",
         img_chem_3: "Reazioni Chimiche",
-        img_val_certificate: "Certificato di Apprezzamento",
-        img_mac_project: "Varie Applicazioni"
+        img_val_certificate: "Attestato di stima",
+        img_mac_project: "Varie Applicazioni",
+        page_not_found: "Ops! La pagina che cerchi è svanita.",
+        back_home: "Torna alla Home"
     },
     ko: {
         title: "포트폴리오 - Mohammed Nafea",
@@ -873,7 +895,9 @@ const translations = {
         img_chem_2: "주기율표",
         img_chem_3: "화학 반응",
         img_val_certificate: "감사장",
-        img_mac_project: "다양한 앱"
+        img_mac_project: "다양한 앱",
+        page_not_found: "어머나! 요청하신 페이지를 찾을 수 없습니다.",
+        back_home: "홈으로 돌아가기"
     },
     id: {
         title: "Portofolio - Mohammed Nafea",
@@ -946,7 +970,9 @@ const translations = {
         img_chem_2: "Tabel Periodik",
         img_chem_3: "Reaksi Kimia",
         img_val_certificate: "Sertifikat Penghargaan",
-        img_mac_project: "Berbagai Aplikasi"
+        img_mac_project: "Berbagai Aplikasi",
+        page_not_found: "Waduh! Halaman yang Anda cari sudah menghilang.",
+        back_home: "Kembali ke Beranda"
     },
     ur: {
         title: "پورٹ فولیو - محمد نافع",
@@ -1019,7 +1045,9 @@ const translations = {
         img_chem_2: "دوری جدول",
         img_chem_3: "کیمیائی رد عمل",
         img_val_certificate: "تعریفی سند",
-        img_mac_project: "مختلف ایپس"
+        img_mac_project: "مختلف ایپس",
+        page_not_found: "اوہ! وہ صفحہ جو آپ تلاش کر رہے ہیں غائب ہو گیا ہے۔",
+        back_home: "ہوم پیج پر واپس جائیں"
     },
     hi: {
         title: "पोर्टफोलियो - मोहम्मद नाफे",
@@ -1092,6 +1120,8 @@ const translations = {
         img_chem_2: "आवर्त सारणी",
         img_chem_3: "रासायनिक प्रतिक्रियाएं",
         img_val_certificate: "प्रशंसा प्रमाण पत्र",
-        img_mac_project: "विभिन्न ऐप्स"
+        img_mac_project: "विभिन्न ऐप्स",
+        page_not_found: "ओह! वह पृष्ठ जिसे आप खोज रहे हैं गायब हो गया है।",
+        back_home: "मुख्य पृष्ठ पर वापस जाएं"
     }
 };

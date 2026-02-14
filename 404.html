@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Mohammed Nafea</title>
     <link rel="icon" href="fire_crown.jpg" type="image/jpeg">
-    <link rel="stylesheet" href="style.css">
+    <!-- Tech Optimizations -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css?v=1.1">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -108,7 +113,36 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="translations.js?v=1.1"></script>
     <script>
+        // Use Cairo font for all languages for consistency as defined in CSS
+        // Language detection logic
+        function getSavedLanguage() {
+            return localStorage.getItem('selectedLanguage') || 'ar'; // Default to Arabic as per project primary
+        }
+
+        function applyTranslations() {
+            const lang = getSavedLanguage();
+            const trans = translations[lang] || translations['en'];
+            
+            // Apply language direction
+            document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+
+            // Update title
+            document.title = (lang === 'ar' ? '404 - الصفحة غير موجودة' : '404 - Page Not Found') + ' | Mohammed Nafea';
+
+            // Apply translations to elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (trans[key]) {
+                    el.textContent = trans[key];
+                }
+            });
+        }
+
+        applyTranslations();
+
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
