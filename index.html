@@ -496,16 +496,26 @@
             document.getElementById('qrModalTitle').innerText = dictionary['contact_qr_title'] || 'Contact Card';
             document.getElementById('qrModalDesc').innerText = dictionary['contact_qr_desc'] || 'Scan to save contact';
 
-            // vCard 3.0 — proper CRLF line endings per RFC 6350
-            const vcard = 
-                'BEGIN:VCARD\r\n' +
-                'VERSION:3.0\r\n' +
-                'N:Nafea;Mohammed;Fathallah;;\r\n' +
-                'FN:Mohammed Fathallah Nafea\r\n' +
-                'EMAIL;TYPE=INTERNET:king.darkmn@gmail.com\r\n' +
-                'URL:https://github.com/MohammedNafea\r\n' +
-                'NOTE:WhatsApp: https://wa.me/message/YGXHPUENICNAN1\\nGitHub: github.com/MohammedNafea\\nX (Twitter): x.com/KingDarkmn\\nTelegram: t.me/king_darkmn\r\n' +
-                'END:VCARD';
+            // vCard 3.0 — Complete business card format (RFC 6350 compliant)
+            // Compatible with: iOS, Android, Samsung, Huawei, Outlook, CamCard, HubSpot, etc.
+            const vcard = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'PRODID:-//Mohammed Nafea//Portfolio//EN',
+                'N:Nafea;Mohammed;Fathallah;;',
+                'FN:Mohammed Fathallah Nafea',
+                'ORG:Software Developer',
+                'TITLE:Mobile & Web Developer',
+                'EMAIL;TYPE=INTERNET,WORK:king.darkmn@gmail.com',
+                'URL;TYPE=WORK:https://mohammednafea.github.io/portfolio/',
+                'URL;TYPE=GitHub:https://github.com/MohammedNafea',
+                'URL;TYPE=Twitter:https://x.com/KingDarkmn',
+                'URL;TYPE=Telegram:https://t.me/king_darkmn',
+                'URL;TYPE=WhatsApp:https://wa.me/message/YGXHPUENICNAN1',
+                'NOTE:Mobile & Web Developer\\nGitHub: github.com/MohammedNafea\\nX: x.com/KingDarkmn\\nTelegram: @king_darkmn\\nWhatsApp: wa.me/message/YGXHPUENICNAN1',
+                'REV:' + new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
+                'END:VCARD'
+            ].join('\r\n');
             
             // Use H (highest) error correction to allow logo overlay
             new QRCode(qrContainer, {
