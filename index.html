@@ -18,6 +18,15 @@
       gtag('config', 'G-0DM18PLXSY');
     </script>
     <title>ملف أعمال - محمد نافع</title>
+    <link rel="icon" href="fire_crown.jpg" type="image/jpeg">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="ملف أعمال - محمد نافع | Mobile App Developer">
+    <meta property="og:description" content="مطور تطبيقات (Flutter, Android, Java) شغوف ببناء تجارب مستخدم استثنائية. تصفح مشاريعي وتواصل معي!">
+    <meta property="og:image" content="https://mohammednafea.github.io/portfolio/fire_crown.jpg">
+    <meta property="og:url" content="https://mohammednafea.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
@@ -488,6 +497,10 @@
             <i class="fas fa-volume-up"></i>
         </button>
 
+        <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
@@ -517,13 +530,25 @@
     <script src="translations.js"></script>
     <script src="cv-generator.js"></script>
     <script>
-        // Scroll Progress Bar
+        // Scroll Progress Bar & Scroll To Top Logic
         window.addEventListener('scroll', () => {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
             document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+            // Scroll To Top Button Visibility
+            const scrollBtn = document.getElementById("scrollTop");
+            if (winScroll > 500) {
+                scrollBtn.classList.add("visible");
+            } else {
+                scrollBtn.classList.remove("visible");
+            }
         });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
         // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
