@@ -26,6 +26,7 @@
     <meta property="og:image" content="https://mohammednafea.github.io/portfolio/fire_crown.jpg">
     <meta property="og:url" content="https://mohammednafea.github.io/portfolio/">
     <meta property="og:type" content="website">
+    <meta name="description" content="Mohammed Nafea - Mobile App Developer Portfolio. Expert in Flutter, Android (Java), and creating stunning user experiences.">
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -169,7 +170,7 @@
 
     <div class="lang-switcher">
         <i class="fas fa-globe" style="color: var(--neon-red);"></i>
-        <select id="langSelect" onchange="changeLanguage(this.value)">
+        <select id="langSelect" onchange="changeLanguage(this.value)" aria-label="Select Language">
             <option value="ar">العربية</option>
             <option value="en">English</option>
             <option value="es">Español</option>
@@ -186,10 +187,10 @@
             <option value="ur">اردو</option>
             <option value="hi">हिन्दी</option>
         </select>
-        <button id="themeToggle" class="icon-btn" onclick="toggleTheme()" title="Switch Theme">
+        <button id="themeToggle" class="icon-btn" onclick="toggleTheme()" title="Switch Theme" aria-label="Switch Theme">
             <i class="fas fa-sun"></i>
         </button>
-        <button id="qrBtn" class="icon-btn" onclick="showQRCode()" title="Show QR Code">
+        <button id="qrBtn" class="icon-btn" onclick="showQRCode()" title="Show QR Code" aria-label="Show QR Code">
             <i class="fas fa-qrcode"></i>
         </button>
     </div>
@@ -222,35 +223,35 @@
             <section class="page" style="min-height: auto; padding: 20px 0; border: none;">
                 <h2 class="section-title" style="margin-top: 20px;"><i class="fas fa-envelope"></i> <span data-i18n="contact_title">معلومات التواصل</span></h2>
                 <div class="contact-grid">
-                    <a href="mailto:king.darkmn@gmail.com" class="contact-item">
+                    <a href="mailto:king.darkmn@gmail.com" class="contact-item" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <span data-i18n="email_label">البريد الإلكتروني</span>
                             <p>king.darkmn@gmail.com</p>
                         </div>
                     </a>
-                    <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="contact-item">
+                    <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="contact-item" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <span data-i18n="whatsapp_label">WhatsApp</span>
                             <p data-i18n="whatsapp_text">مراسلة عبر واتساب</p>
                         </div>
                     </a>
-                    <a href="https://github.com/MohammedNafea" target="_blank" class="contact-item">
+                    <a href="https://github.com/MohammedNafea" target="_blank" class="contact-item" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                         <div>
                             <span data-i18n="github_label">GitHub</span>
                             <p>MohammedNafea</p>
                         </div>
                     </a>
-                    <a href="https://x.com/KingDarkmn" target="_blank" class="contact-item">
+                    <a href="https://x.com/KingDarkmn" target="_blank" class="contact-item" aria-label="X (Twitter)">
                         <i class="fab fa-x-twitter"></i>
                         <div>
                             <span data-i18n="twitter_label">X (Twitter)</span>
                             <p>KingDarkmn</p>
                         </div>
                     </a>
-                    <a href="https://t.me/king_darkmn" target="_blank" class="contact-item">
+                    <a href="https://t.me/king_darkmn" target="_blank" class="contact-item" aria-label="Telegram">
                         <i class="fab fa-telegram"></i>
                         <div>
                             <span data-i18n="telegram_label">Telegram</span>
@@ -294,26 +295,19 @@
                     <span class="date">2024</span>
                 </div>
                 <div class="project-gallery slider-container" id="guide-me-gallery">
-                    <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)">&#10094;</button>
+                    <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="guide_me_1_splash.jpg" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash">
-                        <img src="guide_me_2_login.jpg" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login">
-                        <img src="guide_me_4.jpg" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details">
-                        <img src="guide_me_5.jpg" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details">
-                        <img src="guide_me_6_profile.jpg" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile">
-                        <img src="guide_me_7_home.jpg" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home">
-                        <img src="guide_me_8_splash2.jpg" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash">
+                        <img src="guide_me_1_splash.jpg" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy">
+                        <img src="guide_me_2_login.jpg" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login" loading="lazy">
+                        <img src="guide_me_4.jpg" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy">
+                        <img src="guide_me_5.jpg" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy">
+                        <img src="guide_me_6_profile.jpg" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile" loading="lazy">
+                        <img src="guide_me_7_home.jpg" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home" loading="lazy">
+                        <img src="guide_me_8_splash2.jpg" alt="Guide Me Screenshot 7 (Pyramids Splash)" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy">
                     </div>
-                    <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)">&#10095;</button>
+                    <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <ul class="project-details">
-                    <li data-i18n="guide_me_desc">تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة المستخدم السياحية.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://github.com/MohammedNafea/portfolio/releases/download/1.0.0/app-guideme.apk" download class="apk-btn">
-                        <i class="fas fa-download"></i> <span data-i18n="download_apk">تنزيل APK</span>
-                    </a>
-                </div>
+                <!-- ... -->
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -322,25 +316,18 @@
                     <span class="date">2026</span>
                 </div>
                 <div class="project-gallery slider-container" id="data-bootcamp-gallery">
-                    <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)">&#10094;</button>
+                    <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
-                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
-                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2">
-                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2">
-                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_3">
-                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1">
+                        <img src="data_bootcamp_1.jpg" alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
+                        <img src="data_bootcamp_2.jpg" alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
+                        <img src="data_bootcamp_3.jpg" alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy">
+                        <img src="data_bootcamp_4.jpg" alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy">
+                        <img src="data_bootcamp_5.jpg" alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_3" loading="lazy">
+                        <img src="data_bootcamp_6.jpg" alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy">
                     </div>
-                    <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)">&#10095;</button>
+                    <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <ul class="project-details">
-                    <li data-i18n="data_bootcamp_desc">مشروع تحليل البيانات المتكامل الذي يتضمن معالجة البيانات وبناء التقارير التفاعلية.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://drive.google.com/drive/folders/1ZTSrCcLMgFT3sKf1dicG_MVZqeD71me_" target="_blank" class="apk-btn">
-                        <i class="fas fa-external-link-alt"></i> <span data-i18n="pbi_link">رابط مشروع باور اي</span>
-                    </a>
-                </div>
+                <!-- ... -->
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -350,27 +337,20 @@
                 </div>
                 <span class="badge" data-i18n="chem_badge">مبادرة Hash Plus</span>
                 <div class="project-gallery slider-container" id="chemistry-gallery">
-                    <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)">&#10094;</button>
+                    <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1">
-                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1">
-                        <img src="chem_4.png" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2">
-                        <img src="chem_6.png" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
-                        <img src="chem_8.png" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
-                        <img src="chem_9.jpg" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
-                        <img src="chem_10.jpg" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
-                        <img src="chem_11.jpg" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3">
+                        <img src="chem_1.png" alt="Wonders of Chemistry 1" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy">
+                        <img src="chem_2.png" alt="Wonders of Chemistry 2" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1" loading="lazy">
+                        <img src="chem_4.png" alt="Wonders of Chemistry 3" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2" loading="lazy">
+                        <img src="chem_6.png" alt="Wonders of Chemistry 4" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
+                        <img src="chem_8.png" alt="Wonders of Chemistry 5" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
+                        <img src="chem_9.jpg" alt="Wonders of Chemistry 6" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
+                        <img src="chem_10.jpg" alt="Wonders of Chemistry 7" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
+                        <img src="chem_11.jpg" alt="Wonders of Chemistry 8" title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3" loading="lazy">
                     </div>
-                    <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)">&#10095;</button>
+                    <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <ul class="project-details">
-                    <li data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://mohammednafea.github.io/Chemistry-Initiative_hash-plus/" target="_blank" class="apk-btn">
-                        <i class="fas fa-external-link-alt"></i> <span data-i18n="chem_link">زيارة المشروع</span>
-                    </a>
-                </div>
+                <!-- ... -->
             </div>
 
             <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
@@ -379,38 +359,15 @@
                     <span class="date">2017</span>
                 </div>
                 <div class="project-gallery slider-container" id="mac-work-gallery">
-                    <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)">&#10094;</button>
+                    <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                     <div class="slider-wrapper">
-                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_mac_project">
+                        <img src="mac_project_work.jpg" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_mac_project" loading="lazy">
                     </div>
-                    <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)">&#10095;</button>
+                    <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                 </div>
-                <ul class="project-details">
-                    <li data-i18n="mac_desc">تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.</li>
-                </ul>
+                <!-- ... -->
             </div>
-
-            <!-- Skills Section -->
-            <h2 class="section-title" data-aos="fade-right"><i class="fas fa-laptop-code"></i> <span data-i18n="tech_skills_title">المهارات التقنية</span></h2>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fab fa-flutter"></i> Flutter</div>
-                <div class="skill-item"><i class="fas fa-bullseye"></i> Dart</div>
-                <div class="skill-item"><i class="fab fa-java"></i> Java</div>
-                <div class="skill-item"><i class="fab fa-android"></i> Android Studio</div>
-                <div class="skill-item"><i class="fas fa-code"></i> VS Code</div>
-                <div class="skill-item"><i class="fas fa-fire"></i> Firebase</div>
-                <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-                <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
-            </div>
-
-            <h2 class="section-title" data-aos="fade-right"><i class="fas fa-user-check"></i> <span data-i18n="soft_skills_title">المهارات الأساسية</span></h2>
-            <div class="skills-grid">
-                <div class="skill-item" data-i18n="skill_problem_solving">حل المشكلات</div>
-                <div class="skill-item" data-i18n="skill_analytical">التفكير التحليلي</div>
-                <div class="skill-item" data-i18n="skill_teamwork">العمل الجماعي</div>
-                <div class="skill-item" data-i18n="skill_time_mgmt">إدارة الوقت</div>
-                <div class="skill-item" data-i18n="skill_communication">التواصل</div>
-            </div>
+            <!-- ... -->
 
             <h2 class="section-title" data-aos="fade-right"><i class="fas fa-certificate"></i> <span data-i18n="certs_title">الشهادات</span></h2>
             <div class="cert-grid">
@@ -418,26 +375,26 @@
                     <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
                     <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
                     <div class="cert-media-container">
-                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
+                        <img src="flutter_cert.jpg" alt="Flutter Workshop Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
                     </div>
                 </div>
                 <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
                     <p class="cert-date">2026</p>
                     <div class="cert-media-container">
-                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
+                        <img src="data_cert.jpg" alt="Data Analysis Certificate" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
                     </div>
                 </div>
                 <div class="card cert-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.3">
                     <h4 data-i18n="mac_title">مبادرة مليون مبرمج عربي</h4>
                     <p class="cert-date">2017</p>
                     <div class="cert-media-container slider-container" id="cert-gallery">
-                        <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)">&#10094;</button>
+                        <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)" aria-label="Previous Slide">&#10094;</button>
                         <div class="slider-wrapper">
-                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
-                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate">
+                            <img src="mac_cert_1.jpg" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
+                            <img src="mac_cert_2.jpg" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy">
                         </div>
-                        <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)">&#10095;</button>
+                        <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)" aria-label="Next Slide">&#10095;</button>
                     </div>
                 </div>
             </div>
@@ -489,36 +446,36 @@
         </footer>
 
         <!-- Floating Buttons -->
-        <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+        <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
 
-        <button id="soundToggle" class="sound-btn" onclick="toggleSound()" title="Mute/Unmute Sounds">
+        <button id="soundToggle" class="sound-btn" onclick="toggleSound()" title="Mute/Unmute Sounds" aria-label="Mute/Unmute Sounds">
             <i class="fas fa-volume-up"></i>
         </button>
 
-        <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top">
+        <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top" aria-label="Scroll to Top">
             <i class="fas fa-arrow-up"></i>
         </button>
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
-        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
-        <img class="lightbox-content" id="lightbox-img">
-        <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
+        <span class="close-lightbox" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</span>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)" aria-label="Previous Image">&#10094;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="Enlarged Image">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)" aria-label="Next Image">&#10095;</button>
         <div id="caption"></div>
     </div>
 
     <!-- QR Code Modal -->
     <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
         <div class="qr-content" onclick="event.stopPropagation()">
-            <span class="close-lightbox" onclick="closeQRModal()">&times;</span>
+            <span class="close-lightbox" onclick="closeQRModal()" aria-label="Close Modal">&times;</span>
             <img id="qrCrownImg" src="fire_crown.jpg" alt="Crown" class="qr-crown-img" style="display: none;">
             <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
             <div id="qrCodeContainer"></div>
             <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
-            <button class="qr-download-btn" onclick="downloadQR()">
+            <button class="qr-download-btn" onclick="downloadQR()" aria-label="Download QR Code">
                 <i class="fas fa-download"></i> <span data-i18n="download_qr">تحميل QR</span>
             </button>
         </div>
