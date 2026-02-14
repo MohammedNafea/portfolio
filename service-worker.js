@@ -1,12 +1,10 @@
-const CACHE_NAME = 'nafea-portfolio-v7';
+const CACHE_NAME = 'nafea-portfolio-v8';
 const ASSETS = [
   './',
   './index.html',
   './404.html',
   './offline.html',
   './style.css',
-  './typed.js',
-  './qrcode.min.js',
   './Mohamed_Nafea_CV_ATS.pdf',
   './translations.js',
   './cv-generator.js',
