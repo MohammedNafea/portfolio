@@ -1,0 +1,270 @@
+function generateAndDownloadCV() {
+    // 1. Always use English for CV
+    const t = translations['en'];
+    const dir = 'ltr';
+    const align = 'left';
+
+    // 2. Create the CV Container (hidden but rendered)
+    const cvContainer = document.createElement('div');
+    cvContainer.id = 'cv-container';
+    // Use fixed positioning off-screen to ensure it renders but isn't visible
+    cvContainer.style.position = 'fixed';
+    cvContainer.style.top = '0';
+    cvContainer.style.left = '-9999px'; // Move off-screen
+    cvContainer.style.zIndex = '-1000';
+    cvContainer.style.width = '210mm'; // A4 width
+    cvContainer.style.minHeight = '297mm'; // A4 height
+    cvContainer.style.background = '#fff';
+    cvContainer.style.color = '#000';
+    cvContainer.style.fontFamily = 'Arial, Helvetica, sans-serif'; // Clean sans-serif for ATS
+    cvContainer.style.padding = '15mm'; // Standard margins
+    cvContainer.style.boxSizing = 'border-box';
+    document.body.appendChild(cvContainer);
+
+    // 3. Helper to strip HTML from strings
+    const stripHtml = (html) => {
+        let tmp = document.createElement("DIV");
+        // Replace <br> with newline for text content if needed, but here we keep HTML in specific areas
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || "";
+    };
+
+    // 4. Construct the HTML Structure
+    const name = stripHtml(t.name);
+    
+    // Hardcoded skills/tech from site content
+    const techSkills = "Flutter, Dart, Java, Android Studio, VS Code, Firebase, Git & GitHub";
+    const softSkills = `${t.skill_problem_solving}, ${t.skill_analytical}, ${t.skill_teamwork}, ${t.skill_time_mgmt}, ${t.skill_communication}`;
+
+    const content = `
+        <style>
+            .cv-header { text-align: center; margin-bottom: 25px; border-bottom: 2px solid #333; padding-bottom: 15px; }
+            .cv-name { font-size: 26pt; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; color: #222; }
+            .cv-role { font-size: 12pt; margin-bottom: 8px; font-weight: bold; color: #444; }
+            .cv-contact { font-size: 10pt; color: #555; }
+            .cv-contact span { margin: 0 5px; }
+            
+            .cv-section { margin-bottom: 20px; }
+            .cv-section-title { 
+                font-size: 14pt; 
+                font-weight: bold; 
+                border-bottom: 1px solid #ccc; 
+                margin-bottom: 12px; 
+                text-transform: uppercase; 
+                color: #222;
+                letter-spacing: 1px;
+            }
+            
+            .cv-item { margin-bottom: 15px; }
+            .cv-item-header { display: flex; justify-content: space-between; align-items: baseline; }
+            .cv-item-title { font-weight: bold; font-size: 12pt; color: #000; }
+            .cv-item-date { font-weight: bold; font-size: 10pt; color: #000; }
+            .cv-item-sub { font-style: italic; font-size: 11pt; margin-bottom: 5px; color: #444; }
+            
+            .cv-list { margin: 5px 0 0 0; padding-left: 20px; font-size: 11pt; line-height: 1.5; color: #333; }
+            .cv-list li { margin-bottom: 3px; }
+            
+            .cv-skills-text { font-size: 11pt; line-height: 1.6; color: #333; }
+            .cv-summary-text { font-size: 11pt; line-height: 1.6; color: #333; text-align: justify; }
+
+            a { color: #000; text-decoration: none; }
+        </style>
+        
+        <div class="cv-header">
+            <div class="cv-name">${name}</div>
+            <div class="cv-role">${t.role}</div>
+            <div class="cv-contact">
+                king.darkmn@gmail.com <span>&bull;</span> +966555555555 <span>&bull;</span> Riyadh, Saudi Arabia<br>
+                <a href="https://www.linkedin.com/in/mohammed-nafea-62a32b160">LinkedIn</a> <span>&bull;</span> <a href="https://github.com/MohammedNafea">GitHub</a> <span>&bull;</span> <a href="https://mohammednafea.github.io/portfolio">Portfolio</a>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.summary_title}</div>
+            <div class="cv-summary-text">
+                ${t.summary_text}
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.exp_title}</div>
+             <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">Android Developer (Freelance)</span>
+                    <span class="cv-item-date">2023 - Present</span>
+                </div>
+                <div class="cv-item-sub">Remote</div>
+                <ul class="cv-list">
+                    <li>${t.exp_1}</li>
+                    <li>${t.exp_2}</li>
+                    <li>${t.exp_3}</li>
+                    <li>${t.exp_4}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.projects_title}</div>
+            
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">${t.guide_me_title}</span>
+                    <span class="cv-item-date">2024</span>
+                </div>
+                <ul class="cv-list">
+                    <li>${t.guide_me_desc}</li>
+                    <li>Developed using Flutter & Firebase with Google Maps integration.</li>
+                    <li>Achieved 'Excellent' grade in graduation project.</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">${t.data_bootcamp_title}</span>
+                    <span class="cv-item-date">2026</span>
+                </div>
+                <ul class="cv-list">
+                    <li>${t.data_bootcamp_desc}</li>
+                    <li>Utilized Power BI for advanced data visualization and reporting.</li>
+                </ul>
+            </div>
+
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">${t.chem_title}</span>
+                    <span class="cv-item-date">2026</span>
+                </div>
+                <ul class="cv-list">
+                    <li>${t.chem_desc}</li>
+                    <li>Interactive educational platform built for Hash Plus Initiative.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.edu_title}</div>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <span class="cv-item-title">${t.edu_degree}</span>
+                    <span class="cv-item-date">${t.edu_date}</span>
+                </div>
+                <div class="cv-item-sub">University of Tabuk</div>
+                <ul class="cv-list">
+                    <li>${t.edu_project}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.tech_skills_title}</div>
+            <div class="cv-skills-text">
+                <strong>Technical:</strong> ${techSkills}<br>
+                <strong>Soft Skills:</strong> ${softSkills}
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <div class="cv-section-title">${t.certs_title}</div>
+             <ul class="cv-list">
+                <li>${t.flutter_cert_title} (${t.sept_2020})</li>
+                <li>Misk Foundation / Samsung Innovation Campus - Data Bootcamp (2026)</li>
+            </ul>
+        </div>
+    `;
+
+    cvContainer.innerHTML = content;
+
+    // 5. Generate PDF with delay to ensure rendering
+    // Use a small timeout to allow DOM layout
+    setTimeout(() => {
+        const opt = {
+            margin: 0,
+            filename: 'Mohammed_Nafea_CV.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().set(opt).from(cvContainer).save().then(() => {
+            document.body.removeChild(cvContainer);
+        });
+    }, 500);
+}
+
+// --- ELITE FEATURES: INTERACTIVE CV MODAL ---
+function openCVModal() {
+    const modal = document.getElementById('cv-modal');
+    const bodyObj = document.getElementById('cv-modal-body');
+    const t = translations[currentLang] || translations['en']; // Use current lang or fallback
+    
+    // Populate Modal Content (Web Version)
+    const techSkills = "Flutter, Dart, Java, Android Studio, VS Code, Firebase, Git & GitHub";
+    const softSkills = `${t.skill_problem_solving}, ${t.skill_analytical}, ${t.skill_teamwork}, ${t.skill_time_mgmt}, ${t.skill_communication}`;
+
+    let htmlContent = `
+        <div class="cv-web-section">
+            <h3 style="color: var(--neon-gold); margin-bottom: 10px;">${t.summary_title}</h3>
+            <p style="line-height: 1.6; color: inherit;">${t.summary_text}</p>
+        </div>
+        
+        <div class="cv-web-section" style="margin-top: 25px;">
+            <h3 style="color: var(--neon-gold); margin-bottom: 15px;">${t.exp_title}</h3>
+             <div class="cv-web-item" style="margin-bottom: 15px; padding-left: 15px; border-left: 2px solid var(--neon-gold);">
+                <div style="display:flex; justify-content:space-between;">
+                    <strong>Android Developer (Freelance)</strong>
+                    <span style="opacity:0.8;">2023 - Present</span>
+                </div>
+                <div style="font-style:italic; margin-bottom:5px; opacity:0.8;">Remote</div>
+                <ul style="padding-inline-start: 20px; line-height: 1.5;">
+                    <li>${t.exp_1}</li>
+                    <li>${t.exp_2}</li>
+                    <li>${t.exp_3}</li>
+                    <li>${t.exp_4}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cv-web-section" style="margin-top: 25px;">
+            <h3 style="color: var(--neon-gold); margin-bottom: 15px;">${t.projects_title}</h3>
+             <div class="cv-web-item" style="margin-bottom: 15px;">
+                <strong>${t.guide_me_title}</strong> (2024)<br>
+                <span style="opacity: 0.9;">${t.guide_me_desc}</span>
+            </div>
+             <div class="cv-web-item" style="margin-bottom: 15px;">
+                <strong>${t.data_bootcamp_title}</strong> (2026)<br>
+                <span style="opacity: 0.9;">${t.data_bootcamp_desc}</span>
+            </div>
+             <div class="cv-web-item" style="margin-bottom: 15px;">
+                <strong>${t.chem_title}</strong> (2026)<br>
+                <span style="opacity: 0.9;">${t.chem_desc}</span>
+            </div>
+        </div>
+        
+        <div class="cv-web-section" style="margin-top: 25px;">
+            <h3 style="color: var(--neon-gold); margin-bottom: 15px;">${t.tech_skills_title} <span style="font-size:0.6em; color:var(--text-gray);">(& ${t.certs_title})</span></h3>
+            <p>
+                <strong>Technical:</strong> ${techSkills}<br>
+                <strong>Soft Skills:</strong> ${softSkills}<br>
+                <br>
+                <strong>Certificates:</strong><br>
+                - ${t.flutter_cert_title} (${t.sept_2020})<br>
+                - Misk Foundation / Samsung Innovation Campus - Data Bootcamp (2026)
+            </p>
+        </div>
+    `;
+
+    bodyObj.innerHTML = htmlContent;
+    modal.classList.add('active');
+}
+
+function closeCVModal() {
+    document.getElementById('cv-modal').classList.remove('active');
+}
+
+// Close on outside click
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('cv-modal');
+    if (event.target == modal) {
+        modal.classList.remove('active');
+    }
+});

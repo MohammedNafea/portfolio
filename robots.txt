@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohammednafea.github.io/portfolio/sitemap.xml

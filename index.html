@@ -1,0 +1,1852 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- Font Preloading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap"
+    as="style">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap">
+
+  <!-- Google Tag Manager (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0DM18PLXSY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-0DM18PLXSY');
+  </script>
+  <title>ملف أعمال - محمد نافع</title>
+  <link rel="icon" href="fire_crown.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="fire_crown.webp">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Mohammed Nafea | Mobile App Developer Portfolio">
+  <meta property="og:description"
+    content="Mohammed Nafea - Expert in Flutter and Android development. Explore my latest projects and technical expertise.">
+  <meta property="og:image" content="https://mohammednafea.github.io/portfolio/fire_crown.webp">
+  <meta property="og:url" content="https://mohammednafea.github.io/portfolio/">
+  <meta property="og:type" content="website">
+  <meta name="description"
+    content="Mohammed Nafea - Mobile App Developer Portfolio. Expert in Flutter, Android (Java), and creating stunning user experiences.">
+
+  <meta name="keywords"
+    content="Mohammed Nafea, Mobile App Developer, Flutter Developer, Android Developer, Java, Dart, Portfolio, Resume, CV, Projects, PWA">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed Nafea",
+      "jobTitle": "Mobile App Developer",
+      "url": "https://mohammednafea.github.io/portfolio/",
+      "image": "https://mohammednafea.github.io/portfolio/fire_crown.webp",
+      "sameAs": [
+        "https://github.com/MohammedNafea",
+        "https://www.linkedin.com/in/mohammed-nafea-62a32b160",
+        "https://x.com/KingDarkmn",
+        "https://t.me/king_darkmn"
+      ],
+      "knowsAbout": ["Flutter", "Android", "Dart", "Java", "Firebase", "UI/UX Design"],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "description": "Android and Flutter Developer passionate about building scalable mobile applications."
+    }
+    </script>
+
+  <link rel="stylesheet" href="style.css?v=1.2">
+  <!-- Lottie Player (pinned stable version) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <!-- Missing Core Libraries [Latest] -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <!-- Note: QRCode.js is embedded inline below to avoid CDN CORS issues -->
+  <link rel="manifest" href="manifest.json">
+  <style>
+    /* Ensure floating buttons are always visible at the bottom corner */
+    .floating-btn {
+      position: fixed !important;
+      right: 20px !important;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      background: rgba(20, 20, 20, 0.8) !important;
+      border: 1px solid var(--accent-gold) !important;
+      color: var(--accent-gold) !important;
+      font-size: 20px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      z-index: 9999 !important;
+      backdrop-filter: blur(10px) !important;
+      transition: all 0.3s ease !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .floating-btn:hover {
+      background: var(--accent-gold) !important;
+      color: #000 !important;
+      transform: translateY(-5px) scale(1.1) !important;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4) !important;
+    }
+
+    /* Modal specific overlay fixes */
+    #qrModal.active,
+    #projectModal.active {
+      display: flex !important;
+      animation: fadeIn 0.3s forwards;
+      opacity: 1;
+      visibility: visible;
+      z-index: 100000;
+    }
+
+    /* Project Glass Modal */
+    .project-modal-overlay {
+      background: rgba(0, 0, 0, 0.8) !important;
+      backdrop-filter: blur(4px);
+    }
+
+    .glass-modal-content {
+      background: var(--card-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+      transform: scale(0.9);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #projectModal.active .glass-modal-content {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .pm-badges span {
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--primary-gold);
+      padding: 5px 15px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+
+    .qr-content {
+      background: rgba(10, 10, 10, 0.95);
+      border: 1px solid var(--accent-gold);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      max-width: 90%;
+      width: 350px;
+      margin: auto;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #qrModal.active .qr-content {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    #qrCodeContainer {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body class="loading-skeleton light-mode">
+  <!-- Reading Progress Bar -->
+  <div id="reading-progress"></div>
+
+  <!-- Inline Visibility Fail-Safe (Immediate Insurance) -->
+  <script>
+    (function () {
+      var safetyTrigger = setTimeout(function () {
+        document.body.classList.remove('loading-skeleton');
+        var preloader = document.getElementById('preloader');
+        var skeleton = document.getElementById('skeleton-loader');
+        if (preloader) preloader.style.display = 'none';
+        if (skeleton) skeleton.style.display = 'none';
+      }, 4500);
+      window.addEventListener('load', function () {
+        clearTimeout(safetyTrigger);
+        document.body.classList.remove('loading-skeleton');
+        var preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.style.opacity = '0';
+          setTimeout(function () { preloader.style.display = 'none'; }, 500);
+        }
+      });
+    })();
+  </script>
+  <!-- Skeleton Overlay (Managed by CSS) -->
+  <div id="skeleton-loader"></div>
+  <!-- Scroll Progress Bar -->
+
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Noscript Fallback -->
+  <noscript>
+    <div
+      style="background:#111;color:#fff;text-align:center;padding:40px 20px;font-family:'Cairo',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+      <h1 style="color:#FF0000;font-size:2rem;">⚠️ JavaScript Required</h1>
+      <p style="margin-top:15px;font-size:1.1rem;color:#ccc;">هذا الموقع يحتاج تفعيل JavaScript للعمل بشكل صحيح.</p>
+      <p style="margin-top:5px;font-size:1.1rem;color:#ccc;">This website requires JavaScript to function properly.</p>
+    </div>
+  </noscript>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <img loading="lazy" src="logo.svg" alt="MN Logo" width="80" height="80" class="pulsate-logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Floating Action Button (FAB) -->
+  <div class="fab-container">
+    <a href="https://wa.me/201015694380" class="fab-btn" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+
+
+
+
+  <div class="lang-switcher">
+    <i class="fas fa-globe"></i>
+    <select id="langSelect" onchange="changeLanguage(this.value)" aria-label="Select Language">
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="tr">Türkçe</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ru">Русский</option>
+      <option value="pt">Português</option>
+      <option value="it">Italiano</option>
+      <option value="ko">한국어</option>
+      <option value="id">Bahasa Indonesia</option>
+      <option value="ur">اردو</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+    <button id="themeToggle" class="icon-btn" onclick="toggleTheme()" title="Switch Theme" aria-label="Switch Theme">
+      <i class="fas fa-sun"></i>
+    </button>
+    <button id="soundToggle" class="icon-btn" onclick="toggleSound()" title="Mute/Unmute Sounds"
+      aria-label="Mute/Unmute Sounds">
+      <i class="fas fa-volume-up"></i>
+    </button>
+    <button id="headerQrBtn" class="icon-btn" onclick="openQRModal()" title="Show QR Code" aria-label="Show QR Code">
+      <i class="fas fa-qrcode"></i>
+    </button>
+  </div>
+  <div id="app-wrapper" class="lang-transition">
+
+    <div class="pdf-container">
+      <!-- Cover Page -->
+      <section class="page cover" data-aos="fade-in">
+        <canvas id="bg-canvas"></canvas>
+        <div class="glow-bg"></div>
+        <div class="content">
+          <h1 class="neon-text" data-i18n="name">محمد <span class="highlight">نافع</span></h1>
+          <p class="subtitle" data-i18n="role">مطور تطبيقات جوال | مطور Flutter | مطور Java</p>
+          <div class="decorative-line"></div>
+        </div>
+        <div class="tech-icons" data-aos="fade-up" data-aos-delay="200">
+          <svg width="24" height="24" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg"
+            style="vertical-align: middle;">
+            <path d="M157.666 0L0 157.666l48.8 48.8L206.466 0h-48.8z" />
+            <path d="M156.567 145.396L72.15 229.813l48.8 48.8 84.417-84.417-48.8-48.8z" />
+            <path d="M72.15 229.813l48.8 48.8 36.417-36.417-48.8-48.8-36.417 36.417z" />
+          </svg>
+          <i class="fab fa-android"></i>
+          <i class="fab fa-java"></i>
+          <i class="fas fa-database"></i>
+        </div>
+      </section>
+
+      <!-- Summary & Education Page -->
+      <section class="page" data-aos="fade-up">
+
+        <h2 class="section-title neon-text" data-i18n="summary_title">الملخص المهني</h2>
+        <div class="card about-card">
+          <p data-i18n="summary_text">مطور أندرويد يمتلك خبرة في Flutter وDart وJava. لديه خبرة في تطوير تطبيقات جوال
+            قابلة للتوسع، تكامل خدمات Firebase، وإدارة الأكواد باستخدام Git. قادر على تنفيذ المشاريع ضمن جداول زمنية
+            محددة بكفاءة تشغيلية عالية.</p>
+        </div>
+
+        <!-- Contact Page (Moved) -->
+        <section class="page" style="min-height: auto; padding: 20px 0; border: none;">
+
+          <div class="contact-grid">
+            <a href="mailto:king.darkmn@gmail.com" class="contact-item" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span data-i18n="email_label">البريد الإلكتروني</span>
+                <p>king.darkmn@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="contact-item" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <span data-i18n="whatsapp_label">WhatsApp</span>
+                <p data-i18n="whatsapp_text">مراسلة عبر واتساب</p>
+              </div>
+            </a>
+            <a href="https://github.com/MohammedNafea" target="_blank" class="contact-item" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+              <div>
+                <span data-i18n="github_label">GitHub</span>
+                <p>Mohammed Nafea</p>
+              </div>
+            </a>
+            <a href="https://x.com/KingDarkmn" target="_blank" class="contact-item" aria-label="X (Twitter)">
+              <i class="fab fa-x-twitter"></i>
+              <div>
+                <span data-i18n="twitter_label">X (Twitter)</span>
+                <p>KingDarkmn</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-nafea-62a32b160" target="_blank" class="contact-item"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <span data-i18n="linkedin_label">LinkedIn</span>
+                <p>Mohammed Nafea</p>
+              </div>
+            </a>
+            <a href="https://t.me/king_darkmn" target="_blank" class="contact-item" aria-label="Telegram">
+              <i class="fab fa-telegram"></i>
+              <div>
+                <span data-i18n="telegram_label">Telegram</span>
+                <p>king_darkmn</p>
+              </div>
+            </a>
+          </div>
+          <div
+            style="text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <button class="contact-qr-btn" onclick="showContactQR()">
+              <span data-i18n="contact_qr_title">بطاقة تواصل (QR)</span> <i class="fas fa-qrcode"></i>
+            </button>
+            <a href="Mohamed_Nafea_CV_ATS.pdf" target="_blank" class="contact-qr-btn" title="Download CV (PDF)"
+              aria-label="Download CV" style="text-decoration:none;">
+              <i class="fas fa-file-pdf"></i> <span data-i18n="download_cv">تحميل السيرة الذاتية (PDF)</span>
+            </a>
+          </div>
+        </section>
+
+
+        <h2 class="section-title neon-text" data-i18n="edu_title">المؤهل العلمي</h2>
+        <div class="card education-card skeleton-item">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 80%;"></div>
+          <h3 data-i18n="edu_degree">بكالوريوس نظم معلومات إدارية</h3>
+          <p class="date" data-i18n="edu_date">2020 – 2024</p>
+          <p data-i18n="edu_project">مشروع التخرج: Guide Me – تطبيق سياحي (تقدير ممتاز ??)</p>
+        </div>
+
+
+        <h2 class="section-title neon-text" data-i18n="exp_title">الخبرة العملية</h2>
+        <ul class="experience-list">
+          <li data-i18n="exp_1" class="skeleton-item">
+            <div class="skeleton-text"></div><i class="fas fa-check-circle"></i> تطوير تطبيقات متعددة المنصات باستخدام
+            Flutter وDart.
+          </li>
+          <li data-i18n="exp_2" class="skeleton-item">
+            <div class="skeleton-text"></div><i class="fas fa-check-circle"></i> بناء وصيانه التطبيقات بمنصات مختلفه
+            باستخدام Flutter و Java
+          </li>
+          <li data-i18n="exp_3" class="skeleton-item">
+            <div class="skeleton-text"></div><i class="fas fa-check-circle"></i> تكامل خدمات Firebase (المصادقة –
+            Firestore – الإشعارات).
+          </li>
+          <li data-i18n="exp_4" class="skeleton-item">
+            <div class="skeleton-text"></div><i class="fas fa-check-circle"></i> إدارة الأكواد باستخدام Git وGitHub ضمن
+            بيئة عمل تعاونية.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projects Page -->
+      <section class="page">
+
+        <h2 class="section-title neon-text" data-i18n="projects_title">المشاريع الرئيسية</h2>
+
+        <div class="project-card skeleton-item" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-speed="400"
+          data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 60%;"></div>
+          <div class="project-header">
+
+            <h3><i class="fas fa-map-marked-alt"></i> <span data-i18n="guide_me_title">Guide Me – تطبيق سياحي</span>
+            </h3>
+            <span class="date">2024</span>
+          </div>
+          <div class="project-gallery slider-container" id="guide-me-gallery">
+            <button class="slider-btn prev" onclick="moveSlider('guide-me-gallery', -1)"
+              aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-wrapper">
+              <img src="guide_me_1_splash.webp" alt="Guide Me Screenshot 1 (Splash)" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_splash" loading="lazy"
+                width="360" height="640">
+              <img src="guide_me_2_login.webp" alt="Guide Me Screenshot 2 (Login)" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_login" loading="lazy"
+                width="360" height="640">
+              <img src="guide_me_4.webp" alt="Guide Me Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير"
+                data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy" width="360" height="640">
+              <img src="guide_me_5.webp" alt="Guide Me Screenshot 4" onclick="openLightbox(this)" title="اضغط للتكبير"
+                data-i18n-title="view_hd" data-i18n-alt="img_guide_details" loading="lazy" width="360" height="640">
+              <img src="guide_me_6_profile.webp" alt="Guide Me Screenshot 5 (Profile)" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_profile" loading="lazy"
+                width="360" height="640">
+              <img src="guide_me_7_home.webp" alt="Guide Me Screenshot 6 (Home Screen)" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_guide_home" loading="lazy" width="360"
+                height="640">
+              <img src="guide_me_8_splash2.webp" alt="Guide Me Screenshot 7 (Pyramids Splash)"
+                onclick="openLightbox(this)" title="اضغط للتكبير" data-i18n-title="view_hd"
+                data-i18n-alt="img_guide_splash" loading="lazy" width="360" height="640">
+            </div>
+            <button class="slider-btn next" onclick="moveSlider('guide-me-gallery', 1)"
+              aria-label="Next Slide">&#10095;</button>
+          </div>
+          <p class="project-details" data-i18n="guide_me_desc">تطوير تطبيق يعتمد على الخدمات الجغرافية لتحسين تجربة
+            المستخدم السياحية.</p>
+          <div class="project-links">
+            <button onclick="openProjectModal('guideMe')" class="btn-gold-sm"
+              style="width: 100%; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1em;">
+              <i class="fas fa-info-circle"></i> <span data-i18n="view_details">عرض التفاصيل</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card skeleton-item" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="5"
+          data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 60%;"></div>
+          <div class="project-header">
+
+            <h3><i class="fas fa-chart-line"></i> <span data-i18n="data_bootcamp_title">معسكر تحليل البيانات</span></h3>
+            <span class="date">2026</span>
+          </div>
+          <div class="project-gallery slider-container" id="data-bootcamp-gallery">
+            <button class="slider-btn prev" onclick="moveSlider('data-bootcamp-gallery', -1)"
+              aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-wrapper">
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_1.webp"
+                  alt="Data Analysis Screenshot 1" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_2.webp"
+                  alt="Data Analysis Screenshot 2" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_3.webp"
+                  alt="Data Analysis Screenshot 3" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_4.webp"
+                  alt="Sales Dashboard - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_2" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_5.webp"
+                  alt="Data Visualizations - Power BI" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_3" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="data_bootcamp_6.webp"
+                  alt="Customer Data Processing Table" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_data_1" loading="lazy" width="800" height="450"></div>
+            </div>
+            <button class="slider-btn next" onclick="moveSlider('data-bootcamp-gallery', 1)"
+              aria-label="Next Slide">&#10095;</button>
+          </div>
+          <p class="project-details" data-i18n="data_bootcamp_desc">مشروع تحليل البيانات المتكامل الذي يتضمن معالجة
+            البيانات وبناء التقارير التفاعلية.</p>
+          <div class="project-links">
+            <button onclick="openProjectModal('dataBootcamp')" class="btn-gold-sm"
+              style="width: 100%; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1em;">
+              <i class="fas fa-info-circle"></i> <span data-i18n="view_details">عرض التفاصيل</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card skeleton-item" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5"
+          data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 60%;"></div>
+          <div class="project-header">
+
+            <h3><i class="fas fa-vial"></i> <span data-i18n="chem_title">Wonders of Chemistry</span></h3>
+            <span class="date">04/02/2026 – 14/02/2026</span>
+          </div>
+          <span class="badge" data-i18n="chem_badge">مبادرة Hash Plus</span>
+          <div class="project-gallery slider-container" id="chemistry-gallery">
+            <button class="slider-btn prev" onclick="moveSlider('chemistry-gallery', -1)"
+              aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-wrapper">
+              <div class="skeleton-item loading-skeleton"><img src="chem_1.webp" alt="Wonders of Chemistry 1"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_2.webp" alt="Wonders of Chemistry 2"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_1"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_4.webp" alt="Wonders of Chemistry 3"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_2"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_6.webp" alt="Wonders of Chemistry 4"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_8.webp" alt="Wonders of Chemistry 5"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_9.webp" alt="Wonders of Chemistry 6"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_10.webp" alt="Wonders of Chemistry 7"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3"
+                  loading="lazy" width="360" height="640"></div>
+              <div class="skeleton-item loading-skeleton"><img src="chem_11.webp" alt="Wonders of Chemistry 8"
+                  title="اضغط للتكبير" data-i18n-title="view_hd" onclick="openLightbox(this)" data-i18n-alt="img_chem_3"
+                  loading="lazy" width="360" height="640"></div>
+            </div>
+            <button class="slider-btn next" onclick="moveSlider('chemistry-gallery', 1)"
+              aria-label="Next Slide">&#10095;</button>
+          </div>
+          <p class="project-details" data-i18n="chem_desc">تطوير برنامج تعليمي تفاعلي يهدف إلى تبسيط مفاهيم الكيمياء.
+          </p>
+          <div class="project-links">
+            <button onclick="openProjectModal('chemWonders')" class="btn-gold-sm"
+              style="width: 100%; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1em;">
+              <i class="fas fa-info-circle"></i> <span data-i18n="view_details">عرض التفاصيل</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-card skeleton-item" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="5"
+          data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 60%;"></div>
+          <div class="project-header">
+
+            <h3><i class="fas fa-code-branch"></i> <span data-i18n="mac_title">مشاريع مبادرة مليون مبرمج عربي</span>
+            </h3>
+            <span class="date">2017</span>
+          </div>
+          <div class="project-gallery slider-container" id="mac-work-gallery">
+            <button class="slider-btn prev" onclick="moveSlider('mac-work-gallery', -1)"
+              aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-wrapper">
+              <img src="mac_project_work.webp" alt="MAC Project Work" onclick="openLightbox(this)" title="اضغط للتكبير"
+                data-i18n-title="view_hd" data-i18n-alt="img_mac_project" loading="lazy" width="800" height="450">
+            </div>
+            <button class="slider-btn next" onclick="moveSlider('mac-work-gallery', 1)"
+              aria-label="Next Slide">&#10095;</button>
+          </div>
+          <p class="project-details" data-i18n="mac_desc">تطوير عدة تطبيقات أندرويد أساسية كجزء من مسار مطور أندرويد.
+          </p>
+          <div class="project-links">
+            <button onclick="openProjectModal('macProject')" class="btn-gold-sm"
+              style="width: 100%; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1em;">
+              <i class="fas fa-info-circle"></i> <span data-i18n="view_details">عرض التفاصيل</span>
+            </button>
+          </div>
+        </div>
+        <!-- ... -->
+
+        <!-- Skills Page -->
+        <section class="page" data-aos="fade-up">
+
+          <h2 class="section-title neon-text" data-i18n="tech_skills_title">المهارات التقنية</h2>
+          <div class="skills-grid">
+            <div class="skill-item glass-card skeleton-item" data-tech="flutter" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <svg width="32" height="32" viewBox="0 0 256 317" xmlns="http://www.w3.org/2000/svg">
+                <path d="M157.666 0L0 157.666l48.8 48.8L206.466 0h-48.8z" />
+                <path d="M156.567 145.396L72.15 229.813l48.8 48.8 84.417-84.417-48.8-48.8z" />
+                <path d="M72.15 229.813l48.8 48.8 36.417-36.417-48.8-48.8-36.417 36.417z" />
+              </svg>
+              <h4>Flutter</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="dart" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <svg width="32" height="32" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                <path d="M128 0L0 128l128 128 128-128L128 0zm0 38.4L217.6 128 128 217.6 38.4 128 128 38.4z" />
+                <circle cx="128" cy="128" r="38" />
+              </svg>
+              <h4>Dart</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="java" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fab fa-java"></i>
+              <h4>Java</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="android" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fab fa-android"></i>
+              <h4>Android Studio</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="firebase" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fas fa-fire"></i>
+              <h4>Firebase</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="git" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fab fa-git-alt"></i>
+              <h4>Git & GitHub</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="vscode" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fas fa-file-code"></i>
+              <h4>VS Code</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="antigravity" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <i class="fas fa-robot"></i>
+              <h4 data-i18n="skill_antigravity">Antigravity</h4>
+            </div>
+          </div>
+
+
+          <h2 class="section-title neon-text" style="margin-top:20px;" data-i18n="soft_skills_title">المهارات الشخصية
+          </h2>
+          <div class="skills-grid">
+            <div class="skill-item glass-card skeleton-item" data-tech="problem-solving" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <div class="skeleton-icon"></div>
+              <div class="skeleton-title"></div>
+              <i class="fas fa-lightbulb"></i>
+              <h4 data-i18n="skill_problem_solving">حل المشكلات</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="analytical-thinking" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <div class="skeleton-icon"></div>
+              <div class="skeleton-title"></div>
+              <i class="fas fa-brain"></i>
+              <h4 data-i18n="skill_analytical">التفكير التحليلي</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="teamwork" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <div class="skeleton-icon"></div>
+              <div class="skeleton-title"></div>
+              <i class="fas fa-people-carry"></i>
+              <h4 data-i18n="skill_teamwork">العمل الجماعي</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="time-management" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <div class="skeleton-icon"></div>
+              <div class="skeleton-title"></div>
+              <i class="fas fa-clock"></i>
+              <h4 data-i18n="skill_time_mgmt">إدارة الوقت</h4>
+            </div>
+            <div class="skill-item glass-card skeleton-item" data-tech="communication" data-tilt data-tilt-max="5"
+              data-tilt-speed="400">
+              <div class="skeleton-icon"></div>
+              <div class="skeleton-title"></div>
+              <i class="fas fa-comments"></i>
+              <h4 data-i18n="skill_communication">التواصل</h4>
+            </div>
+          </div>
+        </section>
+
+        <!-- GitHub Stats Section -->
+        <section class="github-stats" data-aos="fade-up">
+
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <img loading="lazy"
+                src="https://github-readme-stats.vercel.app/api?username=MohammedNafea&show_icons=true&hide_border=true&bg_color=transparent&title_color=D4AF37&text_color=999999&icon_color=D4AF37"
+                alt="GitHub Stats"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<a href=\'https://github.com/MohammedNafea\' target=\'_blank\' class=\'btn-gold-sm\'><i class=\'fab fa-github\'></i> View Profile</a>'"
+                style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="stat-card glass-card">
+              <img loading="lazy"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=MohammedNafea&layout=compact&hide_border=true&bg_color=transparent&title_color=D4AF37&text_color=999999"
+                alt="Top Languages"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<a href=\'https://github.com/MohammedNafea\' target=\'_blank\' class=\'btn-gold-sm\'><i class=\'fab fa-github\'></i> View Languages</a>'"
+                style="width: 100%; height: auto; display: block;">
+            </div>
+          </div>
+        </section>
+
+
+        <h2 class="section-title neon-text" data-i18n="certs_title">الشهادات</h2>
+        <div class="cert-grid">
+          <div class="card cert-card skeleton-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.3">
+            <h4 data-i18n="flutter_cert_title">ورشة عمل Flutter</h4>
+            <p class="cert-date" data-i18n="sept_2020">سبتمبر 2020</p>
+            <div class="cert-media-container">
+              <img src="flutter_cert.webp" alt="Flutter Workshop Certificate" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy"
+                width="800" height="566">
+            </div>
+          </div>
+          <div class="card cert-card skeleton-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.3">
+            <h4 data-i18n="data_bootcamp_title">معسكر تحليل البيانات</h4>
+            <p class="cert-date">2026</p>
+            <div class="cert-media-container">
+              <img src="data_cert.webp" alt="Data Analysis Certificate" onclick="openLightbox(this)"
+                title="اضغط للتكبير" data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy"
+                width="800" height="566">
+            </div>
+          </div>
+          <div class="card cert-card skeleton-item" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare
+            data-tilt-max-glare="0.3">
+            <h4 data-i18n="mac_cert_title">مبادرة مليون مبرمج عربي</h4>
+            <p class="cert-date">2017</p>
+            <div class="cert-media-container slider-container" id="cert-gallery">
+              <button class="slider-btn prev" onclick="moveSlider('cert-gallery', -1)"
+                aria-label="Previous Slide">&#10094;</button>
+              <div class="slider-wrapper">
+                <img src="mac_cert_1.webp" alt="MAC Certificate 1" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
+                <img src="mac_cert_2.webp" alt="MAC Certificate 2" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_val_certificate" loading="lazy" width="800" height="566">
+              </div>
+              <button class="slider-btn next" onclick="moveSlider('cert-gallery', 1)"
+                aria-label="Next Slide">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="page testimonials-section" data-aos="fade-up">
+        <h2 class="section-title neon-text" data-i18n="testimonials_title">توصيات الزملاء</h2>
+        <div class="testimonials-container">
+          <button class="slider-btn prev" onclick="moveTestimonials(-1)" aria-label="Previous">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="testimonials-slider" id="testimonialsSlider">
+            <div class="testimonial-card">
+              <p class="testi-quote" data-i18n="testi_1_text">محمد مطور متميز، لديه شغف كبير بالتفاصيل وقدرة عالية على
+                حل المشكلات التقنية المعقدة.</p>
+              <div class="testi-info">
+                <span class="testi-author" data-i18n="testi_1_author">أحمد السيد</span>
+                <span class="testi-role" data-i18n="testi_1_role">مطور برمجيات</span>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <p class="testi-quote" data-i18n="testi_2_text">التزام محمد بالجودة والمواعيد جعله أحد أفضل المطورين الذين
+                تعاملت معهم في مشاريع فلاتر.</p>
+              <div class="testi-info">
+                <span class="testi-author" data-i18n="testi_2_author">إيمان حسن</span>
+                <span class="testi-role" data-i18n="testi_2_role">مديرة تقنية</span>
+              </div>
+            </div>
+          </div>
+          <button class="slider-btn next" onclick="moveTestimonials(1)" aria-label="Next">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+        </div>
+      </section>
+
+      <script>
+        let testiIndex = 0;
+        function moveTestimonials(dir) {
+          const slider = document.getElementById('testimonialsSlider');
+          const cards = document.querySelectorAll('.testimonial-card');
+          if (!cards.length) return;
+
+          const gap = 30;
+          const cardWidth = cards[0].offsetWidth + gap;
+          const visibleWidth = slider.parentElement.offsetWidth;
+          const maxIndex = cards.length - Math.floor(visibleWidth / cardWidth);
+
+          testiIndex += dir;
+          if (testiIndex < 0) testiIndex = 0;
+          if (testiIndex > maxIndex) testiIndex = maxIndex;
+
+          const dirMultiplier = (document.documentElement.dir === 'rtl') ? 1 : -1;
+          slider.style.transform = `translateX(${testiIndex * cardWidth * dirMultiplier}px)`;
+        }
+      </script>
+
+      <!-- FAQ Section -->
+      <section class="page faq-section" id="faq" data-aos="fade-up">
+        <h2 class="section-title neon-text" data-i18n="faq_title">الأسئلة الشائعة</h2>
+        <div class="faq-container">
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span data-i18n="faq_q1">هل تعمل بنظام العمل الحر؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq_a1">نعم، أنا متاح للعمل على مشاريع بنظام العمل الحر، سواء كانت تطبيقات كاملة أو تعديلات.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span data-i18n="faq_q2">ما هي التقنيات التي تستخدمها؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq_a2">أستخدم Flutter و Dart بشكل أساسي، مع خبرة في Native Android (Java/Kotlin) و
+                Firebase.</p>
+            </div>
+          </div>
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span data-i18n="faq_q3">كم تكلفة تطوير تطبيق؟</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p data-i18n="faq_a3">التكلفة تعتمد على حجم وتعقيد المشروع. يمكنك التواصل معي لمناقشة التفاصيل والحصول على
+                عرض سعر.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Page -->
+      <section class="page contact-section" id="contact" data-aos="fade-up">
+
+        <h2 class="section-title neon-text" data-i18n="contact_title">معلومات التواصل</h2>
+        <p class="contact-subtitle" data-i18n="contact_desc">لديك مشروع أو فكرة؟ لا تتردد في مراسلتي، أنا
+          بانتظارك!</p>
+
+        <div class="contact-container">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" id="contact-name" required placeholder="الاسم"
+                data-i18n-placeholder="name_placeholder">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="contact-email" required placeholder="البريد الإلكتروني"
+                data-i18n-placeholder="email_placeholder">
+            </div>
+            <div class="form-group">
+              <textarea name="message" id="contact-message" rows="5" required placeholder="الرسالة"
+                data-i18n-placeholder="msg_placeholder"></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="contact-submit">
+              <span data-i18n="send_btn">إرسال</span> <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="contact-info">
+            <a href="https://github.com/MohammedNafea" target="_blank" rel="noopener noreferrer"
+              class="social-link github" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mohammed-nafea-62a32b160" target="_blank" rel="noopener noreferrer"
+              class="social-link linkedin" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/KingDarkmn" target="_blank" rel="noopener noreferrer" class="social-link twitter"
+              title="X (Twitter)">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/king_darkmn" target="_blank" rel="noopener noreferrer" class="social-link telegram"
+              title="Telegram">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="mailto:king.darkmn@gmail.com" class="social-link email" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" rel="noopener noreferrer"
+              class="social-link whatsapp" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <p data-i18n="footer_text">© 2026 محمد نافع. جميع الحقوق محفوظة.</p>
+        <div class="heart-container" data-i18n="made_with">Made with <i class="fas fa-heart heart-beat"></i> by
+          King_Darkmn</div>
+      </footer>
+
+      <button id="scrollTop" class="scroll-top-btn" onclick="scrollToTop()" title="Go to Top"
+        aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+
+
+
+      <!-- Interactive CV Modal -->
+      <div id="cv-modal" class="modal">
+        <div class="cv-modal-content glass-card">
+          <div class="cv-modal-header">
+            <h2 data-i18n="cv_modal_title">السيرة الذاتية التفاعلية</h2>
+            <span class="close-lightbox" onclick="closeCVModal()">&times;</span>
+          </div>
+          <div id="cv-modal-body" class="cv-preview">
+            <!-- Content injected via JS -->
+          </div>
+          <div class="cv-modal-footer" style="padding: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+            <button class="btn-gold-sm" onclick="generateAndDownloadCV()">
+              <i class="fas fa-file-pdf"></i> <span data-i18n="download_pdf">تحميل PDF</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</span>
+        <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)"
+          aria-label="Previous Image">&#10094;</button>
+        <img loading="lazy" class="lightbox-content" id="lightbox-img" alt="Enlarged Image">
+        <button class="lightbox-btn next" onclick="changeLightboxImage(1)" aria-label="Next Image">&#10095;</button>
+        <div id="caption"></div>
+      </div>
+
+      <!-- QR Code Modal -->
+      <div id="qrModal" class="lightbox" onclick="closeQRModal(event)">
+        <div class="qr-content" onclick="event.stopPropagation()">
+          <span class="close-lightbox" onclick="closeQRModal()" aria-label="Close Modal">&times;</span>
+          <img loading="lazy" id="qrCrownImg" src="fire_crown.webp" alt="Crown" class="qr-crown-img"
+            style="display: none;" width="192" height="192">
+          <h3 class="qr-title" id="qrModalTitle" data-i18n="qr_modal_title">QR Code</h3>
+          <div id="qrCodeContainer"></div>
+          <p class="qr-desc" id="qrModalDesc" data-i18n="qr_modal_desc">Scan to visit on mobile</p>
+          <button class="qr-download-btn" onclick="downloadQR()" aria-label="Download QR Code">
+            <i class="fas fa-download"></i> <span data-i18n="download_qr">تحميل QR</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Project Details Modal -->
+      <div id="projectModal" class="lightbox project-modal-overlay" onclick="closeProjectModal(event)">
+        <div class="glass-modal-content" onclick="event.stopPropagation()">
+          <span class="close-lightbox" onclick="closeProjectModal()" aria-label="Close Project Modal">&times;</span>
+          <h2 id="pm-title" class="neon-text" style="text-align: center; margin-bottom: 15px;"></h2>
+          <div class="pm-badges" id="pm-tech-stack"
+            style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;">
+            <!-- Dynamic Badges -->
+          </div>
+          <p id="pm-desc" style="color: var(--text-gray); text-align: center; line-height: 1.8; margin-bottom: 25px;">
+          </p>
+          <div id="pm-links" style="display: flex; gap: 15px; justify-content: center;">
+            <!-- Dynamic Links -->
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>!function (t, s) { "object" == typeof exports && "undefined" != typeof module ? module.exports = s() : "function" == typeof define && define.amd ? define(s) : (t || self).Typed = s() }(this, function () {
+          function t() { return t = Object.assign ? Object.assign.bind() : function (t) { for (var s = 1; s < arguments.length; s++) { var e = arguments[s]; for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]) } return t }, t.apply(this, arguments) } var s = { strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"], stringsElement: null, typeSpeed: 0, startDelay: 0, backSpeed: 0, smartBackspace: !0, shuffle: !1, backDelay: 700, fadeOut: !1, fadeOutClass: "typed-fade-out", fadeOutDelay: 500, loop: !1, loopCount: Infinity, showCursor: !0, cursorChar: "|", autoInsertCss: !0, attr: null, bindInputFocusEvents: !1, contentType: "html", onBegin: function (t) { }, onComplete: function (t) { }, preStringTyped: function (t, s) { }, onStringTyped: function (t, s) { }, onLastStringBackspaced: function (t) { }, onTypingPaused: function (t, s) { }, onTypingResumed: function (t, s) { }, onReset: function (t) { }, onStop: function (t, s) { }, onStart: function (t, s) { }, onDestroy: function (t) { } }, e = new (/*#__PURE__*/function () { function e() { } var n = e.prototype; return n.load = function (e, n, i) { if (e.el = "string" == typeof i ? document.querySelector(i) : i, e.options = t({}, s, n), e.isInput = "input" === e.el.tagName.toLowerCase(), e.attr = e.options.attr, e.bindInputFocusEvents = e.options.bindInputFocusEvents, e.showCursor = !e.isInput && e.options.showCursor, e.cursorChar = e.options.cursorChar, e.cursorBlinking = !0, e.elContent = e.attr ? e.el.getAttribute(e.attr) : e.el.textContent, e.contentType = e.options.contentType, e.typeSpeed = e.options.typeSpeed, e.startDelay = e.options.startDelay, e.backSpeed = e.options.backSpeed, e.smartBackspace = e.options.smartBackspace, e.backDelay = e.options.backDelay, e.fadeOut = e.options.fadeOut, e.fadeOutClass = e.options.fadeOutClass, e.fadeOutDelay = e.options.fadeOutDelay, e.isPaused = !1, e.strings = e.options.strings.map(function (t) { return t.trim() }), e.stringsElement = "string" == typeof e.options.stringsElement ? document.querySelector(e.options.stringsElement) : e.options.stringsElement, e.stringsElement) { e.strings = [], e.stringsElement.style.cssText = "clip: rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px;"; var r = Array.prototype.slice.apply(e.stringsElement.children), o = r.length; if (o) for (var a = 0; a < o; a += 1)e.strings.push(r[a].innerHTML.trim()) } for (var u in e.strPos = 0, e.currentElContent = this.getCurrentElContent(e), e.currentElContent && e.currentElContent.length > 0 && (e.strPos = e.currentElContent.length - 1, e.strings.unshift(e.currentElContent)), e.sequence = [], e.strings) e.sequence[u] = u; e.arrayPos = 0, e.stopNum = 0, e.loop = e.options.loop, e.loopCount = e.options.loopCount, e.curLoop = 0, e.shuffle = e.options.shuffle, e.pause = { status: !1, typewrite: !0, curString: "", curStrPos: 0 }, e.typingComplete = !1, e.autoInsertCss = e.options.autoInsertCss, e.autoInsertCss && (this.appendCursorAnimationCss(e), this.appendFadeOutAnimationCss(e)) }, n.getCurrentElContent = function (t) { return t.attr ? t.el.getAttribute(t.attr) : t.isInput ? t.el.value : "html" === t.contentType ? t.el.innerHTML : t.el.textContent }, n.appendCursorAnimationCss = function (t) { var s = "data-typed-js-cursor-css"; if (t.showCursor && !document.querySelector("[" + s + "]")) { var e = document.createElement("style"); e.setAttribute(s, "true"), e.innerHTML = "\n        .typed-cursor{\n          opacity: 1;\n        }\n        .typed-cursor.typed-cursor--blink{\n          animation: typedjsBlink 0.7s infinite;\n          -webkit-animation: typedjsBlink 0.7s infinite;\n                  animation: typedjsBlink 0.7s infinite;\n        }\n        @keyframes typedjsBlink{\n          50% { opacity: 0.0; }\n        }\n        @-webkit-keyframes typedjsBlink{\n          0% { opacity: 1; }\n          50% { opacity: 0.0; }\n          100% { opacity: 1; }\n        }\n      ", document.body.appendChild(e) } }, n.appendFadeOutAnimationCss = function (t) { var s = "data-typed-fadeout-js-css"; if (t.fadeOut && !document.querySelector("[" + s + "]")) { var e = document.createElement("style"); e.setAttribute(s, "true"), e.innerHTML = "\n        .typed-fade-out{\n          opacity: 0;\n          transition: opacity .25s;\n        }\n        .typed-cursor.typed-cursor--blink.typed-fade-out{\n          -webkit-animation: 0;\n          animation: 0;\n        }\n      ", document.body.appendChild(e) } }, e }()), n = new (/*#__PURE__*/function () { function t() { } var s = t.prototype; return s.typeHtmlChars = function (t, s, e) { if ("html" !== e.contentType) return s; var n = t.substring(s).charAt(0); if ("<" === n || "&" === n) { var i; for (i = "<" === n ? ">" : ";"; t.substring(s + 1).charAt(0) !== i && !(1 + ++s > t.length);); s++ } return s }, s.backSpaceHtmlChars = function (t, s, e) { if ("html" !== e.contentType) return s; var n = t.substring(s).charAt(0); if (">" === n || ";" === n) { var i; for (i = ">" === n ? "<" : "&"; t.substring(s - 1).charAt(0) !== i && !(--s < 0);); s-- } return s }, t }());/*#__PURE__*/
+          return function () { function t(t, s) { e.load(this, s, t), this.begin() } var s = t.prototype; return s.toggle = function () { this.pause.status ? this.start() : this.stop() }, s.stop = function () { this.typingComplete || this.pause.status || (this.toggleBlinking(!0), this.pause.status = !0, this.options.onStop(this.arrayPos, this)) }, s.start = function () { this.typingComplete || this.pause.status && (this.pause.status = !1, this.pause.typewrite ? this.typewrite(this.pause.curString, this.pause.curStrPos) : this.backspace(this.pause.curString, this.pause.curStrPos), this.options.onStart(this.arrayPos, this)) }, s.destroy = function () { this.reset(!1), this.options.onDestroy(this) }, s.reset = function (t) { void 0 === t && (t = !0), clearInterval(this.timeout), this.replaceText(""), this.cursor && this.cursor.parentNode && (this.cursor.parentNode.removeChild(this.cursor), this.cursor = null), this.strPos = 0, this.arrayPos = 0, this.curLoop = 0, t && (this.insertCursor(), this.options.onReset(this), this.begin()) }, s.begin = function () { var t = this; this.options.onBegin(this), this.typingComplete = !1, this.shuffleStringsIfNeeded(this), this.insertCursor(), this.bindInputFocusEvents && this.bindFocusEvents(), this.timeout = setTimeout(function () { 0 === t.strPos ? t.typewrite(t.strings[t.sequence[t.arrayPos]], t.strPos) : t.backspace(t.strings[t.sequence[t.arrayPos]], t.strPos) }, this.startDelay) }, s.typewrite = function (t, s) { var e = this; this.fadeOut && this.el.classList.contains(this.fadeOutClass) && (this.el.classList.remove(this.fadeOutClass), this.cursor && this.cursor.classList.remove(this.fadeOutClass)); var i = this.humanizer(this.typeSpeed), r = 1; !0 !== this.pause.status ? this.timeout = setTimeout(function () { s = n.typeHtmlChars(t, s, e); var i = 0, o = t.substring(s); if ("^" === o.charAt(0) && /^\^\d+/.test(o)) { var a = 1; a += (o = /\d+/.exec(o)[0]).length, i = parseInt(o), e.temporaryPause = !0, e.options.onTypingPaused(e.arrayPos, e), t = t.substring(0, s) + t.substring(s + a), e.toggleBlinking(!0) } if ("`" === o.charAt(0)) { for (; "`" !== t.substring(s + r).charAt(0) && (r++, !(s + r > t.length));); var u = t.substring(0, s), p = t.substring(u.length + 1, s + r), c = t.substring(s + r + 1); t = u + p + c, r-- } e.timeout = setTimeout(function () { e.toggleBlinking(!1), s >= t.length ? e.doneTyping(t, s) : e.keepTyping(t, s, r), e.temporaryPause && (e.temporaryPause = !1, e.options.onTypingResumed(e.arrayPos, e)) }, i) }, i) : this.setPauseStatus(t, s, !0) }, s.keepTyping = function (t, s, e) { 0 === s && (this.toggleBlinking(!1), this.options.preStringTyped(this.arrayPos, this)); var n = t.substring(0, s += e); this.replaceText(n), this.typewrite(t, s) }, s.doneTyping = function (t, s) { var e = this; this.options.onStringTyped(this.arrayPos, this), this.toggleBlinking(!0), this.arrayPos === this.strings.length - 1 && (this.complete(), !1 === this.loop || this.curLoop === this.loopCount) || (this.timeout = setTimeout(function () { e.backspace(t, s) }, this.backDelay)) }, s.backspace = function (t, s) { var e = this; if (!0 !== this.pause.status) { if (this.fadeOut) return this.initFadeOut(); this.toggleBlinking(!1); var i = this.humanizer(this.backSpeed); this.timeout = setTimeout(function () { s = n.backSpaceHtmlChars(t, s, e); var i = t.substring(0, s); if (e.replaceText(i), e.smartBackspace) { var r = e.strings[e.arrayPos + 1]; e.stopNum = r && i === r.substring(0, s) ? s : 0 } s > e.stopNum ? (s--, e.backspace(t, s)) : s <= e.stopNum && (e.arrayPos++, e.arrayPos === e.strings.length ? (e.arrayPos = 0, e.options.onLastStringBackspaced(), e.shuffleStringsIfNeeded(), e.begin()) : e.typewrite(e.strings[e.sequence[e.arrayPos]], s)) }, i) } else this.setPauseStatus(t, s, !1) }, s.complete = function () { this.options.onComplete(this), this.loop ? this.curLoop++ : this.typingComplete = !0 }, s.setPauseStatus = function (t, s, e) { this.pause.typewrite = e, this.pause.curString = t, this.pause.curStrPos = s }, s.toggleBlinking = function (t) { this.cursor && (this.pause.status || this.cursorBlinking !== t && (this.cursorBlinking = t, t ? this.cursor.classList.add("typed-cursor--blink") : this.cursor.classList.remove("typed-cursor--blink"))) }, s.humanizer = function (t) { return Math.round(Math.random() * t / 2) + t }, s.shuffleStringsIfNeeded = function () { this.shuffle && (this.sequence = this.sequence.sort(function () { return Math.random() - .5 })) }, s.initFadeOut = function () { var t = this; return this.el.className += " " + this.fadeOutClass, this.cursor && (this.cursor.className += " " + this.fadeOutClass), setTimeout(function () { t.arrayPos++, t.replaceText(""), t.strings.length > t.arrayPos ? t.typewrite(t.strings[t.sequence[t.arrayPos]], 0) : (t.typewrite(t.strings[0], 0), t.arrayPos = 0) }, this.fadeOutDelay) }, s.replaceText = function (t) { this.attr ? this.el.setAttribute(this.attr, t) : this.isInput ? this.el.value = t : "html" === this.contentType ? this.el.innerHTML = t : this.el.textContent = t }, s.bindFocusEvents = function () { var t = this; this.isInput && (this.el.addEventListener("focus", function (s) { t.stop() }), this.el.addEventListener("blur", function (s) { t.el.value && 0 !== t.el.value.length || t.start() })) }, s.insertCursor = function () { this.showCursor && (this.cursor || (this.cursor = document.createElement("span"), this.cursor.className = "typed-cursor", this.cursor.setAttribute("aria-hidden", !0), this.cursor.innerHTML = this.cursorChar, this.el.parentNode && this.el.parentNode.insertBefore(this.cursor, this.el.nextSibling))) }, t }()
+        });
+        //# sourceMappingURL=typed.umd.js.map
+      </script>
+      <script>
+        /* QRCode.js v1.0.0 */
+        var QRCode; !function () { function a(a) { this.mode = c.MODE_8BIT_BYTE, this.data = a, this.parsedData = []; for (var b = [], d = 0, e = this.data.length; e > d; d++) { var f = this.data.charCodeAt(d); f > 65536 ? (b[0] = 240 | (1835008 & f) >>> 18, b[1] = 128 | (258048 & f) >>> 12, b[2] = 128 | (4032 & f) >>> 6, b[3] = 128 | 63 & f) : f > 2048 ? (b[0] = 224 | (61440 & f) >>> 12, b[1] = 128 | (4032 & f) >>> 6, b[2] = 128 | 63 & f) : f > 128 ? (b[0] = 192 | (1984 & f) >>> 6, b[1] = 128 | 63 & f) : b[0] = f, this.parsedData = this.parsedData.concat(b) } this.parsedData.length != this.data.length && (this.parsedData.unshift(191), this.parsedData.unshift(187), this.parsedData.unshift(239)) } function b(a, b) { this.typeNumber = a, this.errorCorrectLevel = b, this.modules = null, this.moduleCount = 0, this.dataCache = null, this.dataList = [] } function i(a, b) { if (void 0 == a.length) throw new Error(a.length + "/" + b); for (var c = 0; c < a.length && 0 == a[c];)c++; this.num = new Array(a.length - c + b); for (var d = 0; d < a.length - c; d++)this.num[d] = a[d + c] } function j(a, b) { this.totalCount = a, this.dataCount = b } function k() { this.buffer = [], this.length = 0 } function m() { return "undefined" != typeof CanvasRenderingContext2D } function n() { var a = !1, b = navigator.userAgent; return /android/i.test(b) && (a = !0, aMat = b.toString().match(/android ([0-9]\.[0-9])/i), aMat && aMat[1] && (a = parseFloat(aMat[1]))), a } function r(a, b) { for (var c = 1, e = s(a), f = 0, g = l.length; g >= f; f++) { var h = 0; switch (b) { case d.L: h = l[f][0]; break; case d.M: h = l[f][1]; break; case d.Q: h = l[f][2]; break; case d.H: h = l[f][3] }if (h >= e) break; c++ } if (c > l.length) throw new Error("Too long data"); return c } function s(a) { var b = encodeURI(a).toString().replace(/\%[0-9a-fA-F]{2}/g, "a"); return b.length + (b.length != a ? 3 : 0) } a.prototype = { getLength: function () { return this.parsedData.length }, write: function (a) { for (var b = 0, c = this.parsedData.length; c > b; b++)a.put(this.parsedData[b], 8) } }, b.prototype = { addData: function (b) { var c = new a(b); this.dataList.push(c), this.dataCache = null }, isDark: function (a, b) { if (0 > a || this.moduleCount <= a || 0 > b || this.moduleCount <= b) throw new Error(a + "," + b); return this.modules[a][b] }, getModuleCount: function () { return this.moduleCount }, make: function () { this.makeImpl(!1, this.getBestMaskPattern()) }, makeImpl: function (a, c) { this.moduleCount = 4 * this.typeNumber + 17, this.modules = new Array(this.moduleCount); for (var d = 0; d < this.moduleCount; d++) { this.modules[d] = new Array(this.moduleCount); for (var e = 0; e < this.moduleCount; e++)this.modules[d][e] = null } this.setupPositionProbePattern(0, 0), this.setupPositionProbePattern(this.moduleCount - 7, 0), this.setupPositionProbePattern(0, this.moduleCount - 7), this.setupPositionAdjustPattern(), this.setupTimingPattern(), this.setupTypeInfo(a, c), this.typeNumber >= 7 && this.setupTypeNumber(a), null == this.dataCache && (this.dataCache = b.createData(this.typeNumber, this.errorCorrectLevel, this.dataList)), this.mapData(this.dataCache, c) }, setupPositionProbePattern: function (a, b) { for (var c = -1; 7 >= c; c++)if (!(-1 >= a + c || this.moduleCount <= a + c)) for (var d = -1; 7 >= d; d++)-1 >= b + d || this.moduleCount <= b + d || (this.modules[a + c][b + d] = c >= 0 && 6 >= c && (0 == d || 6 == d) || d >= 0 && 6 >= d && (0 == c || 6 == c) || c >= 2 && 4 >= c && d >= 2 && 4 >= d ? !0 : !1) }, getBestMaskPattern: function () { for (var a = 0, b = 0, c = 0; 8 > c; c++) { this.makeImpl(!0, c); var d = f.getLostPoint(this); (0 == c || a > d) && (a = d, b = c) } return b }, createMovieClip: function (a, b, c) { var d = a.createEmptyMovieClip(b, c), e = 1; this.make(); for (var f = 0; f < this.modules.length; f++)for (var g = f * e, h = 0; h < this.modules[f].length; h++) { var i = h * e, j = this.modules[f][h]; j && (d.beginFill(0, 100), d.moveTo(i, g), d.lineTo(i + e, g), d.lineTo(i + e, g + e), d.lineTo(i, g + e), d.endFill()) } return d }, setupTimingPattern: function () { for (var a = 8; a < this.moduleCount - 8; a++)null == this.modules[a][6] && (this.modules[a][6] = 0 == a % 2); for (var b = 8; b < this.moduleCount - 8; b++)null == this.modules[6][b] && (this.modules[6][b] = 0 == b % 2) }, setupPositionAdjustPattern: function () { for (var a = f.getPatternPosition(this.typeNumber), b = 0; b < a.length; b++)for (var c = 0; c < a.length; c++) { var d = a[b], e = a[c]; if (null == this.modules[d][e]) for (var g = -2; 2 >= g; g++)for (var h = -2; 2 >= h; h++)this.modules[d + g][e + h] = -2 == g || 2 == g || -2 == h || 2 == h || 0 == g && 0 == h ? !0 : !1 } }, setupTypeNumber: function (a) { for (var b = f.getBCHTypeNumber(this.typeNumber), c = 0; 18 > c; c++) { var d = !a && 1 == (1 & b >> c); this.modules[Math.floor(c / 3)][c % 3 + this.moduleCount - 8 - 3] = d } for (var c = 0; 18 > c; c++) { var d = !a && 1 == (1 & b >> c); this.modules[c % 3 + this.moduleCount - 8 - 3][Math.floor(c / 3)] = d } }, setupTypeInfo: function (a, b) { for (var c = this.errorCorrectLevel << 3 | b, d = f.getBCHTypeInfo(c), e = 0; 15 > e; e++) { var g = !a && 1 == (1 & d >> e); 6 > e ? this.modules[e][8] = g : 8 > e ? this.modules[e + 1][8] = g : this.modules[this.moduleCount - 15 + e][8] = g } for (var e = 0; 15 > e; e++) { var g = !a && 1 == (1 & d >> e); 8 > e ? this.modules[8][this.moduleCount - e - 1] = g : 9 > e ? this.modules[8][15 - e - 1 + 1] = g : this.modules[8][15 - e - 1] = g } this.modules[this.moduleCount - 8][8] = !a }, mapData: function (a, b) { for (var c = -1, d = this.moduleCount - 1, e = 7, g = 0, h = this.moduleCount - 1; h > 0; h -= 2)for (6 == h && h--; ;) { for (var i = 0; 2 > i; i++)if (null == this.modules[d][h - i]) { var j = !1; g < a.length && (j = 1 == (1 & a[g] >>> e)); var k = f.getMask(b, d, h - i); k && (j = !j), this.modules[d][h - i] = j, e--, -1 == e && (g++, e = 7) } if (d += c, 0 > d || this.moduleCount <= d) { d -= c, c = -c; break } } } }, b.PAD0 = 236, b.PAD1 = 17, b.createData = function (a, c, d) { for (var e = j.getRSBlocks(a, c), g = new k, h = 0; h < d.length; h++) { var i = d[h]; g.put(i.mode, 4), g.put(i.getLength(), f.getLengthInBits(i.mode, a)), i.write(g) } for (var l = 0, h = 0; h < e.length; h++)l += e[h].dataCount; if (g.getLengthInBits() > 8 * l) throw new Error("code length overflow. (" + g.getLengthInBits() + ">" + 8 * l + ")"); for (g.getLengthInBits() + 4 <= 8 * l && g.put(0, 4); 0 != g.getLengthInBits() % 8;)g.putBit(!1); for (; ;) { if (g.getLengthInBits() >= 8 * l) break; if (g.put(b.PAD0, 8), g.getLengthInBits() >= 8 * l) break; g.put(b.PAD1, 8) } return b.createBytes(g, e) }, b.createBytes = function (a, b) { for (var c = 0, d = 0, e = 0, g = new Array(b.length), h = new Array(b.length), j = 0; j < b.length; j++) { var k = b[j].dataCount, l = b[j].totalCount - k; d = Math.max(d, k), e = Math.max(e, l), g[j] = new Array(k); for (var m = 0; m < g[j].length; m++)g[j][m] = 255 & a.buffer[m + c]; c += k; var n = f.getErrorCorrectPolynomial(l), o = new i(g[j], n.getLength() - 1), p = o.mod(n); h[j] = new Array(n.getLength() - 1); for (var m = 0; m < h[j].length; m++) { var q = m + p.getLength() - h[j].length; h[j][m] = q >= 0 ? p.get(q) : 0 } } for (var r = 0, m = 0; m < b.length; m++)r += b[m].totalCount; for (var s = new Array(r), t = 0, m = 0; d > m; m++)for (var j = 0; j < b.length; j++)m < g[j].length && (s[t++] = g[j][m]); for (var m = 0; e > m; m++)for (var j = 0; j < b.length; j++)m < h[j].length && (s[t++] = h[j][m]); return s }; for (var c = { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 }, d = { L: 1, M: 0, Q: 3, H: 2 }, e = { PATTERN000: 0, PATTERN001: 1, PATTERN010: 2, PATTERN011: 3, PATTERN100: 4, PATTERN101: 5, PATTERN110: 6, PATTERN111: 7 }, f = { PATTERN_POSITION_TABLE: [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50], [6, 30, 54], [6, 32, 58], [6, 34, 62], [6, 26, 46, 66], [6, 26, 48, 70], [6, 26, 50, 74], [6, 30, 54, 78], [6, 30, 56, 82], [6, 30, 58, 86], [6, 34, 62, 90], [6, 28, 50, 72, 94], [6, 26, 50, 74, 98], [6, 30, 54, 78, 102], [6, 28, 54, 80, 106], [6, 32, 58, 84, 110], [6, 30, 58, 86, 114], [6, 34, 62, 90, 118], [6, 26, 50, 74, 98, 122], [6, 30, 54, 78, 102, 126], [6, 26, 52, 78, 104, 130], [6, 30, 56, 82, 108, 134], [6, 34, 60, 86, 112, 138], [6, 30, 58, 86, 114, 142], [6, 34, 62, 90, 118, 146], [6, 30, 54, 78, 102, 126, 150], [6, 24, 50, 76, 102, 128, 154], [6, 28, 54, 80, 106, 132, 158], [6, 32, 58, 84, 110, 136, 162], [6, 26, 54, 82, 110, 138, 166], [6, 30, 58, 86, 114, 142, 170]], G15: 1335, G18: 7973, G15_MASK: 21522, getBCHTypeInfo: function (a) { for (var b = a << 10; f.getBCHDigit(b) - f.getBCHDigit(f.G15) >= 0;)b ^= f.G15 << f.getBCHDigit(b) - f.getBCHDigit(f.G15); return (a << 10 | b) ^ f.G15_MASK }, getBCHTypeNumber: function (a) { for (var b = a << 12; f.getBCHDigit(b) - f.getBCHDigit(f.G18) >= 0;)b ^= f.G18 << f.getBCHDigit(b) - f.getBCHDigit(f.G18); return a << 12 | b }, getBCHDigit: function (a) { for (var b = 0; 0 != a;)b++, a >>>= 1; return b }, getPatternPosition: function (a) { return f.PATTERN_POSITION_TABLE[a - 1] }, getMask: function (a, b, c) { switch (a) { case e.PATTERN000: return 0 == (b + c) % 2; case e.PATTERN001: return 0 == b % 2; case e.PATTERN010: return 0 == c % 3; case e.PATTERN011: return 0 == (b + c) % 3; case e.PATTERN100: return 0 == (Math.floor(b / 2) + Math.floor(c / 3)) % 2; case e.PATTERN101: return 0 == b * c % 2 + b * c % 3; case e.PATTERN110: return 0 == (b * c % 2 + b * c % 3) % 2; case e.PATTERN111: return 0 == (b * c % 3 + (b + c) % 2) % 2; default: throw new Error("bad maskPattern:" + a) } }, getErrorCorrectPolynomial: function (a) { for (var b = new i([1], 0), c = 0; a > c; c++)b = b.multiply(new i([1, g.gexp(c)], 0)); return b }, getLengthInBits: function (a, b) { if (b >= 1 && 10 > b) switch (a) { case c.MODE_NUMBER: return 10; case c.MODE_ALPHA_NUM: return 9; case c.MODE_8BIT_BYTE: return 8; case c.MODE_KANJI: return 8; default: throw new Error("mode:" + a) } else if (27 > b) switch (a) { case c.MODE_NUMBER: return 12; case c.MODE_ALPHA_NUM: return 11; case c.MODE_8BIT_BYTE: return 16; case c.MODE_KANJI: return 10; default: throw new Error("mode:" + a) } else { if (!(41 > b)) throw new Error("type:" + b); switch (a) { case c.MODE_NUMBER: return 14; case c.MODE_ALPHA_NUM: return 13; case c.MODE_8BIT_BYTE: return 16; case c.MODE_KANJI: return 12; default: throw new Error("mode:" + a) } } }, getLostPoint: function (a) { for (var b = a.getModuleCount(), c = 0, d = 0; b > d; d++)for (var e = 0; b > e; e++) { for (var f = 0, g = a.isDark(d, e), h = -1; 1 >= h; h++)if (!(0 > d + h || d + h >= b)) for (var i = -1; 1 >= i; i++)0 > e + i || e + i >= b || (0 != h || 0 != i) && g == a.isDark(d + h, e + i) && f++; f > 5 && (c += 3 + f - 5) } for (var d = 0; b - 1 > d; d++)for (var e = 0; b - 1 > e; e++) { var j = 0; a.isDark(d, e) && j++, a.isDark(d + 1, e) && j++, a.isDark(d, e + 1) && j++, a.isDark(d + 1, e + 1) && j++, (0 == j || 4 == j) && (c += 3) } for (var d = 0; b > d; d++)for (var e = 0; b - 6 > e; e++)a.isDark(d, e) && !a.isDark(d, e + 1) && a.isDark(d, e + 2) && a.isDark(d, e + 3) && a.isDark(d, e + 4) && !a.isDark(d, e + 5) && a.isDark(d, e + 6) && (c += 40); for (var e = 0; b > e; e++)for (var d = 0; b - 6 > d; d++)a.isDark(d, e) && !a.isDark(d + 1, e) && a.isDark(d + 2, e) && a.isDark(d + 3, e) && a.isDark(d + 4, e) && !a.isDark(d + 5, e) && a.isDark(d + 6, e) && (c += 40); for (var k = 0, e = 0; b > e; e++)for (var d = 0; b > d; d++)a.isDark(d, e) && k++; var l = Math.abs(100 * k / b / b - 50) / 5; return c += 10 * l } }, g = { glog: function (a) { if (1 > a) throw new Error("glog(" + a + ")"); return g.LOG_TABLE[a] }, gexp: function (a) { for (; 0 > a;)a += 255; for (; a >= 256;)a -= 255; return g.EXP_TABLE[a] }, EXP_TABLE: new Array(256), LOG_TABLE: new Array(256) }, h = 0; 8 > h; h++)g.EXP_TABLE[h] = 1 << h; for (var h = 8; 256 > h; h++)g.EXP_TABLE[h] = g.EXP_TABLE[h - 4] ^ g.EXP_TABLE[h - 5] ^ g.EXP_TABLE[h - 6] ^ g.EXP_TABLE[h - 8]; for (var h = 0; 255 > h; h++)g.LOG_TABLE[g.EXP_TABLE[h]] = h; i.prototype = { get: function (a) { return this.num[a] }, getLength: function () { return this.num.length }, multiply: function (a) { for (var b = new Array(this.getLength() + a.getLength() - 1), c = 0; c < this.getLength(); c++)for (var d = 0; d < a.getLength(); d++)b[c + d] ^= g.gexp(g.glog(this.get(c)) + g.glog(a.get(d))); return new i(b, 0) }, mod: function (a) { if (this.getLength() - a.getLength() < 0) return this; for (var b = g.glog(this.get(0)) - g.glog(a.get(0)), c = new Array(this.getLength()), d = 0; d < this.getLength(); d++)c[d] = this.get(d); for (var d = 0; d < a.getLength(); d++)c[d] ^= g.gexp(g.glog(a.get(d)) + b); return new i(c, 0).mod(a) } }, j.RS_BLOCK_TABLE = [[1, 26, 19], [1, 26, 16], [1, 26, 13], [1, 26, 9], [1, 44, 34], [1, 44, 28], [1, 44, 22], [1, 44, 16], [1, 70, 55], [1, 70, 44], [2, 35, 17], [2, 35, 13], [1, 100, 80], [2, 50, 32], [2, 50, 24], [4, 25, 9], [1, 134, 108], [2, 67, 43], [2, 33, 15, 2, 34, 16], [2, 33, 11, 2, 34, 12], [2, 86, 68], [4, 43, 27], [4, 43, 19], [4, 43, 15], [2, 98, 78], [4, 49, 31], [2, 32, 14, 4, 33, 15], [4, 39, 13, 1, 40, 14], [2, 121, 97], [2, 60, 38, 2, 61, 39], [4, 40, 18, 2, 41, 19], [4, 40, 14, 2, 41, 15], [2, 146, 116], [3, 58, 36, 2, 59, 37], [4, 36, 16, 4, 37, 17], [4, 36, 12, 4, 37, 13], [2, 86, 68, 2, 87, 69], [4, 69, 43, 1, 70, 44], [6, 43, 19, 2, 44, 20], [6, 43, 15, 2, 44, 16], [4, 101, 81], [1, 80, 50, 4, 81, 51], [4, 50, 22, 4, 51, 23], [3, 36, 12, 8, 37, 13], [2, 116, 92, 2, 117, 93], [6, 58, 36, 2, 59, 37], [4, 46, 20, 6, 47, 21], [7, 42, 14, 4, 43, 15], [4, 133, 107], [8, 59, 37, 1, 60, 38], [8, 44, 20, 4, 45, 21], [12, 33, 11, 4, 34, 12], [3, 145, 115, 1, 146, 116], [4, 64, 40, 5, 65, 41], [11, 36, 16, 5, 37, 17], [11, 36, 12, 5, 37, 13], [5, 109, 87, 1, 110, 88], [5, 65, 41, 5, 66, 42], [5, 54, 24, 7, 55, 25], [11, 36, 12], [5, 122, 98, 1, 123, 99], [7, 73, 45, 3, 74, 46], [15, 43, 19, 2, 44, 20], [3, 45, 15, 13, 46, 16], [1, 135, 107, 5, 136, 108], [10, 74, 46, 1, 75, 47], [1, 50, 22, 15, 51, 23], [2, 42, 14, 17, 43, 15], [5, 150, 120, 1, 151, 121], [9, 69, 43, 4, 70, 44], [17, 50, 22, 1, 51, 23], [2, 42, 14, 19, 43, 15], [3, 141, 113, 4, 142, 114], [3, 70, 44, 11, 71, 45], [17, 47, 21, 4, 48, 22], [9, 39, 13, 16, 40, 14], [3, 135, 107, 5, 136, 108], [3, 67, 41, 13, 68, 42], [15, 54, 24, 5, 55, 25], [15, 43, 15, 10, 44, 16], [4, 144, 116, 4, 145, 117], [17, 68, 42], [17, 50, 22, 6, 51, 23], [19, 46, 16, 6, 47, 17], [2, 139, 111, 7, 140, 112], [17, 74, 46], [7, 54, 24, 16, 55, 25], [34, 37, 13], [4, 151, 121, 5, 152, 122], [4, 75, 47, 14, 76, 48], [11, 54, 24, 14, 55, 25], [16, 45, 15, 14, 46, 16], [6, 147, 117, 4, 148, 118], [6, 73, 45, 14, 74, 46], [11, 54, 24, 16, 55, 25], [30, 46, 16, 2, 47, 17], [8, 132, 106, 4, 133, 107], [8, 75, 47, 13, 76, 48], [7, 54, 24, 22, 55, 25], [22, 45, 15, 13, 46, 16], [10, 142, 114, 2, 143, 115], [19, 74, 46, 4, 75, 47], [28, 50, 22, 6, 51, 23], [33, 46, 16, 4, 47, 17], [8, 152, 122, 4, 153, 123], [22, 73, 45, 3, 74, 46], [8, 53, 23, 26, 54, 24], [12, 45, 15, 28, 46, 16], [3, 147, 117, 10, 148, 118], [3, 73, 45, 23, 74, 46], [4, 54, 24, 31, 55, 25], [11, 45, 15, 31, 46, 16], [7, 146, 116, 7, 147, 117], [21, 73, 45, 7, 74, 46], [1, 53, 23, 37, 54, 24], [19, 45, 15, 26, 46, 16], [5, 145, 115, 10, 146, 116], [19, 75, 47, 10, 76, 48], [15, 54, 24, 25, 55, 25], [23, 45, 15, 25, 46, 16], [13, 145, 115, 3, 146, 116], [2, 74, 46, 29, 75, 47], [42, 54, 24, 1, 55, 25], [23, 45, 15, 28, 46, 16], [17, 145, 115], [10, 74, 46, 23, 75, 47], [10, 54, 24, 35, 55, 25], [19, 45, 15, 35, 46, 16], [17, 145, 115, 1, 146, 116], [14, 74, 46, 21, 75, 47], [29, 54, 24, 19, 55, 25], [11, 45, 15, 46, 46, 16], [13, 145, 115, 6, 146, 116], [14, 74, 46, 23, 75, 47], [44, 54, 24, 7, 55, 25], [59, 46, 16, 1, 47, 17], [12, 151, 121, 7, 152, 122], [12, 75, 47, 26, 76, 48], [39, 54, 24, 14, 55, 25], [22, 45, 15, 41, 46, 16], [6, 151, 121, 14, 152, 122], [6, 75, 47, 34, 76, 48], [46, 54, 24, 10, 55, 25], [2, 45, 15, 64, 46, 16], [17, 152, 122, 4, 153, 123], [29, 74, 46, 14, 75, 47], [49, 54, 24, 10, 55, 25], [24, 45, 15, 46, 46, 16], [4, 152, 122, 18, 153, 123], [13, 74, 46, 32, 75, 47], [48, 54, 24, 14, 55, 25], [42, 45, 15, 32, 46, 16], [20, 147, 117, 4, 148, 118], [40, 75, 47, 7, 76, 48], [43, 54, 24, 22, 55, 25], [10, 45, 15, 67, 46, 16], [19, 148, 118, 6, 149, 119], [18, 75, 47, 31, 76, 48], [34, 54, 24, 34, 55, 25], [20, 45, 15, 61, 46, 16]], j.getRSBlocks = function (a, b) { var c = j.getRsBlockTable(a, b); if (void 0 == c) throw new Error("bad rs block @ typeNumber:" + a + "/errorCorrectLevel:" + b); for (var d = c.length / 3, e = [], f = 0; d > f; f++)for (var g = c[3 * f + 0], h = c[3 * f + 1], i = c[3 * f + 2], k = 0; g > k; k++)e.push(new j(h, i)); return e }, j.getRsBlockTable = function (a, b) { switch (b) { case d.L: return j.RS_BLOCK_TABLE[4 * (a - 1) + 0]; case d.M: return j.RS_BLOCK_TABLE[4 * (a - 1) + 1]; case d.Q: return j.RS_BLOCK_TABLE[4 * (a - 1) + 2]; case d.H: return j.RS_BLOCK_TABLE[4 * (a - 1) + 3]; default: return void 0 } }, k.prototype = { get: function (a) { var b = Math.floor(a / 8); return 1 == (1 & this.buffer[b] >>> 7 - a % 8) }, put: function (a, b) { for (var c = 0; b > c; c++)this.putBit(1 == (1 & a >>> b - c - 1)) }, getLengthInBits: function () { return this.length }, putBit: function (a) { var b = Math.floor(this.length / 8); this.buffer.length <= b && this.buffer.push(0), a && (this.buffer[b] |= 128 >>> this.length % 8), this.length++ } }; var l = [[17, 14, 11, 7], [32, 26, 20, 14], [53, 42, 32, 24], [78, 62, 46, 34], [106, 84, 60, 44], [134, 106, 74, 58], [154, 122, 86, 64], [192, 152, 108, 84], [230, 180, 130, 98], [271, 213, 151, 119], [321, 251, 177, 137], [367, 287, 203, 155], [425, 331, 241, 177], [458, 362, 258, 194], [520, 412, 292, 220], [586, 450, 322, 250], [644, 504, 364, 280], [718, 560, 394, 310], [792, 624, 442, 338], [858, 666, 482, 382], [929, 711, 509, 403], [1003, 779, 565, 439], [1091, 857, 611, 461], [1171, 911, 661, 511], [1273, 997, 715, 535], [1367, 1059, 751, 593], [1465, 1125, 805, 625], [1528, 1190, 868, 658], [1628, 1264, 908, 698], [1732, 1370, 982, 742], [1840, 1452, 1030, 790], [1952, 1538, 1112, 842], [2068, 1628, 1168, 898], [2188, 1722, 1228, 958], [2303, 1809, 1283, 983], [2431, 1911, 1351, 1051], [2563, 1989, 1423, 1093], [2699, 2099, 1499, 1139], [2809, 2213, 1579, 1219], [2953, 2331, 1663, 1273]], o = function () { var a = function (a, b) { this._el = a, this._htOption = b }; return a.prototype.draw = function (a) { function g(a, b) { var c = document.createElementNS("http://www.w3.org/2000/svg", a); for (var d in b) b.hasOwnProperty(d) && c.setAttribute(d, b[d]); return c } var b = this._htOption, c = this._el, d = a.getModuleCount(); Math.floor(b.width / d), Math.floor(b.height / d), this.clear(); var h = g("svg", { viewBox: "0 0 " + String(d) + " " + String(d), width: "100%", height: "100%", fill: b.colorLight }); h.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink"), c.appendChild(h), h.appendChild(g("rect", { fill: b.colorDark, width: "1", height: "1", id: "template" })); for (var i = 0; d > i; i++)for (var j = 0; d > j; j++)if (a.isDark(i, j)) { var k = g("use", { x: String(i), y: String(j) }); k.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#template"), h.appendChild(k) } }, a.prototype.clear = function () { for (; this._el.hasChildNodes();)this._el.removeChild(this._el.lastChild) }, a }(), p = "svg" === document.documentElement.tagName.toLowerCase(), q = p ? o : m() ? function () { function a() { this._elImage.src = this._elCanvas.toDataURL("image/png"), this._elImage.style.display = "block", this._elCanvas.style.display = "none" } function d(a, b) { var c = this; if (c._fFail = b, c._fSuccess = a, null === c._bSupportDataURI) { var d = document.createElement("img"), e = function () { c._bSupportDataURI = !1, c._fFail && _fFail.call(c) }, f = function () { c._bSupportDataURI = !0, c._fSuccess && c._fSuccess.call(c) }; return d.onabort = e, d.onerror = e, d.onload = f, d.src = "data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==", void 0 } c._bSupportDataURI === !0 && c._fSuccess ? c._fSuccess.call(c) : c._bSupportDataURI === !1 && c._fFail && c._fFail.call(c) } if (this._android && this._android <= 2.1) { var b = 1 / window.devicePixelRatio, c = CanvasRenderingContext2D.prototype.drawImage; CanvasRenderingContext2D.prototype.drawImage = function (a, d, e, f, g, h, i, j) { if ("nodeName" in a && /img/i.test(a.nodeName)) for (var l = arguments.length - 1; l >= 1; l--)arguments[l] = arguments[l] * b; else "undefined" == typeof j && (arguments[1] *= b, arguments[2] *= b, arguments[3] *= b, arguments[4] *= b); c.apply(this, arguments) } } var e = function (a, b) { this._bIsPainted = !1, this._android = n(), this._htOption = b, this._elCanvas = document.createElement("canvas"), this._elCanvas.width = b.width, this._elCanvas.height = b.height, a.appendChild(this._elCanvas), this._el = a, this._oContext = this._elCanvas.getContext("2d"), this._bIsPainted = !1, this._elImage = document.createElement("img"), this._elImage.style.display = "none", this._el.appendChild(this._elImage), this._bSupportDataURI = null }; return e.prototype.draw = function (a) { var b = this._elImage, c = this._oContext, d = this._htOption, e = a.getModuleCount(), f = d.width / e, g = d.height / e, h = Math.round(f), i = Math.round(g); b.style.display = "none", this.clear(); for (var j = 0; e > j; j++)for (var k = 0; e > k; k++) { var l = a.isDark(j, k), m = k * f, n = j * g; c.strokeStyle = l ? d.colorDark : d.colorLight, c.lineWidth = 1, c.fillStyle = l ? d.colorDark : d.colorLight, c.fillRect(m, n, f, g), c.strokeRect(Math.floor(m) + .5, Math.floor(n) + .5, h, i), c.strokeRect(Math.ceil(m) - .5, Math.ceil(n) - .5, h, i) } this._bIsPainted = !0 }, e.prototype.makeImage = function () { this._bIsPainted && d.call(this, a) }, e.prototype.isPainted = function () { return this._bIsPainted }, e.prototype.clear = function () { this._oContext.clearRect(0, 0, this._elCanvas.width, this._elCanvas.height), this._bIsPainted = !1 }, e.prototype.round = function (a) { return a ? Math.floor(1e3 * a) / 1e3 : a }, e }() : function () { var a = function (a, b) { this._el = a, this._htOption = b }; return a.prototype.draw = function (a) { for (var b = this._htOption, c = this._el, d = a.getModuleCount(), e = Math.floor(b.width / d), f = Math.floor(b.height / d), g = ['<table style="border:0;border-collapse:collapse;">'], h = 0; d > h; h++) { g.push("<tr>"); for (var i = 0; d > i; i++)g.push('<td style="border:0;border-collapse:collapse;padding:0;margin:0;width:' + e + "px;height:" + f + "px;background-color:" + (a.isDark(h, i) ? b.colorDark : b.colorLight) + ';"></td>'); g.push("</tr>") } g.push("</table>"), c.innerHTML = g.join(""); var j = c.childNodes[0], k = (b.width - j.offsetWidth) / 2, l = (b.height - j.offsetHeight) / 2; k > 0 && l > 0 && (j.style.margin = l + "px " + k + "px") }, a.prototype.clear = function () { this._el.innerHTML = "" }, a }(); QRCode = function (a, b) { if (this._htOption = { width: 256, height: 256, typeNumber: 4, colorDark: "#000000", colorLight: "#ffffff", correctLevel: d.H }, "string" == typeof b && (b = { text: b }), b) for (var c in b) this._htOption[c] = b[c]; "string" == typeof a && (a = document.getElementById(a)), this._android = n(), this._el = a, this._oQRCode = null, this._oDrawing = new q(this._el, this._htOption), this._htOption.text && this.makeCode(this._htOption.text) }, QRCode.prototype.makeCode = function (a) { this._oQRCode = new b(r(a, this._htOption.correctLevel), this._htOption.correctLevel), this._oQRCode.addData(a), this._oQRCode.make(), this._el.title = a, this._oDrawing.draw(this._oQRCode), this.makeImage() }, QRCode.prototype.makeImage = function () { "function" == typeof this._oDrawing.makeImage && (!this._android || this._android >= 3) && this._oDrawing.makeImage() }, QRCode.prototype.clear = function () { this._oDrawing.clear() }, QRCode.CorrectLevel = d }();
+      </script>
+      <script src="translations.js?v=0.2"></script>
+      <script src="crown_data.js"></script>
+      <script src="cv-generator.js?v=0.1"></script>
+      <script>
+        // --- QR CODE LOGIC ---
+        function getTranslation(key) {
+          const currentLang = document.documentElement.lang || 'ar';
+          if (window.translations && window.translations[currentLang] && window.translations[currentLang][key]) {
+            return window.translations[currentLang][key];
+          }
+          return key;
+        }
+
+        function openQRModal() {
+          const modal = document.getElementById('qrModal');
+          const container = document.getElementById('qrCodeContainer');
+          const crownImg = document.getElementById('qrCrownImg');
+          const title = document.getElementById('qrModalTitle');
+          const desc = document.getElementById('qrModalDesc');
+
+          if (!modal || !container) return;
+
+          if (title) title.textContent = getTranslation('qr_modal_title') || 'QR Code';
+          if (desc) desc.textContent = getTranslation('qr_modal_desc') || 'Scan to visit on mobile';
+
+          container.innerHTML = '';
+
+          // Generate new QR code using the imported QRCode.js library
+          new QRCode(container, {
+            text: window.location.href,
+            width: 200,
+            height: 200,
+            colorDark: "#D4AF37", // Gold
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+
+          // Draw crown inside the generated QR Code canvas safely
+          setTimeout(() => {
+            const cvs = container.querySelector('canvas');
+            if (cvs) {
+              const ctx = cvs.getContext('2d');
+              const imgSize = 46;
+              const x = (cvs.width - imgSize) / 2;
+              const y = (cvs.height - imgSize) / 2;
+
+              // Create a fresh image object to guarantee loading
+              const centerImg = new Image();
+              centerImg.crossOrigin = "Anonymous";
+              centerImg.onload = () => {
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(x - 4, y - 4, imgSize + 8, imgSize + 8);
+                ctx.drawImage(centerImg, x, y, imgSize, imgSize);
+
+                const generatedImg = container.querySelector('img');
+                if (generatedImg) {
+                  generatedImg.src = cvs.toDataURL("image/png");
+                }
+              };
+              centerImg.src = CROWN_BASE64;
+            }
+          }, 150);
+
+          if (crownImg) {
+            crownImg.style.display = 'none'; // Hide the top crown, it is now inside the QR
+          }
+
+          modal.style.display = 'flex';
+          setTimeout(() => modal.classList.add('active'), 10);
+
+          if (typeof soundManager !== 'undefined') soundManager.play('click');
+        }
+
+        function showContactQR() {
+          const modal = document.getElementById('qrModal');
+          const container = document.getElementById('qrCodeContainer');
+          const crownImg = document.getElementById('qrCrownImg');
+          const title = document.getElementById('qrModalTitle');
+          const desc = document.getElementById('qrModalDesc');
+
+          if (!modal || !container) return;
+
+          if (title) title.textContent = getTranslation('contact_qr_title') || 'Contact Card';
+          if (desc) desc.textContent = getTranslation('contact_qr_desc') || 'Scan to save contact details';
+
+          container.innerHTML = '';
+
+          // Generate VCard Data
+          const vcard = `BEGIN:VCARD
+VERSION:3.0
+N:Nafea;Mohammed;;;
+FN:Mohammed Nafea
+EMAIL:king.darkmn@gmail.com
+TEL:+201015694380
+URL:https://mohammednafea.github.io/portfolio
+END:VCARD`;
+
+          new QRCode(container, {
+            text: vcard,
+            width: 200,
+            height: 200,
+            colorDark: "#D4AF37", // Gold
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+          });
+
+          // Draw crown inside the generated QR Code canvas safely
+          setTimeout(() => {
+            const cvs = container.querySelector('canvas');
+            if (cvs) {
+              const ctx = cvs.getContext('2d');
+              const imgSize = 46;
+              const x = (cvs.width - imgSize) / 2;
+              const y = (cvs.height - imgSize) / 2;
+
+              // Create a fresh image object to guarantee loading
+              const centerImg = new Image();
+              centerImg.crossOrigin = "Anonymous";
+              centerImg.onload = () => {
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(x - 4, y - 4, imgSize + 8, imgSize + 8);
+                ctx.drawImage(centerImg, x, y, imgSize, imgSize);
+
+                const generatedImg = container.querySelector('img');
+                if (generatedImg) {
+                  generatedImg.src = cvs.toDataURL("image/png");
+                }
+              };
+              centerImg.src = CROWN_BASE64;
+            }
+          }, 150);
+
+          if (crownImg) {
+            crownImg.style.display = 'none'; // Hide the top crown, it is now inside the QR
+          }
+
+          modal.style.display = 'flex';
+          setTimeout(() => modal.classList.add('active'), 10);
+
+          if (typeof soundManager !== 'undefined') soundManager.play('click');
+        }
+
+        function closeQRModal(e) {
+          // If event is provided, make sure we only close if clicking the background via bubbling or the close button specifically.
+          // In the HTML we put stopPropagation on the content div so this is safe.
+          const modal = document.getElementById('qrModal');
+          if (modal) {
+            modal.classList.remove('active');
+            setTimeout(() => {
+              modal.style.display = 'none';
+            }, 300);
+            if (typeof soundManager !== 'undefined') soundManager.play('click');
+          }
+        }
+
+        function downloadQR() {
+          const canvas = document.querySelector('#qrCodeContainer canvas');
+          if (!canvas) {
+            alert('الرجاء الانتظار حتى يتم إنشاء الكود.');
+            return;
+          }
+          const link = document.createElement('a');
+          link.download = 'portfolio-qrcode.png';
+          link.href = canvas.toDataURL("image/png");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          if (typeof soundManager !== 'undefined') soundManager.play('success');
+        }
+        // Scroll Progress Bar & Scroll To Top Logic
+        window.addEventListener('scroll', () => {
+          const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          document.getElementById("scroll-progress").style.width = scrolled + "%";
+
+          // Scroll To Top Button Visibility
+          const scrollBtn = document.getElementById("scrollTop");
+          if (winScroll > 500) {
+            scrollBtn.classList.add("visible");
+          } else {
+            scrollBtn.classList.remove("visible");
+          }
+        });
+
+        function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' })
+              .then(registration => {
+                // Force check for SW update immediately
+                registration.update();
+              })
+              .catch(err => {
+                // ServiceWorker registration failed
+              });
+          });
+        }
+
+
+
+
+
+        // Sound Manager using Web Audio API
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let isSoundEnabled = true;
+
+        const soundManager = {
+          play(type) {
+            if (!isSoundEnabled || audioCtx.state === 'suspended') {
+              if (isSoundEnabled) audioCtx.resume();
+            }
+            if (!isSoundEnabled) return;
+
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            const now = audioCtx.currentTime;
+
+            if (type === 'hover') {
+              // High pitch short blip (Sci-fi hover)
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(400, now);
+              osc.frequency.exponentialRampToValueAtTime(800, now + 0.1);
+              gain.gain.setValueAtTime(0.05, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+              osc.start(now);
+              osc.stop(now + 0.1);
+            } else if (type === 'click') {
+              // Mechanical click
+              osc.type = 'triangle';
+              osc.frequency.setValueAtTime(300, now);
+              osc.frequency.exponentialRampToValueAtTime(100, now + 0.15);
+              gain.gain.setValueAtTime(0.1, now);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+              osc.start(now);
+              osc.stop(now + 0.15);
+            } else if (type === 'success') {
+              // Success chime
+              osc.type = 'sine';
+              osc.frequency.setValueAtTime(440, now);
+              osc.frequency.setValueAtTime(554, now + 0.1); // C#
+              osc.frequency.setValueAtTime(659, now + 0.2); // E
+              gain.gain.setValueAtTime(0.1, now);
+              gain.gain.linearRampToValueAtTime(0.1, now + 0.3);
+              gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+              osc.start(now);
+              osc.stop(now + 0.6);
+            }
+          }
+        };
+
+        function toggleSound() {
+          isSoundEnabled = !isSoundEnabled;
+          const btn = document.getElementById('soundToggle');
+          const icon = btn.querySelector('i');
+
+          if (isSoundEnabled) {
+            icon.className = 'fas fa-volume-up';
+            btn.style.opacity = '1';
+            soundManager.play('success'); // Play sound to confirm on
+          } else {
+            icon.className = 'fas fa-volume-mute';
+            btn.style.opacity = '0.7';
+          }
+        }
+
+        // Attach sounds to elements
+        document.addEventListener('DOMContentLoaded', () => {
+          const interactive = document.querySelectorAll('a, button, .card, .project-card, .contact-item, input, textarea');
+
+          interactive.forEach(el => {
+            el.addEventListener('mouseenter', () => soundManager.play('hover'));
+            el.addEventListener('click', () => {
+              // Don't play click sound for sound toggle button itself to avoid confusion
+              if (el.id !== 'soundToggle') soundManager.play('click');
+            });
+          });
+        });
+
+        // Initialize AOS with refinement for mobile
+        AOS.init({
+          duration: 1000,
+          once: true,
+          offset: 100,
+          // Instead of 'mobile', we use a function to handle it better
+          // some mobile browsers struggle with 'mobile' string
+          disable: window.innerWidth < 768
+        });
+
+        // Force AOS refresh on scroll to handle dynamic visibility
+        window.addEventListener('scroll', () => {
+          if (window.innerWidth < 992) {
+            // On mobile, just make sure everything is visible if AOS is buggy
+            document.querySelectorAll('[data-aos]').forEach(el => {
+              el.style.opacity = '1';
+              el.style.transform = 'none';
+              el.style.visibility = 'visible';
+            });
+          }
+        });
+
+        // Preloader
+        window.addEventListener('load', () => {
+          const preloader = document.getElementById('preloader');
+          preloader.style.opacity = '0';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 500);
+        });
+
+        // --- IMAGE COMPATIBILITY & RELIABILITY ---
+
+        // 1. WebP Support Check
+        (function () {
+          const img = new Image();
+          img.onload = function () {
+            if (!(img.width > 0 && img.height > 0)) {
+              document.documentElement.classList.add('no-webp');
+            }
+          };
+          img.onerror = function () {
+            document.documentElement.classList.add('no-webp');
+          };
+          img.src = 'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==';
+        })();
+
+        // 2. Global Image Error Handler (Anti-Failure Shield)
+        window.addEventListener('error', function (e) {
+          if (e.target.tagName === 'IMG') {
+            const img = e.target;
+
+            // Avoid infinite loops
+            if (img.dataset.failed) return;
+            img.dataset.failed = "true";
+
+            // Handle Skeleton Loader if present
+            const skeletonParent = img.closest('.skeleton-item');
+            if (skeletonParent) {
+              skeletonParent.classList.remove('loading-skeleton');
+            }
+
+            // fallback: Use a professional grey placeholder with descriptive text
+            img.style.background = '#222';
+            img.style.display = 'flex';
+            img.style.alignItems = 'center';
+            img.style.justifyContent = 'center';
+            img.style.padding = '20px';
+            img.style.minHeight = '150px';
+
+            // If it's the crown icon, we want to try a simpler emoji fallback
+            if (img.src.includes('fire_crown.webp')) {
+              img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">??</text></svg>';
+            } else {
+              // Standard fallback for other images (mostly project screenshots)
+              img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150"><rect width="100%" height="100%" fill="%231a1a1a"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23555" font-family="Cairo, sans-serif" font-size="12">Image Unavailable in this browser</text></svg>';
+            }
+          }
+        }, true);
+
+        // Remove skeleton when image loads
+        window.addEventListener('load', function (e) {
+          const images = document.querySelectorAll('img');
+          images.forEach(img => {
+            if (img.complete) {
+              const skeleton = img.closest('.loading-skeleton');
+              if (skeleton) skeleton.classList.remove('loading-skeleton');
+            }
+            img.addEventListener('load', function () {
+              const skeleton = img.closest('.loading-skeleton');
+              if (skeleton) skeleton.classList.remove('loading-skeleton');
+            });
+          });
+        }, true);
+
+        // Custom Cursor
+        const cursor = document.querySelector('.cursor');
+        const follower = document.querySelector('.cursor-follower');
+
+        if (window.innerWidth > 992) {
+          document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+
+            setTimeout(() => {
+              follower.style.left = e.clientX + 'px';
+              follower.style.top = e.clientY + 'px';
+            }, 50);
+          });
+
+          const interactiveElements = document.querySelectorAll('a, button, .card, input, select, textarea');
+          interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => { follower.classList.add('active'); });
+            el.addEventListener('mouseleave', () => { follower.classList.remove('active'); });
+          });
+        }
+
+        // 3D Background Config
+        if (document.getElementById('bg-canvas') && typeof THREE !== 'undefined') {
+          const canvas = document.getElementById('bg-canvas');
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+          const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.setPixelRatio(1);
+
+          const geometry = new THREE.TorusKnotGeometry(12, 3, 64, 12);
+          const material = new THREE.MeshBasicMaterial({ color: 0xD4AF37, wireframe: true, transparent: true, opacity: 0.15 });
+          const torusKnot = new THREE.Mesh(geometry, material);
+          scene.add(torusKnot);
+
+          camera.position.z = 35;
+
+          let targetThreeMouseX = 0, targetThreeMouseY = 0;
+          let currentThreeMouseX = 0, currentThreeMouseY = 0;
+          let targetCSSMouseX = 50, targetCSSMouseY = 50;
+          let currentCSSMouseX = 50, currentCSSMouseY = 50;
+
+          // Combined mousemove listener for ALL effects
+          document.addEventListener('mousemove', (event) => {
+            targetThreeMouseX = (event.clientX - window.innerWidth / 2) * 0.0015;
+            targetThreeMouseY = (event.clientY - window.innerHeight / 2) * 0.0015;
+            targetCSSMouseX = (event.clientX / window.innerWidth) * 100;
+            targetCSSMouseY = (event.clientY / window.innerHeight) * 100;
+          }, { passive: true });
+
+          const animate = function () {
+            requestAnimationFrame(animate);
+
+            // Smooth Three.js rotation interpolation
+            currentThreeMouseX += (targetThreeMouseX - currentThreeMouseX) * 0.05;
+            currentThreeMouseY += (targetThreeMouseY - currentThreeMouseY) * 0.05;
+            torusKnot.rotation.y += (currentThreeMouseX - torusKnot.rotation.y) * 0.05;
+            torusKnot.rotation.x += (currentThreeMouseY - torusKnot.rotation.x) * 0.05;
+            torusKnot.rotation.z += 0.002;
+
+            // Update CSS variables only if they change significantly to save repaints
+            if (Math.abs(currentCSSMouseX - targetCSSMouseX) > 0.1 || Math.abs(currentCSSMouseY - targetCSSMouseY) > 0.1) {
+              currentCSSMouseX += (targetCSSMouseX - currentCSSMouseX) * 0.1;
+              currentCSSMouseY += (targetCSSMouseY - currentCSSMouseY) * 0.1;
+              document.documentElement.style.setProperty('--mouse-x', currentCSSMouseX.toFixed(2) + '%');
+              document.documentElement.style.setProperty('--mouse-y', currentCSSMouseY.toFixed(2) + '%');
+            }
+
+            renderer.render(scene, camera);
+          };
+          animate();
+
+          window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+          });
+        }
+
+        let typed;
+        function initTyped(strings) {
+          if (typed) typed.destroy();
+          if (!strings || strings.length === 0) return;
+          const subtitle = document.querySelector('.subtitle');
+          if (subtitle) {
+            if (typeof Typed === 'undefined') {
+              subtitle.textContent = strings[0];
+              return;
+            }
+            subtitle.innerHTML = '';
+            typed = new Typed('.subtitle', {
+              strings: strings,
+              typeSpeed: 50,
+              backSpeed: 30,
+              backDelay: 2000,
+              loop: true,
+              showCursor: true,
+              cursorChar: '|',
+            });
+          }
+        }
+
+        let currentImages = [];
+        let currentIndex = 0;
+        let currentLang = localStorage.getItem('selectedLang') || 'ar';
+        let dictionary;
+
+        document.addEventListener('DOMContentLoaded', () => {
+          setTimeout(() => {
+            // Verify libraries
+            if (typeof Typed !== 'undefined' && !document.querySelector('.subtitle').textContent.trim()) {
+              const lang = localStorage.getItem('selectedLang') || 'ar';
+              const strings = lang === 'ar' ?
+                ['مطور تطبيقات', 'محلل بيانات', 'مصمم واجهات'] :
+                ['App Developer', 'Data Analyst', 'UI/UX Designer'];
+              initTyped(strings);
+            }
+          }, 1000);
+
+          const langSelect = document.getElementById('langSelect');
+          if (langSelect) langSelect.value = currentLang;
+          applyLanguage(currentLang);
+
+          // Theme Initialization - Default to Light Mode
+          const savedTheme = localStorage.getItem('theme') || 'light';
+          const isLight = savedTheme === 'light';
+          if (isLight) {
+            document.body.classList.add('light-mode');
+          } else {
+            document.body.classList.remove('light-mode');
+          }
+          updateThemeIcon(isLight);
+        });
+
+        function toggleTheme() {
+          const isLight = document.body.classList.toggle('light-mode');
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+          updateThemeIcon(isLight);
+
+          // Update theme toggle button title if possible
+          if (typeof translations !== 'undefined' && translations[currentLang]) {
+            const dictionary = translations[currentLang];
+            const themeBtn = document.getElementById('themeToggle');
+            if (themeBtn) {
+              themeBtn.title = dictionary[isLight ? 'theme_toggle_dark' : 'theme_toggle_light'];
+            }
+          }
+
+          if (typeof soundManager !== 'undefined') soundManager.play('click');
+        }
+
+        function updateThemeIcon(isLight) {
+          const themeBtn = document.getElementById('themeToggle');
+          if (themeBtn) {
+            const icon = themeBtn.querySelector('i');
+            if (icon) {
+              icon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+              // Note: style.css defines colors based on .light-mode class on body
+            }
+          }
+        }
+
+        async function changeLanguage(lang) {
+          const wrapper = document.getElementById('app-wrapper');
+          try {
+            if (wrapper) wrapper.classList.add('lang-switching');
+            await new Promise(resolve => setTimeout(resolve, 300));
+            currentLang = lang;
+            localStorage.setItem('selectedLang', lang);
+            applyLanguage(lang);
+          } finally {
+            setTimeout(() => { if (wrapper) wrapper.classList.remove('lang-switching'); }, 50);
+          }
+        }
+
+        function applyLanguage(lang) {
+          if (!translations[lang]) return;
+          dictionary = translations[lang];
+          document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dictionary[key]) {
+              const icon = el.querySelector('i');
+              if (icon) {
+                el.innerHTML = icon.outerHTML + ' ' + dictionary[key];
+              } else if (key === 'name') {
+                el.innerHTML = dictionary[key];
+              } else if (key === 'role') {
+                try {
+                  const roles = dictionary[key].split('|').map(s => s.trim());
+                  initTyped(roles);
+                } catch (e) { console.warn('Typed init failed:', e); }
+              } else {
+                el.innerText = dictionary[key];
+              }
+            }
+          });
+
+          document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const key = el.getAttribute('data-i18n-alt');
+            if (dictionary[key]) el.alt = dictionary[key];
+          });
+
+          document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            const key = el.getAttribute('data-i18n-title');
+            if (dictionary[key]) el.title = dictionary[key];
+          });
+
+          const isLight = document.body.classList.contains('light-mode');
+          const themeBtn = document.getElementById('themeToggle');
+          if (themeBtn) themeBtn.title = dictionary[isLight ? 'theme_toggle_dark' : 'theme_toggle_light'];
+
+          if (document.getElementById('qrBtn')) document.getElementById('qrBtn').title = dictionary['qr_btn_title'];
+          if (document.getElementById('soundToggle')) document.getElementById('soundToggle').title = dictionary['sound_toggle_title'] || 'Mute Sounds';
+
+          const rtlLanguages = ['ar', 'ur'];
+          document.documentElement.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';
+          document.documentElement.lang = lang;
+          document.title = dictionary.title;
+
+          document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (dictionary[key]) el.placeholder = dictionary[key];
+          });
+        }
+        function toggleFAQ(element) {
+          const item = element.closest('.faq-item');
+          const isActive = item.classList.contains('active');
+
+          // Close all others
+          document.querySelectorAll('.faq-item').forEach(faq => {
+            faq.classList.remove('active');
+          });
+
+          // Toggle current
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        }
+
+        // Lightbox Functions
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(imgElement) {
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+
+          if (!lightbox || !lightboxImg) return;
+
+          // Find all images in the same project card for gallery mode
+          const card = imgElement.closest('.project-card');
+          if (card) {
+            currentLightboxImages = Array.from(card.querySelectorAll('img[onclick^="openLightbox"]'));
+            currentLightboxIndex = currentLightboxImages.indexOf(imgElement);
+          } else {
+            currentLightboxImages = [imgElement];
+            currentLightboxIndex = 0;
+          }
+
+          lightboxImg.src = imgElement.src;
+          lightbox.style.display = 'flex';
+          setTimeout(() => lightbox.classList.add('active'), 10);
+        }
+
+        function closeLightbox() {
+          const lightbox = document.getElementById('lightbox');
+          if (!lightbox) return;
+
+          lightbox.classList.remove('active');
+          setTimeout(() => lightbox.style.display = 'none', 300);
+        }
+
+        function changeLightboxImage(direction) {
+          if (currentLightboxImages.length <= 1) return;
+
+          currentLightboxIndex += direction;
+
+          if (currentLightboxIndex < 0) {
+            currentLightboxIndex = currentLightboxImages.length - 1;
+          } else if (currentLightboxIndex >= currentLightboxImages.length) {
+            currentLightboxIndex = 0;
+          }
+
+          const lightboxImg = document.getElementById('lightbox-img');
+          lightboxImg.src = currentLightboxImages[currentLightboxIndex].src;
+        }
+
+        // CV Modal Functions
+        function openCVModal() {
+          const modal = document.getElementById('cv-modal');
+          const body = document.getElementById('cv-modal-body');
+          if (modal && body) {
+            // Generate a simplified preview
+            body.innerHTML = `
+                    <div class="cv-header">
+                        <h3>${translations[currentLang].name}</h3>
+                        <p>${translations[currentLang].role}</p>
+                    </div>
+                    <div class="cv-section">
+                        <h4>${translations[currentLang].summary_title}</h4>
+                        <p>${translations[currentLang].summary_text}</p>
+                    </div>
+                `;
+            modal.style.display = 'flex';
+          }
+        }
+
+        function closeCVModal() {
+          const modal = document.getElementById('cv-modal');
+          if (modal) modal.style.display = 'none';
+        }
+
+        function generateAndDownloadCV() {
+          // Simplified PDF download logic or link to external PDF
+          window.open('resume.pdf', '_blank');
+        }
+      </script>
+
+      <!-- Success Modal (Lottie) -->
+      <div id="success-modal" class="modal" style="display: none;">
+        <div class="modal-content glass-card" style="text-align: center; max-width: 400px; padding: 40px;">
+          <div class="success-checkmark">
+            <div class="check-icon">
+              <span class="icon-line line-tip"></span>
+              <span class="icon-line line-long"></span>
+              <div class="icon-circle"></div>
+              <div class="icon-fix"></div>
+            </div>
+          </div>
+          <h3 data-i18n="msg_success" style="color: var(--text-white); margin-top: 10px;">تم إرسال رسالتك بنجاح!
+          </h3>
+          <button class="contact-qr-btn" onclick="closeSuccessModal()" style="margin-top: 20px;">إغلاق</button>
+        </div>
+      </div>
+
+
+      <!-- EmailJS Integration -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script type="text/javascript">
+        (function () {
+          // TODO: REPLACE WITH YOUR ACTUAL PUBLIC KEY FROM EMAILJS DASHBOARD
+          emailjs.init("user_YOUR_PUBLIC_KEY");
+        })();
+      </script>
+
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+          e.preventDefault();
+          const submitBtn = document.getElementById('contact-submit');
+          const originalContent = submitBtn.innerHTML;
+
+          // Show loading state
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+
+          const serviceID = 'default_service'; // TODO: REPLACE WITH YOUR SERVICE ID
+          const templateID = 'template_YOUR_ID'; // TODO: REPLACE WITH YOUR TEMPLATE ID
+
+          emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              showSuccessModal();
+              this.reset();
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalContent;
+            }, (err) => {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalContent;
+              alert('Failed to send message: ' + JSON.stringify(err));
+            });
+        });
+
+        function showSuccessModal() {
+          const modal = document.getElementById('success-modal');
+          modal.classList.add('active');
+        }
+
+        function closeSuccessModal() {
+          const modal = document.getElementById('success-modal');
+          modal.classList.remove('active');
+        }
+
+        // Interactive Aurora Background handled in throttled animation loop above
+
+        window.onclick = function (event) {
+          const lightbox = document.getElementById("lightbox");
+          const successModal = document.getElementById("success-modal");
+          if (event.target == lightbox) {
+            closeLightbox();
+          }
+          if (event.target == successModal) {
+            closeSuccessModal();
+          }
+        }
+      </script>
+    </div> <!-- End of app-wrapper -->
+    <script>
+      // Project Modal Logic
+      const projectRegistry = {
+        guideMe: {
+          titleKey: 'guide_me_title',
+          descKey: 'guide_me_desc',
+          tech: ['Android Studio', 'Java', 'XML', 'Firebase', 'Google Maps'],
+          links: `<a href="https://github.com/MohammedNafea/portfolio/releases/download/1.0.0/app-guideme.apk" download class="apk-btn" style="background: var(--primary-gold); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none;"><i class="fas fa-download"></i> <span data-i18n="download_apk">تنزيل APK</span></a>`
+        },
+        dataBootcamp: {
+          titleKey: 'data_bootcamp_title',
+          descKey: 'data_bootcamp_desc',
+          tech: ['Python', 'Pandas', 'PowerBI', 'Excel'],
+          links: `<a href="Data_Analysis.pdf" target="_blank" class="btn-with-icon" style="background: var(--primary-gold); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none;"><i class="fas fa-file-pdf"></i> <span data-i18n="pbi_link">ملف تحليل البيانات</span></a>`
+        },
+        chemWonders: {
+          titleKey: 'chem_title',
+          descKey: 'chem_desc',
+          tech: ['Flutter', 'Dart', 'Educational Design'],
+          links: `<a href="https://mohammednafea.github.io/Chemistry-Initiative_hash-plus/" target="_blank" class="btn-with-icon" style="background: var(--primary-gold); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none;"><i class="fas fa-external-link-alt"></i> <span data-i18n="chem_link">زيارة المشروع</span></a>`
+        },
+        macProject: {
+          titleKey: 'mac_title',
+          descKey: 'mac_desc',
+          tech: ['AndroidStudio', 'Java', 'XML'],
+          links: ``
+        }
+      };
+
+      function openProjectModal(id) {
+        const p = projectRegistry[id];
+        if (!p) return;
+
+        const titleEl = document.getElementById('pm-title');
+        const descEl = document.getElementById('pm-desc');
+        const techEl = document.getElementById('pm-tech-stack');
+        const linksEl = document.getElementById('pm-links');
+
+        // Update Title & Desc with i18n support
+        titleEl.setAttribute('data-i18n', p.titleKey);
+        titleEl.textContent = typeof dictionary !== 'undefined' && dictionary[p.titleKey] ? dictionary[p.titleKey] : p.titleKey;
+
+        descEl.setAttribute('data-i18n', p.descKey);
+        descEl.textContent = typeof dictionary !== 'undefined' && dictionary[p.descKey] ? dictionary[p.descKey] : p.descKey;
+
+        // Render Tech Badges
+        techEl.innerHTML = p.tech.map(tech => `<span>${tech}</span>`).join('');
+
+        // Render Links
+        linksEl.innerHTML = p.links;
+        if (typeof applyLanguage === 'function') applyLanguage();
+
+        // Show Modal
+        document.getElementById('projectModal').classList.add('active');
+      }
+
+      function closeProjectModal(event) {
+        if (event && event.target !== document.getElementById('projectModal') && !event.target.classList.contains('close-lightbox')) return;
+        document.getElementById('projectModal').classList.remove('active');
+      }
+
+      // Reading Progress Bar Logic - Throttled with RAF
+      let scrollTicking = false;
+      window.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+          window.requestAnimationFrame(() => {
+            const scrollTotal = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTotal / height) * 100;
+            const progressBar = document.getElementById('reading-progress');
+            if (progressBar) {
+              progressBar.style.width = scrollPercent + '%';
+            }
+            scrollTicking = false;
+          });
+          scrollTicking = true;
+        }
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "Mohammed Nafea | Mobile App Developer",
+  "short_name": "Nafea Dev",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#D4AF37",
+  "description": "Expert in Flutter, Android (Java), and AI solutions. Portfolio of Mohammed Nafea.",
+  "categories": ["developer", "portfolio", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "fire_crown.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "fire_crown.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "guide_me_1_splash.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "platform": "narrow"
+    }
+  ],
+  "orientation": "portrait",
+  "dir": "auto",
+  "prefer_related_applications": false
+}

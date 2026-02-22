@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline | Mohammed Nafea</title>
+    <link rel="icon" href="fire_crown.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-red: #FF0000;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+        .offline-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--neon-red);
+            text-shadow: 0 0 10px var(--neon-red), 0 0 20px var(--neon-red);
+            margin-bottom: 15px;
+        }
+        .message {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .retry-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'Cairo', sans-serif;
+            color: #fff;
+            border: 2px solid var(--neon-red);
+            text-decoration: none;
+            border-radius: 50px;
+            background: var(--neon-red);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            animation: pulse-glow 2s infinite;
+        }
+        .retry-btn:hover {
+            background: #fff;
+            color: var(--neon-red);
+            box-shadow: 0 0 30px var(--neon-red);
+            transform: translateY(-3px) scale(1.05);
+        }
+        .wifi-waves {
+            position: relative;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .wifi-waves span {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid var(--neon-red);
+            border-radius: 50%;
+            opacity: 0;
+            animation: wifi-wave 2s infinite;
+        }
+        .wifi-waves span:nth-child(1) { width: 20px; height: 20px; animation-delay: 0s; }
+        .wifi-waves span:nth-child(2) { width: 40px; height: 40px; animation-delay: 0.3s; }
+        .wifi-waves span:nth-child(3) { width: 60px; height: 60px; animation-delay: 0.6s; }
+        .wifi-dot {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background: var(--neon-red);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-red);
+        }
+
+        @keyframes wifi-wave {
+            0% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+            50% { opacity: 0.5; }
+            100% { opacity: 0; transform: translateX(-50%) scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(255, 0, 0, 0.7), 0 0 50px rgba(255, 0, 0, 0.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wifi-waves">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="wifi-dot"></div>
+        </div>
+        <h1>أنت غير متصل بالإنترنت</h1>
+        <p class="message">
+            يبدو أنك فقدت الاتصال بالإنترنت.<br>
+            تحقق من اتصالك وحاول مرة أخرى.
+        </p>
+        <button class="retry-btn" onclick="location.reload()">
+            🔄 إعادة المحاولة
+        </button>
+    </div>
+
+    <script>
+        // Auto-retry when connection is restored
+        window.addEventListener('online', () => {
+            location.reload();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cv-generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohammedNafea/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MohammedNafea/portfolio/issues"
+  },
+  "homepage": "https://github.com/MohammedNafea/portfolio#readme",
+  "dependencies": {
+    "sharp": "^0.34.5",
+    "sharp-cli": "^5.2.0"
+  }
+}
