@@ -2743,39 +2743,54 @@ p,
   .social-link:hover {
     transform: none;
     box-shadow: none;
-    background: transparent;
-    border-color: var(--neon-gold);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-white);
   }
 
   .social-link:active {
     background: var(--neon-gold);
     color: white;
-    transform: scale(0.95);
+    transform: scale(0.92);
+    box-shadow: 0 0 12px var(--neon-gold);
+    border-color: var(--neon-gold);
+    transition: 0.1s;
   }
 
   .social-link.whatsapp:active {
     background: #25D366;
     border-color: #25D366;
+    box-shadow: 0 0 12px #25D366;
   }
 
   .social-link.linkedin:active {
     background: #0A66C2;
     border-color: #0A66C2;
+    box-shadow: 0 0 12px #0A66C2;
   }
 
   .social-link.telegram:active {
     background: #0088CC;
     border-color: #0088CC;
+    box-shadow: 0 0 12px #0088CC;
   }
 
   .social-link.github:active {
     background: #6e5494;
     border-color: #6e5494;
+    box-shadow: 0 0 12px #6e5494;
   }
 
   .social-link.twitter:active {
     background: #1DA1F2;
     border-color: #1DA1F2;
+    box-shadow: 0 0 12px #1DA1F2;
+  }
+
+  .social-link.email:active {
+    background: var(--neon-gold);
+    border-color: var(--neon-gold);
+    box-shadow: 0 0 12px var(--neon-gold);
   }
 }
 
