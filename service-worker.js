@@ -12,6 +12,8 @@ const ASSETS = [
   './data_cert.webp',
   './mac_cert_1.webp',
   './mac_cert_2.webp',
+  './offline.html',
+  './crown_data.js',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
   'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap',
   'https://unpkg.com/aos@2.3.4/dist/aos.css',
