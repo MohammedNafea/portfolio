@@ -26,6 +26,23 @@
 
   --mouse-x: 50%;
   --mouse-y: 50%;
+
+  /* Z-Index System */
+  --z-base: 1;
+  --z-card: 10;
+  --z-header: 500;
+  --z-fab: 600;
+  --z-progress: 700;
+  --z-floating: 800;
+  --z-modal: 1000;
+  --z-modal-ui: 1001;
+  --z-preloader: 1100;
+  --z-cursor: 9000;
+
+  /* Transition System */
+  --transition-fast: 0.2s ease;
+  --transition-med: 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 body.light-mode {
@@ -128,7 +145,7 @@ html {
   width: 100%;
   height: 100%;
   background: #000000;
-  z-index: 10000;
+  z-index: var(--z-preloader);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,18 +258,16 @@ body {
   background-size: 200% 200%;
   color: var(--text-white);
   line-height: 1.85;
-  /* Increased for better legibility */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  /* Simplified drift for performance */
   animation: aurora-drift 60s infinite alternate ease-in-out;
-  width: 100vw;
+  max-width: 100%;
 }
 
 html {
-  width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -272,11 +287,12 @@ html {
   top: 0;
   left: 0;
   width: 0%;
-  height: 4px;
+  height: 3px;
   background: var(--neon-gold);
-  z-index: 10000;
-  box-shadow: 0 0 10px var(--neon-gold);
+  z-index: var(--z-progress);
+  box-shadow: 0 0 8px var(--neon-gold);
   transition: width 0.1s ease-out;
+  will-change: width;
 }
 
 
@@ -292,7 +308,7 @@ header {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
+  z-index: var(--z-header);
   padding: 12px 30px;
   border-radius: 50px;
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.1);
@@ -331,7 +347,8 @@ body.light-mode .neon-text {
   border-radius: 16px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  transition: transform var(--transition-med), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
 }
 
 .glass-card:hover {
@@ -403,9 +420,8 @@ body.light-mode .glass-card:hover {
   border-radius: 20px;
 }
 
-/* Slider/Image Container - Full Fill */
-.project-gallery,
-.slider-container {
+/* Slider/Image Container - Full Fill for project cards */
+.project-gallery {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -418,9 +434,16 @@ body.light-mode .glass-card:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s ease;
-  filter: brightness(0.7);
-  /* Darken for text */
+  transition: transform 0.8s ease, filter 0.4s ease;
+  filter: brightness(0.75);
+}
+
+/* Slider images inside project cards should not fill 100% height */
+.project-gallery .slider-wrapper img {
+  height: 100%;
+  flex: 0 0 100%;
+  min-width: 100%;
+  object-fit: cover;
 }
 
 .project-card:hover img {
@@ -666,18 +689,7 @@ body.light-mode .cert-date {
 }
 
 
-/* Scroll Progress Bar */
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: var(--neon-gold);
-  z-index: 10000;
-  transition: width 0.1s;
-  box-shadow: 0 0 10px var(--neon-gold);
-}
+/* #scroll-progress removed — using #reading-progress (RAF-based) */
 
 
 
@@ -1112,6 +1124,16 @@ body.light-mode .skill-bar {
   gap: 10px;
 }
 
+/* Project gallery overrides slider-container to fill the card */
+.project-gallery.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
 .slider-wrapper {
   display: flex;
   overflow-x: auto;
@@ -1120,6 +1142,7 @@ body.light-mode .skill-bar {
   -ms-overflow-style: none;
   gap: 10px;
   flex: 1;
+  height: 100%;
 }
 
 .slider-wrapper::-webkit-scrollbar {
@@ -1165,7 +1188,7 @@ img {
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: var(--z-modal);
   left: 0;
   top: 0;
   width: 100%;
@@ -1202,8 +1225,7 @@ img {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  z-index: 100001;
-  /* Drastically increased to ensure visibility */
+  z-index: 1101;
 }
 
 /* Fix QR Modal Close Button in Light Mode (White on White fix) */
@@ -1235,8 +1257,7 @@ body.light-mode .qr-content .close-lightbox:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100001;
-  /* Drastically increased to ensure visibility */
+  z-index: 1101;
 }
 
 .lightbox-btn:hover {
@@ -1319,12 +1340,10 @@ body.light-mode .qr-content .close-lightbox:hover {
     flex-direction: column;
   }
 
-  .project-gallery,
-  .slider-container {
+  .project-gallery.slider-container {
     position: relative !important;
     height: 250px !important;
     margin-top: 60px;
-    /* Space for absolute header */
   }
 
   .project-card::after {
@@ -2016,30 +2035,7 @@ body.light-mode .icon-btn i {
 
 /* ============ ADVANCED UI FEATURES ============ */
 
-/* Preloader */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.5s ease-out;
-}
-
-.loader-content {
-  text-align: center;
-}
-
-.loader-logo {
-  font-size: 4rem;
-  color: var(--neon-gold);
-  animation: pulse 1.5s infinite;
-}
+/* Preloader — canonical definition is in the LOGO ANIMATION STYLES section below */
 
 @keyframes pulse {
   0% {
@@ -2068,7 +2064,7 @@ body.light-mode #preloader {
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999999;
+  z-index: 9000;
   transform: translate(-50%, -50%);
   display: none;
 }
@@ -2305,6 +2301,18 @@ body.light-mode .testi-quote {
   margin: 0 auto;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -2420,16 +2428,17 @@ body.light-mode .testi-quote {
   border-color: var(--neon-gold);
 }
 
-/* Skeleton Loading for Images */
-.slider-wrapper img {
+/* Skeleton Loading for Images — stops once image is loaded */
+.slider-wrapper img:not([src]),
+.slider-wrapper img[src=""] {
   background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s infinite;
   min-height: 200px;
-  object-fit: cover;
 }
 
-body.light-mode .slider-wrapper img {
+body.light-mode .slider-wrapper img:not([src]),
+body.light-mode .slider-wrapper img[src=""] {
   background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
   background-size: 200% 100%;
 }
@@ -3083,7 +3092,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.85);
-  z-index: 10001;
+  z-index: 1100;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   justify-content: center;
@@ -3133,7 +3142,7 @@ body:not(.light-mode) .neon-text .highlight {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: var(--z-preloader);
   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
