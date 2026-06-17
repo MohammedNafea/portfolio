@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nafea-portfolio-v2026-b3';
+const CACHE_NAME = 'nafea-portfolio-v2026-b5';
 const ASSETS = [
   './',
   './index.html',
