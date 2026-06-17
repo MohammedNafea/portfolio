@@ -74,7 +74,7 @@ function generateAndDownloadCV() {
             <div class="cv-name">${name}</div>
             <div class="cv-role">${t.role}</div>
             <div class="cv-contact">
-                king.darkmn@gmail.com <span>&bull;</span> +966555555555 <span>&bull;</span> Riyadh, Saudi Arabia<br>
+                king.darkmn@gmail.com <span>&bull;</span> +966546532955 <span>&bull;</span> Riyadh, Saudi Arabia<br>
                 <a href="https://www.linkedin.com/in/mohammed-nafea-62a32b160">LinkedIn</a> <span>&bull;</span> <a href="https://github.com/MohammedNafea">GitHub</a> <span>&bull;</span> <a href="https://mohammednafea.github.io/portfolio">Portfolio</a>
             </div>
         </div>
