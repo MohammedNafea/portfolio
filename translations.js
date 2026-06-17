@@ -93,7 +93,14 @@
     testi_2_text: "التزام محمد بالجودة والمواعيد جعله أحد أفضل المطورين الذين تعاملت معهم في مشاريع فلاتر.",
     testi_2_author: "إيمان حسن",
     testi_2_role: "مديرة تقنية",
-    msg_success: "تم إرسال رسالتك بنجاح! شكراً لتواصلك."
+    msg_success: "تم إرسال رسالتك بنجاح! شكراً لتواصلك.",
+    adhkar_title: "مركز الأذكار الإسلامي",
+    adhkar_desc: "منصة ويب إسلامية شاملة تضم القرآن الكريم والأذكار ومواقيت الصلاة، مع دعم ثنائي اللغة (عربي وإنجليزي) وتصميم متجاوب يعمل على جميع الأجهزة.",
+    adhkar_badge: "موقع ويب تفاعلي",
+    adhkar_visit: "زيارة الموقع",
+    img_adhkar_1: "الصفحة الرئيسية لمركز الأذكار",
+    img_adhkar_2: "قسم القرآن الكريم",
+    img_adhkar_3: "مواقيت الصلاة والأذكار"
   },
   en: {
     title: "Mohammed Nafea - Portfolio",
@@ -189,7 +196,14 @@
     testi_2_text: "Mohammed's commitment to quality and deadlines made him one of the best developers I've worked with on Flutter projects.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Technical Manager",
-    msg_success: "Your message has been sent successfully! Thank you for contacting me."
+    msg_success: "Your message has been sent successfully! Thank you for contacting me.",
+    adhkar_title: "Islamic Reminders Hub",
+    adhkar_desc: "A comprehensive Islamic web platform featuring the Holy Quran, Islamic supplications, and prayer times with bilingual support (Arabic & English) and a responsive design across all devices.",
+    adhkar_badge: "Interactive Website",
+    adhkar_visit: "Visit Website",
+    img_adhkar_1: "Islamic Reminders Hub - Homepage",
+    img_adhkar_2: "Holy Quran Section",
+    img_adhkar_3: "Prayer Times & Adhkar"
   },
   tr: {
     title: "Mohammed Nafea - Portföy",
@@ -285,7 +299,14 @@
     testi_2_text: "Mohammed'in kaliteye ve teslimat sürelerine olan bağlılığı, Flutter projelerinde birlikte çalıştığım en iyi geliştiricilerden biri olmasını sağladı.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Teknik Müdür",
-    msg_success: "Mesajınız başarıyla gönderildi! İletişime geçtiğiniz için teşekkürler."
+    msg_success: "Mesajınız başarıyla gönderildi! İletişime geçtiğiniz için teşekkürler.",
+    adhkar_title: "İslami Hatırlatmalar Merkezi",
+    adhkar_desc: "Kutsal Kuran, İslami zikirler ve namaz vakitlerini içeren kapsamlı bir İslami web platformu. Çift dil desteği (Arapça ve İngilizce) ve tüm cihazlara uyumlu tasarım.",
+    adhkar_badge: "Etkileşimli Web Sitesi",
+    adhkar_visit: "Web Sitesini Ziyaret Et",
+    img_adhkar_1: "İslami Merkez - Ana Sayfa",
+    img_adhkar_2: "Kutsal Kuran Bölümü",
+    img_adhkar_3: "Namaz Vakitleri ve Zikirler"
   },
   es: {
     title: "Mohammed Nafea - Portafolio",
@@ -381,7 +402,14 @@
     testi_2_text: "El compromiso de Mohammed con la calidad y los plazos lo convirtió en uno de los mejores desarrolladores con los que he trabajado en proyectos de Flutter.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Directora Técnica",
-    msg_success: "¡Tu mensaje ha sido enviado con éxito! Gracias por contactarme."
+    msg_success: "¡Tu mensaje ha sido enviado con éxito! Gracias por contactarme.",
+    adhkar_title: "Centro de Recordatorios Islámicos",
+    adhkar_desc: "Una plataforma web islámica integral con el Sagrado Corán, súplicas islámicas y horarios de oración, con soporte bilingüe (árabe e inglés) y diseño responsivo para todos los dispositivos.",
+    adhkar_badge: "Sitio Web Interactivo",
+    adhkar_visit: "Visitar el Sitio",
+    img_adhkar_1: "Centro Islámico - Página de Inicio",
+    img_adhkar_2: "Sección del Sagrado Corán",
+    img_adhkar_3: "Horarios de Oración y Adhkar"
   },
   fr: {
     title: "Mohammed Nafea - Portfolio",
@@ -477,7 +505,14 @@
     testi_2_text: "L'engagement de Mohammed envers la qualité et les délais a fait de lui l'un des meilleurs développeurs avec lesquels j'ai travaillé sur des projets Flutter.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Directrice Technique",
-    msg_success: "Votre message a été envoyé avec succès! Merci de m'avoir contacté."
+    msg_success: "Votre message a été envoyé avec succès! Merci de m'avoir contacté.",
+    adhkar_title: "Centre de Rappels Islamiques",
+    adhkar_desc: "Une plateforme web islamique complète avec le Saint Coran, les supplications islamiques et les horaires de prière, avec support bilingue (arabe et anglais) et design responsive pour tous les appareils.",
+    adhkar_badge: "Site Web Interactif",
+    adhkar_visit: "Visiter le Site",
+    img_adhkar_1: "Centre Islamique - Page d'Accueil",
+    img_adhkar_2: "Section du Saint Coran",
+    img_adhkar_3: "Horaires de Prière et Adhkar"
   },
   de: {
     title: "Mohammed Nafea - Portfolio",
@@ -573,7 +608,14 @@
     testi_2_text: "Mohammeds Engagement für Qualität und Fristen machte ihn zu einem der besten Entwickler, mit denen ich in Flutter-Projekten zusammengearbeitet habe.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Technische Leiterin",
-    msg_success: "Ihre Nachricht wurde erfolgreich gesendet! Danke für Ihre Kontaktaufnahme."
+    msg_success: "Ihre Nachricht wurde erfolgreich gesendet! Danke für Ihre Kontaktaufnahme.",
+    adhkar_title: "Islamisches Erinnerungszentrum",
+    adhkar_desc: "Eine umfassende islamische Webplattform mit dem Heiligen Koran, islamischen Gebeten und Gebetszeiten mit zweisprachiger Unterstützung (Arabisch und Englisch) und responsivem Design für alle Geräte.",
+    adhkar_badge: "Interaktive Webseite",
+    adhkar_visit: "Website Besuchen",
+    img_adhkar_1: "Islamisches Zentrum - Startseite",
+    img_adhkar_2: "Heiliger Koran Bereich",
+    img_adhkar_3: "Gebetszeiten und Adhkar"
   },
   zh: {
     title: "Mohammed Nafea - 作品集",
@@ -669,7 +711,14 @@
     testi_2_text: "Mohammed 对质量和截止日期的承诺使他成为我在 Flutter 项目中合作过的最优秀的开发者之一。",
     testi_2_author: "Eman Hassan",
     testi_2_role: "技术总监",
-    msg_success: "您的消息已成功发送！感谢您与我联系。"
+    msg_success: "您的消息已成功发送！感谢您与我联系。",
+    adhkar_title: "伊斯兰提醒中心",
+    adhkar_desc: "一个综合伊斯兰网络平台，提供圣古兰经、伊斯兰祈祷词和礼拜时间，支持双语（阿拉伯语和英语），并在所有设备上提供响应式设计。",
+    adhkar_badge: "互动网站",
+    adhkar_visit: "访问网站",
+    img_adhkar_1: "伊斯兰中心 - 首页",
+    img_adhkar_2: "圣古兰经部分",
+    img_adhkar_3: "礼拜时间与祈祷词"
   },
   ja: {
     title: "Mohammed Nafea - ポートフォリオ",
@@ -765,7 +814,14 @@
     testi_2_text: "Mohammedの品質と締め切りへのコミットメントは、Flutterプロジェクトで協力した中で最高の開発者の一人となりました。",
     testi_2_author: "Eman Hassan",
     testi_2_role: "テクニカルマネージャー",
-    msg_success: "メッセージが正常に送信されました！お問い合わせいただきありがとうございます。"
+    msg_success: "メッセージが正常に送信されました！お問い合わせいただきありがとうございます。",
+    adhkar_title: "イスラミックリマインダーハブ",
+    adhkar_desc: "神聖なコーラン、イスラームの祈り、礼拝時間を含む包括的なイスラームウェブプラットフォーム。アラビア語と英語のバイリンガルサポートと全デバイス対応のレスポンシブデザインを提供。",
+    adhkar_badge: "インタラクティブウェブサイト",
+    adhkar_visit: "ウェブサイトを訪問",
+    img_adhkar_1: "イスラミックハブ - ホームページ",
+    img_adhkar_2: "コーラン閲覧セクション",
+    img_adhkar_3: "礼拝時間とズィクル"
   },
   ru: {
     title: "Mohammed Nafea - Портфолио",
@@ -861,7 +917,14 @@
     testi_2_text: "Приверженность Мохаммеда качеству и срокам сделала его одним из лучших разработчиков, с которыми я работала над Flutter-проектами.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Технический директор",
-    msg_success: "Ваше сообщение успешно отправлено! Спасибо за обращение."
+    msg_success: "Ваше сообщение успешно отправлено! Спасибо за обращение.",
+    adhkar_title: "Исламский центр напоминаний",
+    adhkar_desc: "Комплексная исламская веб-платформа со Священным Кораном, исламскими мольбами и временем молитв с двуязычной поддержкой (арабский и английский) и адаптивным дизайном для всех устройств.",
+    adhkar_badge: "Интерактивный веб-сайт",
+    adhkar_visit: "Посетить сайт",
+    img_adhkar_1: "Исламский центр - Главная страница",
+    img_adhkar_2: "Раздел Священного Корана",
+    img_adhkar_3: "Время молитв и зикр"
   },
   pt: {
     title: "Mohammed Nafea - Portfólio",
@@ -957,7 +1020,14 @@
     testi_2_text: "O compromisso de Mohammed com a qualidade e os prazos o tornou um dos melhores desenvolvedores com quem trabalhei em projetos Flutter.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Diretora Técnica",
-    msg_success: "Sua mensagem foi enviada com sucesso! Obrigado por entrar em contato."
+    msg_success: "Sua mensagem foi enviada com sucesso! Obrigado por entrar em contato.",
+    adhkar_title: "Centro de Lembretes Islâmicos",
+    adhkar_desc: "Uma plataforma web islâmica abrangente com o Sagrado Alcorão, súplicas islâmicas e horários de oração, com suporte bilíngue (árabe e inglês) e design responsivo para todos os dispositivos.",
+    adhkar_badge: "Site Interativo",
+    adhkar_visit: "Visitar o Site",
+    img_adhkar_1: "Centro Islâmico - Página Inicial",
+    img_adhkar_2: "Seção do Sagrado Alcorão",
+    img_adhkar_3: "Horários de Oração e Adhkar"
   },
   it: {
     title: "Mohammed Nafea - Portfolio",
@@ -1053,7 +1123,14 @@
     testi_2_text: "L'impegno di Mohammed per la qualità e le scadenze lo ha reso uno dei migliori sviluppatori con cui ho lavorato in progetti Flutter.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Direttrice Tecnica",
-    msg_success: "Il tuo messaggio è stato inviato con successo! Grazie per avermi contattato."
+    msg_success: "Il tuo messaggio è stato inviato con successo! Grazie per avermi contattato.",
+    adhkar_title: "Centro di Promemoria Islamici",
+    adhkar_desc: "Una piattaforma web islamica completa con il Santo Corano, suppliche islamiche e orari di preghiera, con supporto bilingue (arabo e inglese) e design responsive per tutti i dispositivi.",
+    adhkar_badge: "Sito Web Interattivo",
+    adhkar_visit: "Visita il Sito",
+    img_adhkar_1: "Centro Islamico - Pagina Principale",
+    img_adhkar_2: "Sezione del Santo Corano",
+    img_adhkar_3: "Orari di Preghiera e Adhkar"
   },
   ko: {
     title: "Mohammed Nafea - 포트폴리오",
@@ -1149,7 +1226,14 @@
     testi_2_text: "Mohammed의 품질과 마감 기한에 대한 헌신은 Flutter 프로젝트에서 함께 일한 개발자 중 최고 중 한 명이 되게 했습니다.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "기술 관리자",
-    msg_success: "메시지가 성공적으로 전송되었습니다! 연락해 주셔서 감사합니다."
+    msg_success: "메시지가 성공적으로 전송되었습니다! 연락해 주셔서 감사합니다.",
+    adhkar_title: "이슬람 리마인더 허브",
+    adhkar_desc: "성스러운 코란, 이슬람 기도문, 예배 시간을 포함하는 종합 이슬람 웹 플랫폼으로, 이중 언어 지원(아랍어 및 영어)과 모든 기기에서 작동하는 반응형 디자인을 제공합니다.",
+    adhkar_badge: "인터랙티브 웹사이트",
+    adhkar_visit: "웹사이트 방문",
+    img_adhkar_1: "이슬람 허브 - 홈페이지",
+    img_adhkar_2: "성스러운 코란 섹션",
+    img_adhkar_3: "예배 시간 및 지크르"
   },
   id: {
     title: "Mohammed Nafea - Portofolio",
@@ -1245,7 +1329,14 @@
     testi_2_text: "Komitmen Mohammed terhadap kualitas dan tenggat waktu menjadikannya salah satu pengembang terbaik yang pernah saya ajak kerjasama dalam proyek Flutter.",
     testi_2_author: "Eman Hassan",
     testi_2_role: "Manajer Teknis",
-    msg_success: "Pesan Anda telah berhasil terkirim! Terima kasih telah menghubungi saya."
+    msg_success: "Pesan Anda telah berhasil terkirim! Terima kasih telah menghubungi saya.",
+    adhkar_title: "Pusat Pengingat Islam",
+    adhkar_desc: "Platform web Islam komprehensif dengan Al-Quran, dzikir Islam, dan jadwal sholat, dengan dukungan dua bahasa (Arab dan Inggris) serta desain responsif untuk semua perangkat.",
+    adhkar_badge: "Situs Web Interaktif",
+    adhkar_visit: "Kunjungi Situs",
+    img_adhkar_1: "Pusat Islam - Halaman Utama",
+    img_adhkar_2: "Bagian Al-Quran",
+    img_adhkar_3: "Jadwal Sholat dan Dzikir"
   },
   ur: {
     title: "محمد نافع - پورٹ فولیو",
@@ -1341,7 +1432,14 @@
     testi_2_text: "Flutter پروجیکٹس میں محمد کی معیار اور ڈیڈلائنز کے لیے وابستگی نے انہیں میرے ساتھ کام کرنے والے بہترین ڈویلپرز میں سے ایک بنا دیا۔",
     testi_2_author: "ایمان حسن",
     testi_2_role: "تکنیکی مینیجر",
-    msg_success: "آپ کا پیغام کامیابی سے بھیج دیا گیا! رابطہ کرنے کا شکریہ۔"
+    msg_success: "آپ کا پیغام کامیابی سے بھیج دیا گیا! رابطہ کرنے کا شکریہ۔",
+    adhkar_title: "اسلامی یاد دہانی مرکز",
+    adhkar_desc: "قرآن کریم، اسلامی اذکار اور نماز کے اوقات پر مشتمل ایک جامع اسلامی ویب پلیٹ فارم، جس میں دو لسانی حمایت (عربی اور انگریزی) اور تمام آلات پر ریسپانسو ڈیزائن موجود ہے۔",
+    adhkar_badge: "انٹرایکٹو ویب سائٹ",
+    adhkar_visit: "ویب سائٹ دیکھیں",
+    img_adhkar_1: "اسلامی مرکز - ہوم پیج",
+    img_adhkar_2: "قرآن کریم سیکشن",
+    img_adhkar_3: "نماز کے اوقات اور اذکار"
   },
   hi: {
     title: "Mohammed Nafea - पोर्टफोलियो",
@@ -1437,6 +1535,13 @@
     testi_2_text: "गुणवत्ता और समय-सीमाओं के प्रति Mohammed की प्रतिबद्धता ने उन्हें Flutter प्रोजेक्ट्स में मेरे साथ काम करने वाले सर्वश्रेष्ठ डेवलपर्स में से एक बनाया।",
     testi_2_author: "Eman Hassan",
     testi_2_role: "तकनीकी प्रबंधक",
-    msg_success: "आपका संदेश सफलतापूर्वक भेज दिया गया है! संपर्क करने के लिए धन्यवाद।"
+    msg_success: "आपका संदेश सफलतापूर्वक भेज दिया गया है! संपर्क करने के लिए धन्यवाद।",
+    adhkar_title: "इस्लामिक स्मरण केंद्र",
+    adhkar_desc: "पवित्र कुरान, इस्लामिक प्रार्थनाओं और नमाज के समय के साथ एक व्यापक इस्लामिक वेब प्लेटफॉर्म, द्विभाषी समर्थन (अरबी और अंग्रेजी) और सभी उपकरणों पर उत्तरदायी डिजाइन के साथ।",
+    adhkar_badge: "इंटरएक्टिव वेबसाइट",
+    adhkar_visit: "वेबसाइट पर जाएं",
+    img_adhkar_1: "इस्लामिक केंद्र - होमपेज",
+    img_adhkar_2: "पवित्र कुरान अनुभाग",
+    img_adhkar_3: "नमाज के समय और जिक्र"
   }
 };

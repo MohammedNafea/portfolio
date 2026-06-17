@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nafea-portfolio-v2026-b5';
+const CACHE_NAME = 'nafea-portfolio-v2026-b6';
 const ASSETS = [
   './',
   './index.html',
@@ -12,6 +12,9 @@ const ASSETS = [
   './data_cert.webp',
   './mac_cert_1.webp',
   './mac_cert_2.webp',
+  './adhkar_1.webp',
+  './adhkar_2.webp',
+  './adhkar_3.webp',
   './offline.html',
   './crown_data.js',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',

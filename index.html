@@ -608,7 +608,46 @@
             </button>
           </div>
         </div>
-        <!-- ... -->
+        <!-- Adhkar Project -->
+        <div class="project-card skeleton-item" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="5"
+          data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+          <div class="skeleton-title"></div>
+          <div class="skeleton-text"></div>
+          <div class="skeleton-text" style="width: 60%;"></div>
+          <div class="project-header">
+            <h3><i class="fas fa-mosque"></i> <span data-i18n="adhkar_title">مركز الأذكار الإسلامي</span></h3>
+            <span class="date">2025</span>
+          </div>
+          <span class="badge" data-i18n="adhkar_badge">موقع ويب تفاعلي</span>
+          <div class="project-gallery slider-container" id="adhkar-gallery">
+            <button class="slider-btn prev" onclick="moveSlider('adhkar-gallery', -1)"
+              aria-label="Previous Slide">&#10094;</button>
+            <div class="slider-wrapper">
+              <div class="skeleton-item loading-skeleton"><img src="adhkar_1.webp"
+                  alt="Adhkar Hub - Homepage" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_adhkar_1" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="adhkar_2.webp"
+                  alt="Adhkar Hub - Quran Section" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_adhkar_2" loading="lazy" width="800" height="450"></div>
+              <div class="skeleton-item loading-skeleton"><img src="adhkar_3.webp"
+                  alt="Adhkar Hub - Prayer Times" onclick="openLightbox(this)" title="اضغط للتكبير"
+                  data-i18n-title="view_hd" data-i18n-alt="img_adhkar_3" loading="lazy" width="800" height="450"></div>
+            </div>
+            <button class="slider-btn next" onclick="moveSlider('adhkar-gallery', 1)"
+              aria-label="Next Slide">&#10095;</button>
+          </div>
+          <div class="project-links">
+            <a href="https://adhkar.thedarkgalaxy.com/" target="_blank" rel="noopener noreferrer"
+              class="btn-gold-sm"
+              style="display:block; text-align:center; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-bottom: 8px;">
+              <i class="fas fa-external-link-alt"></i> <span data-i18n="adhkar_visit">زيارة الموقع</span>
+            </a>
+            <button onclick="openProjectModal('adhkar')" class="btn-gold-sm"
+              style="width: 100%; padding: 12px; border-radius: 30px; font-weight: bold; font-size: 1.1em;">
+              <i class="fas fa-info-circle"></i> <span data-i18n="view_details">عرض التفاصيل</span>
+            </button>
+          </div>
+        </div>
 
         <!-- Skills Page -->
         <section class="page" data-aos="fade-up">
@@ -1813,6 +1852,12 @@ END:VCARD`;
           descKey: 'mac_desc',
           tech: ['AndroidStudio', 'Java', 'XML'],
           links: ``
+        },
+        adhkar: {
+          titleKey: 'adhkar_title',
+          descKey: 'adhkar_desc',
+          tech: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'REST API'],
+          links: `<a href="https://adhkar.thedarkgalaxy.com/" target="_blank" rel="noopener noreferrer" class="btn-with-icon" style="background: var(--primary-gold); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none;"><i class="fas fa-external-link-alt"></i> <span data-i18n="adhkar_visit">زيارة الموقع</span></a>`
         }
       };
 
