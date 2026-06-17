@@ -85,7 +85,6 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <!-- Note: QRCode.js is embedded inline below to avoid CDN CORS issues -->
-  <link rel="manifest" href="manifest.json">
   <style>
     /* Ensure floating buttons are always visible at the bottom corner */
     .floating-btn {
@@ -267,7 +266,7 @@
 
   <!-- Floating Action Button (FAB) -->
   <div class="fab-container">
-    <a href="https://wa.me/201015694380" class="fab-btn" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/966546532955" class="fab-btn" target="_blank" aria-label="WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
@@ -354,7 +353,7 @@
                 <p>king.darkmn@gmail.com</p>
               </div>
             </a>
-            <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" class="contact-item" aria-label="WhatsApp">
+            <a href="https://wa.me/966546532955" target="_blank" class="contact-item" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
               <div>
                 <span data-i18n="whatsapp_label">WhatsApp</span>
@@ -806,6 +805,19 @@
       </section>
 
       <script>
+        function moveSlider(galleryId, dir) {
+          const gallery = document.getElementById(galleryId);
+          if (!gallery) return;
+          const wrapper = gallery.querySelector('.slider-wrapper');
+          if (!wrapper) return;
+          const imgs = wrapper.querySelectorAll('img');
+          if (!imgs.length) return;
+          const imgWidth = imgs[0].offsetWidth + 12;
+          const isRTL = document.documentElement.dir === 'rtl';
+          const scrollAmount = imgWidth * (isRTL ? -dir : dir);
+          wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+
         let testiIndex = 0;
         function moveTestimonials(dir) {
           const slider = document.getElementById('testimonialsSlider');
@@ -909,7 +921,7 @@
             <a href="mailto:king.darkmn@gmail.com" class="social-link email" title="Email">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://wa.me/message/YGXHPUENICNAN1" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/966546532955" target="_blank" rel="noopener noreferrer"
               class="social-link whatsapp" title="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
@@ -1096,7 +1108,7 @@ VERSION:3.0
 N:Nafea;Mohammed;;;
 FN:Mohammed Nafea
 EMAIL:king.darkmn@gmail.com
-TEL:+201015694380
+TEL:+966546532955
 URL:https://mohammednafea.github.io/portfolio
 END:VCARD`;
 
