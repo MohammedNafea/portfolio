@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MohammedNafea/portfolio#readme",
   "dependencies": {
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.3",
     "sharp-cli": "^5.2.0"
   }
 }
